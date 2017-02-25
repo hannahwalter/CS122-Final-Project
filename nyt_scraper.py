@@ -6,6 +6,8 @@ import datetime as dt
 import math
 import time
 
+import opinion_words
+
 pm = urllib3.PoolManager()
 
 f = open('stop_words.txt', 'r')
@@ -13,6 +15,23 @@ stop_words = set(f.read().splitlines())
 stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just', 
 'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
 'percent'}
+
+def get_opinion_score(search_item, date):
+    positive, negative = opinion_words.get_word_lexicons()
+
+    urls = get_search_urls(search_item, date)
+    scraped_words = scrape_url_list(urls, search_item)
+
+    p_score = 0
+    n_score = 0
+
+    for word, count in scraped_words.items():
+        if word in positive:
+            p_score += count
+        elif word in negative:
+            n_score += count
+    
+    return p_score, n_score
 
 def get_search_urls(search_item, date):
     '''
@@ -46,13 +65,12 @@ def get_search_urls(search_item, date):
 
     url_list = []
 
-    time.sleep(.5)
+    time.sleep(1)
 
     for i in range(pages):
         l = url + '&page=' + str(i)
         time.sleep(1)
         r = requests.get(l)
-        r.raise_for_status()
         json = r.json()
         search_results = json['response']['docs']
     
@@ -79,7 +97,7 @@ def scrape_url_list(url_list, search_item):
         if not r.status_code == requests.codes.ok:
             continue
         html = r.text
-        soup = bs4.BeautifulSoup(html)
+        soup = bs4.BeautifulSoup(html, 'lxml')
 
         story_text = soup.find_all('p', class_ = 'story-body-text story-content')
 
@@ -98,4 +116,4 @@ def scrape_url_list(url_list, search_item):
                     words_dict[word] += 1
 
     l = sorted(words_dict.items(), key = lambda x: x[1], reverse = True)
-    return l
+    return words_dict
