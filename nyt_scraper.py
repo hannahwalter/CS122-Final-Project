@@ -5,8 +5,11 @@ import re
 import datetime as dt
 import math
 import time
-
+import json
+import urllib
 import opinion_words
+import oauth2
+from selenium import webdriver
 
 pm = urllib3.PoolManager()
 
@@ -16,22 +19,92 @@ stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just',
 'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
 'percent'}
 
+API_KEY = 'yIhvOOP5HLOj09upLo5PsOp1w'
+API_SECRET = 'kN5ymLTkaESyX2EzvGEEQiyalumThykKdLLXbD3d70jfGwSMZM'
+
+ACCESS_KEY = '733301270-Hg5n52rXSTpvwrfQAoLczgUI8jgwpAcllysVkAIU'
+ACCESS_SECRET = 'eYShWymyKJPi2myY0E7hyPU9HdZz1y6MlrSDDyR5rhdpw'
+
+URL = "https://api.twitter.com/1.1/search/tweets.json?q={}&count=100"
+
 def get_opinion_score(search_item, date):
     positive, negative = opinion_words.get_word_lexicons()
 
-    urls = get_search_urls(search_item, date)
-    scraped_words = scrape_url_list(urls, search_item)
+    # NYT
+    nyt_urls = get_search_urls(search_item, date)
+    nyt_words = scrape_url_list(nyt_urls, search_item)
 
     p_score = 0
     n_score = 0
 
-    for word, count in scraped_words.items():
+    for word, count in nyt_words.items():
         if word in positive:
             p_score += count
         elif word in negative:
             n_score += count
     
     return p_score, n_score
+
+### SCRAPING TWITTER ###
+
+test_twitter_url = "https://twitter.com/search?f=tweets&vertical=news&q=%23AAPL&src=typd"
+
+def web_search(search_term):
+    search_term = urllib.parse.quote_plus(search_term)
+
+    r = requests.get(test_twitter_url)
+    html = r.text
+    soup = bs4.BeautifulSoup(html, 'lxml')
+
+    tweet_text = soup.find_all('p', class_ = 'TweetTextSize js-tweet-text tweet-text')
+
+    return tweet_text
+
+def twitter_selenium(search_term):
+
+
+# Using the Twitter API
+
+def get_tweet_list(search_term):
+
+    search_term = urllib.parse.quote_plus(search_term)
+    url = URL.format(search_term)
+
+    consumer = oauth2.Consumer(key = API_KEY, secret = API_SECRET)
+    token = oauth2.Token(key = ACCESS_KEY, secret = ACCESS_SECRET)
+    client = oauth2.Client(consumer, token)
+    resp, content = client.request(url)
+
+    tweets_l = []
+    data = json.loads(content.decode())
+    tweets = data['statuses']
+
+    for t in tweets:
+        tweets_l.append(t['text'])
+
+    return tweets_l
+
+def parse_tweets(tweet_list, search_term):
+
+    words_dict = {}
+
+    for t in tweet_list:
+        t_l = t.split()
+
+        for word in t_l:
+            word = re.sub('[^a-z0-9\-\']', '', word.lower())
+            if (word in stop_words or word == '' or word == '-' 
+                or word in search_term.lower() or word.isdigit()
+                or word.startswith('http')):
+                continue
+            elif word not in words_dict:
+                words_dict[word] = 1
+            else:
+                words_dict[word] += 1
+
+    return words_dict
+
+### USING NEW YORK TIMES API ###
 
 def get_search_urls(search_item, date):
     '''
