@@ -95,7 +95,8 @@ def historical_basic(start_date, end_date, only_start_and_end):
     raw = Share(ticker).get_historical(start_date, end_date)
     if only_start_and_end:
         return_rate_per_day = math.pow(( float(raw[0]['High']) / float(raw[-1]['Low']) ), (1/(len(raw)-1))) - 1
-        return return_rate_per_day
+        multiple = float(raw[0]['High']) / float(raw[-1]['Low'])
+        return return_rate_per_day, multiple
     else:
         processed = []
         for day_data in raw:
@@ -203,5 +204,6 @@ def historical_optimized(approximate_start_date, approximate_end_date, range_of_
     business_days = len(Share(ticker).get_historical(start_min_date, end_max_date))
 
     return_rate_per_day = math.pow(( end_max / start_min ), (1/(business_days-1))) - 1
+    multiple = end_max / start_min
 
-    return return_rate_per_day, [end_max_date, start_min_date]
+    return return_rate_per_day, multiple, [end_max_date, start_min_date]
