@@ -18,6 +18,7 @@ stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just',
 'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
 'percent'}
 
+<<<<<<< HEAD
 ### SCRAPING TWITTER THROUGH HTML ###
 
 def html_search(search_term, date):
@@ -217,6 +218,7 @@ def scrape_url_list(url_list, search_item):
                     words_dict[word] += 1
 
     l = sorted(words_dict.items(), key = lambda x: x[1], reverse = True)
+
     return words_dict
 
 ### NYT GET OPINION SCORE ###
