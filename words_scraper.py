@@ -8,9 +8,7 @@ import time
 import json
 import urllib
 import opinion_words
-import oauth2
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+import random
 
 pm = urllib3.PoolManager()
 
@@ -20,104 +18,119 @@ stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just',
 'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
 'percent'}
 
-API_KEY = 'yIhvOOP5HLOj09upLo5PsOp1w'
-API_SECRET = 'kN5ymLTkaESyX2EzvGEEQiyalumThykKdLLXbD3d70jfGwSMZM'
+### SCRAPING TWITTER THROUGH HTML ###
 
-ACCESS_KEY = '733301270-Hg5n52rXSTpvwrfQAoLczgUI8jgwpAcllysVkAIU'
-ACCESS_SECRET = 'eYShWymyKJPi2myY0E7hyPU9HdZz1y6MlrSDDyR5rhdpw'
-
-URL = "https://api.twitter.com/1.1/search/tweets.json?q={}&count=100"
-
-# Getting opinion score
-def get_opinion_score(search_item, date):
-    positive, negative = opinion_words.get_word_lexicons()
-
-    # NYT
-    nyt_urls = get_search_urls(search_item, date)
-    nyt_words = scrape_url_list(nyt_urls, search_item)
-
-    p_score = 0
-    n_score = 0
-
-    for word, count in nyt_words.items():
-        if word in positive:
-            p_score += count
-        elif word in negative:
-            n_score += count
-    
-    return p_score, n_score
-
-### SCRAPING TWITTER ###
-
-test_twitter_url = "https://twitter.com/search?q=%23AAPL%20since%3A2017-03-01&src=typd"
-
-# Using Selenium
-def web_search(search_term):
-    browser = webdriver.Chrome()
-    browser.set_window_size(1120, 550)
-    browser.get(test_twitter_url)
-
-    last_height = browser.execute_script("return document.body.scrollHeight")
-    
-    more_scrolls = True
-
-    while more_scrolls:
-        print("more scrolls")
-        browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-        time.sleep(1)
-        new_height = browser.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            more_scrolls = False
-        else:
-            last_height = new_height
-
-    print(last_height)
-
-    tweets = browser.find_elements_by_xpath("//p[@class='TweetTextSize  js-tweet-text tweet-text']")
-
-    for tweet in tweets:
-        print(tweet.text)
-
-# Using the Twitter API
-
-def get_tweet_list(search_term):
+def html_search(search_term, date):
+    headers = {'User-Agent': 'Mozilla/5.0'}
 
     search_term = urllib.parse.quote_plus(search_term)
-    url = URL.format(search_term)
 
-    consumer = oauth2.Consumer(key = API_KEY, secret = API_SECRET)
-    token = oauth2.Token(key = ACCESS_KEY, secret = ACCESS_SECRET)
-    client = oauth2.Client(consumer, token)
-    resp, content = client.request(url)
+    base_url = "https://twitter.com/search?f=tweets&vertical=default&q={}%20since%3A{}%20until%3A{}&src=typd"
+    reload_url = "https://twitter.com/search?f=tweets&vertical=default&q={}%20since%3A{}%20until%3A{}&max_position={}&src=typd"
 
-    tweets_l = []
-    data = json.loads(content.decode())
-    tweets = data['statuses']
+    y = int(date[0:4])
+    m = int(date[4:6])
+    d = int(date[6:8])
+    end_date_obj = dt.date(y, m, d)
+    month_obj = dt.timedelta(days=30)
+    begin_date_obj = end_date_obj - month_obj
 
-    for t in tweets:
-        tweets_l.append(t['text'])
+    end_date = end_date_obj.isoformat()
+    begin_date = begin_date_obj.isoformat()
 
-    return tweets_l
+    tweets_dict = {}
 
-def parse_tweets(tweet_list, search_term):
+    initial_run = True
 
-    words_dict = {}
+    while True:
+        time.sleep(random.random())
+        if initial_run:
+            r = requests.get(base_url.format(search_term, begin_date, end_date), headers = headers)
+            initial_run = False
+        else:
+            r = requests.get(reload_url.format(search_term, begin_date, end_date, pos), headers = headers)
 
-    for t in tweet_list:
-        t_l = t.split()
+        html = r.text
+        soup = bs4.BeautifulSoup(html, 'lxml')
+        tweets = soup.find_all('li', class_='js-stream-item stream-item stream-item ')
 
-        for word in t_l:
-            word = re.sub('[^a-z0-9\-\']', '', word.lower())
-            if (word in stop_words or word == '' or word == '-' 
-                or word in search_term.lower() or word.isdigit()
-                or word.startswith('http')):
-                continue
-            elif word not in words_dict:
-                words_dict[word] = 1
+        if tweets == []:
+            break
+
+        for tweet in tweets:
+            text = tweet.find_all('p', class_=re.compile('TweetTextSize js-tweet-text tweet-text*'))[0]
+            date = tweet.find_all('span', class_='_timestamp js-short-timestamp ')[0]
+            if date.text not in tweets_dict:
+                tweets_dict[date.text] = [text.text]
             else:
-                words_dict[word] += 1
+                tweets_dict[date.text].append(text.text)
 
-    return words_dict
+        pos = re.findall('data-max-position=\"(TWEET-[0-9]+-[0-9]+)', html)[0]
+
+    return tweets_dict
+
+def get_daily_twitter_sentiment(tweets_dict, search_term):
+    positive, negative = opinion_words.get_word_lexicons()
+
+    daily_dict = {}
+    total_dict = {}
+
+    for key, val in tweets_dict.items():
+        daily_dict[key] = {'positive': 0, 'negative': 0}
+        for tweet in val:
+            tweet_l = tweet.split()
+            for word in tweet_l:
+                word = re.sub('[^a-z0-9\-\']', '', word.lower())
+                if (word in stop_words or word == '' or word == '-' 
+                    or word.isdigit() or 'twittercom' in word or 'http' in word
+                    or word[0] in ['$', '@'] or word in search_term):
+                    continue
+                else:
+                    if word in positive:
+                        daily_dict[key]['positive'] += 1
+                    elif word in negative:
+                        daily_dict[key]['negative'] += 1
+
+                    if word not in total_dict:
+                        total_dict[word] = 1
+                    else:
+                        total_dict[word] += 1
+
+    sorted_words = sorted(total_dict.items(), key = lambda x: x[1], reverse = True)
+    sorted_daily_list = sorted(daily_dict.items())
+
+    return sorted_daily_list, sorted_words
+
+### GETTING PERCENTAGES FROM TWITTER ###
+
+def get_percentages(sorted_daily_list):
+    y_vals = []
+    x_vals = []
+    negative_l = []
+    positive_l = []
+    current = 0
+
+    for item in sorted_daily_list:
+        negative = item[1]['negative']
+        positive = item[1]['positive']
+        total = negative + positive
+
+        positive_l.append(positive/total)
+        negative_l.append(negative/total)
+
+        if negative > positive:
+            ratio = (positive-negative)/total
+        elif positive > negative:
+            ratio = (positive-negative)/total
+        else:
+            ratio = 0
+
+        current += ratio
+
+        y_vals.append(current)
+        x_vals.append(item[0])
+
+    return x_vals, y_vals, positive_l, negative_l
 
 ### USING NEW YORK TIMES API ###
 
@@ -205,3 +218,23 @@ def scrape_url_list(url_list, search_item):
 
     l = sorted(words_dict.items(), key = lambda x: x[1], reverse = True)
     return words_dict
+
+### NYT GET OPINION SCORE ###
+
+def get_opinion_score(search_item, date):
+    positive, negative = opinion_words.get_word_lexicons()
+
+    # NYT
+    nyt_urls = get_search_urls(search_item, date)
+    nyt_words = scrape_url_list(nyt_urls, search_item)
+
+    p_score = 0
+    n_score = 0
+
+    for word, count in nyt_words.items():
+        if word in positive:
+            p_score += count
+        elif word in negative:
+            n_score += count
+    
+    return p_score, n_score
