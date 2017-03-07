@@ -24,11 +24,12 @@ try:
 except ImportError:
     from urllib import urlencode
 from json import loads
+import pandas as pd
 
-def find_ticker(company_name):
+def find_ticker_from_internet(company_name):
     '''
-    Given a company name or ticker, finds the associated ticker or returns
-    possible options in case of a misspelling.
+    Given an input of company name or ticker, finds the associated ticker or returns
+    possible options in case the input is contained in multiple companies.
     '''
 
     response = urlopen('http://chstocksearch.herokuapp.com/api/{}'.format(company_name))
@@ -46,6 +47,12 @@ def find_ticker(company_name):
             print(index + 1, company)
         print('Please retry again using the proper name or ticker.')
         return
+
+def find_sector_and_industry(ticker):
+    df = pd.read_csv('companylist.csv')
+    sector = df['Sector'].loc[df['Symbol'] == ticker].tolist()[0]
+    industry = df['Industry'].loc[df['Symbol'] == ticker].tolist()[0]
+    return sector, industry
 
 def historical_basic(ticker, start_date, end_date, only_start_and_end):
     '''

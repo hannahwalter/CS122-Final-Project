@@ -49,7 +49,8 @@ class SearchForm(forms.Form):
     date = forms.DateField(
             label='Date to look for recommendation',
             widget=SelectDateWidget,
-            required=True)
+            required=True,
+            auto_now_add=True)
     investment_horizon = forms.MultipleChoiceField(
             label='Investment_horizon',
             choices=[('days', 'a couple of days'), ('weeks', 'a couple of weeks'), ('months', 'a couple of months'), ('years', 'a couple of years')],
