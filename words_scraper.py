@@ -25,6 +25,8 @@ import matplotlib.pyplot as plt
 
 import opinion_words
 import stock_scraper_v3
+from imp import reload
+reload(stock_scraper_v3)
 
 pm = urllib3.PoolManager()
 
@@ -51,7 +53,7 @@ def html_search(search_term, date):
     m = int(date[4:6])
     d = int(date[6:8])
     end_date_obj = dt.date(y, m, d)
-    month_obj = dt.timedelta(days=5)
+    month_obj = dt.timedelta(days=10)
     begin_date_obj = end_date_obj - month_obj
 
     end_date = end_date_obj.isoformat()
@@ -130,7 +132,7 @@ def monte_carlo(sorted_daily_list, search_term):
     end_date = sorted_daily_list[-1][0]
     ticker = search_term[1:]
 
-    stock_vals = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
+    stock_vals, stock_dates = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
     deltas = [abs(float(x) - float(y)) for x, y  in zip(stock_vals[1:], stock_vals[:-1])]
     max_delta = max(deltas)
     min_delta = min(deltas)
@@ -141,23 +143,69 @@ def monte_carlo(sorted_daily_list, search_term):
     current_sum_sq = None
     best_a = 0
     best_b = 0
+    best_c = 0
+    best_d = 0
 
     while current_run_count <= run_count:
-        A = random.uniform(max_delta, min_delta)
-        B = random.uniform(max_delta, min_delta)
+        index_diff = 0
+
+        A = random.uniform(-max_delta, max_delta)
+        B = random.uniform(-max_delta, max_delta)
+        C = random.uniform(-max_delta, max_delta)
+        D = random.uniform(-max_delta, max_delta)
 
         sum_sq = 0
 
         for i, day in enumerate(sorted_daily_list[1:]):
-            sq_error = (deltas[i] - (A*float(day[1]['positive']) - B*float(day[1]['negative'])))**2
+
+            if day[0] not in stock_dates:
+                index_diff += 1
+                continue
+            positive = float(day[1]['positive'])
+            negative = float(day[1]['negative'])
+            sq_error = (deltas[i - index_diff] - ((A*positive)**C - (B*negative)**D))**2
+            if type(sq_error) is complex:
+                print(sq_error)
+                print(A, B, C, D)
             sum_sq += sq_error
 
         if current_sum_sq == None or current_sum_sq > sum_sq:
             current_sum_sq = sum_sq
             best_a = A
             best_b = B
+            best_c = C
+            best_d = D
 
         current_run_count += 1
+
+    ax = plt.axes()
+    ax.plot(range(len(stock_vals)), stock_vals)
+
+    monte_carlo_sim = []
+    current = 0
+
+    initial_not_found = True
+    index_diff = 0
+
+    for i, day in enumerate(sorted_daily_list):
+        if day[0] not in stock_dates:
+            index_diff += 1
+            continue
+        if initial_not_found:
+            monte_carlo_sim.append(float(stock_vals[i-index_diff]))
+            current = float(stock_vals[i-index_diff])
+            initial_not_found = False
+            continue
+
+        positive = day[1]['positive']
+        negative = day[1]['negative']
+
+        val = current + float((positive*best_a)**best_c - (negative*best_b)**best_d) 
+        monte_carlo_sim.append(val)
+
+    ax.plot(range(len(stock_vals)), monte_carlo_sim)
+
+    plt.show()
 
     return best_a, best_b
 
@@ -179,8 +227,6 @@ def plot(stock_vals, daily_list, best_a, best_b):
     ax.plot(range(len(stock_vals)), monte_carlo_sim)
 
     plt.show()
-
-
 
 
 def get_percentages(sorted_daily_list):
