@@ -1,3 +1,15 @@
+# Team FiSci
+# Hannah Ni, Hannah Walter, Lin Su
+
+'''
+This code scrapes words from Twitter and NYTimes.
+
+Packages to install:
+    - bs4 (beautiful soup)
+    - urllib3
+    - requests
+    - regex
+'''
 import bs4
 import urllib3
 import requests
@@ -7,8 +19,12 @@ import math
 import time
 import json
 import urllib
-import opinion_words
 import random
+import collections
+import matplotlib.pyplot as plt
+
+import opinion_words
+import stock_scraper_v3
 
 pm = urllib3.PoolManager()
 
@@ -18,7 +34,9 @@ stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just',
 'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
 'percent'}
 
-<<<<<<< HEAD
+month_dict = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 
+            'June': '06', 'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
+
 ### SCRAPING TWITTER THROUGH HTML ###
 
 def html_search(search_term, date):
@@ -33,7 +51,7 @@ def html_search(search_term, date):
     m = int(date[4:6])
     d = int(date[6:8])
     end_date_obj = dt.date(y, m, d)
-    month_obj = dt.timedelta(days=30)
+    month_obj = dt.timedelta(days=5)
     begin_date_obj = end_date_obj - month_obj
 
     end_date = end_date_obj.isoformat()
@@ -60,17 +78,20 @@ def html_search(search_term, date):
 
         for tweet in tweets:
             text = tweet.find_all('p', class_=re.compile('TweetTextSize js-tweet-text tweet-text*'))[0]
-            date = tweet.find_all('span', class_='_timestamp js-short-timestamp ')[0]
-            if date.text not in tweets_dict:
-                tweets_dict[date.text] = [text.text]
+            date = tweet.find_all('a', class_='tweet-timestamp js-permalink js-nav js-tooltip')[0]
+            date_text = date['title'][-11:len(date['title'])]
+            date_text = date_text[7:11] + '-' + month_dict[date_text[3:6]] + '-' + date_text[0:2]
+            if date_text not in tweets_dict:
+                tweets_dict[date_text] = [text.text]
             else:
-                tweets_dict[date.text].append(text.text)
+                tweets_dict[date_text].append(text.text)
 
         pos = re.findall('data-max-position=\"(TWEET-[0-9]+-[0-9]+)', html)[0]
 
     return tweets_dict
 
 def get_daily_twitter_sentiment(tweets_dict, search_term):
+    search_term = re.sub('[^a-z0-9\-\']', '', search_term.lower())
     positive, negative = opinion_words.get_word_lexicons()
 
     daily_dict = {}
@@ -84,7 +105,7 @@ def get_daily_twitter_sentiment(tweets_dict, search_term):
                 word = re.sub('[^a-z0-9\-\']', '', word.lower())
                 if (word in stop_words or word == '' or word == '-' 
                     or word.isdigit() or 'twittercom' in word or 'http' in word
-                    or word[0] in ['$', '@'] or word in search_term):
+                    or word[0] in ['$', '@'] or word == search_term):
                     continue
                 else:
                     if word in positive:
@@ -102,7 +123,65 @@ def get_daily_twitter_sentiment(tweets_dict, search_term):
 
     return sorted_daily_list, sorted_words
 
-### GETTING PERCENTAGES FROM TWITTER ###
+### ANALYZING TWITTER SENTIMENT ###
+
+def monte_carlo(sorted_daily_list, search_term):
+    begin_date = sorted_daily_list[0][0]
+    end_date = sorted_daily_list[-1][0]
+    ticker = search_term[1:]
+
+    stock_vals = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
+    deltas = [abs(float(x) - float(y)) for x, y  in zip(stock_vals[1:], stock_vals[:-1])]
+    max_delta = max(deltas)
+    min_delta = min(deltas)
+
+    run_count = 100000
+    current_run_count = 0
+
+    current_sum_sq = None
+    best_a = 0
+    best_b = 0
+
+    while current_run_count <= run_count:
+        A = random.uniform(max_delta, min_delta)
+        B = random.uniform(max_delta, min_delta)
+
+        sum_sq = 0
+
+        for i, day in enumerate(sorted_daily_list[1:]):
+            sq_error = (deltas[i] - (A*float(day[1]['positive']) - B*float(day[1]['negative'])))**2
+            sum_sq += sq_error
+
+        if current_sum_sq == None or current_sum_sq > sum_sq:
+            current_sum_sq = sum_sq
+            best_a = A
+            best_b = B
+
+        current_run_count += 1
+
+    return best_a, best_b
+
+def plot(stock_vals, daily_list, best_a, best_b):
+    
+    ax = plt.axes()
+    ax.plot(range(len(stock_vals)), stock_vals)
+
+    monte_carlo_sim = [float(stock_vals[0])]
+    current = float(stock_vals[0])
+
+    for day in daily_list[1:]:
+        positive = day[1]['positive']
+        negative = day[1]['negative']
+
+        val = current + float(positive*best_a - negative*best_b) 
+        monte_carlo_sim.append(val)
+
+    ax.plot(range(len(stock_vals)), monte_carlo_sim)
+
+    plt.show()
+
+
+
 
 def get_percentages(sorted_daily_list):
     y_vals = []
