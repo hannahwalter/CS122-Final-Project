@@ -1,0 +1,86 @@
+Summary
+Pfizer pays an attractive dividend at 3.81%.
+It trades at a discount to future cash flow and is expected to grow earnings substantially.
+The company has a very strong and promising drug pipeline.
+Pfizer (NYSE:PFE) is a safe long term play. They have a strong dividend, trade at a discount to future cash flow, and they have a promising drug pipeline. They are positioned well to handle any threats to the pharmaceutical industry as a whole. I believe they make an excellent addition to any long term portfolio.
+Pfizer is a global pharmaceutical giant. They discover, develop, manufacture, and acquisition healthcare products. They operate in two segments: Pfizer Innovative Health and Pfizer Essential Health. They have two subsidiaries which are Hospira and Medivation. Pfizer focuses its research in six areas shown below.
+Immunology and Inflammation
+Cardiovascular and Metabolic Diseases
+Oncology
+Vaccines
+Neuroscience and Pain
+Rare Diseases
+What I Like
+The two things that make Pfizer part of my retirement portfolio are its future and its dividend. They have a very promising drug pipeline, including eight drugs awaiting approval, thirty in late-stage trials, and fifteen up-and-coming drugs that announce preliminary trial results within two years. Pfizer has also scooped up a few drugs in acquisitions as well, which should translate directly to revenue and profit. Specific drugs will be discussed later.
+An essential qualification for my retirement portfolio is a strong, high dividend. Pfizer's dividend rolls in at nearly 4% which is pretty nice in this era of low rates. Some may argue that they have a high payout ratio but Pfizer's cash flow is very strong and I believe the dividend is not at risk.
+Opportunity and Drivers
+Lets talk individual drugs. First up is Ibrance which is a breast cancer drug. Revenue for Ibrance close to tripled in 2016. The most rigorous of growth for Ibrance may be over but Pfizer has discussed ways of continuing to expand its market. This includes treating early stage breast cancer, and targeting physicians who have not yet taken to prescribing the drug. The list of promising drugs goes on: Xeljanz had a massive sales increase last year. Pfizer bought Xtandi and Eucrisa which both potentially hold billions in revenue. And, analysts seem to have noticed this. Future earnings estimates are shown in Figure 1.
+What happened
+According to data from S&P Global Market Intelligence, shares of Pfizer (NYSE:PFE) gained 7.7% in February. The move has added more than $11 billion to the pharma giant's market capitalization. 
+
+So what
+Pfizer showered investors with a number of positive announcements during the month that helped to nudge its stock higher. Here's a review of the most important announcements from the period:
+
+Top-line results from a study comparing its rheumatoid arthritis drug Xeljanz to AbbVie's Humira showed that Xeljanz in combination with methotrexate met its primary endpoint in demonstrating non-inferiority versus Humira in combination with methotrexate. 
+Pfizer and partner Celltrion Healthcare presented data at the annual Congress of the European Crohn's and Colitis Organisation. The data showed that Inflectra -- Pfizer's biosimilar version of Johnson & Johnson's megablockbuster drug Remicade -- showed similar efficacy and safety in treating Crohn's disease when compared to Remicade.
+
+Its FDA Biologics License Application, or BLA, for inotuzumab ozogamicin has been accepted for review. This drug has been granted Priority Review by the agency as a treatment for relapsed or refractory B-cell precursor acute lymphoblastic leukemia. A decision date is expected by August 2017. 
+According to Pfizer and partner EMD Serono, a second BLA has been accepted by the FDA for Priority Review of avelumab as a hopeful treatment for urothelial carcinoma. A decision is also expected in August of this year.
+
+Clinical-stage biotech Cara Therapeutics (NASDAQ:CARA) reports earnings on March 9, but investors won't be paying much attention to the financials. With important information on clinical trials of its innovative drug for pain and itching due to come out any day now, the market will be poised to jump on news of the drug's prospects -- good or bad.
+Cara Therapeutics has a single drug in human trials, CR845, which is a novel treatment for pain, inflammation, and pruritus (itching). Today's opioid drugs for severe pain work by acting on the central nervous system and attaching to the mu opioid receptors. This works well for blocking pain, but these drugs also produce euphoria, a side effect that has led to society's increasingly serious opioid addiction problem. CR845 instead attaches to the kappa opioid receptors in the periphery of the body, not only blocking pain, but tamping down inflammation and soothing itching as well. Since it doesn't cross the blood-brain barrier, it does not produce the euphoria that leads to abuse.
+
+Results from the pruritus trial are expected this month
+As recently as the January J.P. Morgan Healthcare Conference, Cara set expectations for a Q1 data readout from part A of a phase 2/3 trial of IV CR845 for pruritus in patients with severe kidney disease undergoing dialysis. Part A of the trial will test three different dose levels, and part B will focus on a particular dosage based on results of part A.
+
+Pruritus is a serious condition that severely degrades the quality of life for 60% to 70% of patients undergoing dialysis. Conventional itch medications like antihistamines or steroids don't help, so there are no approved therapies for these patients, who number 200,000 to 300,000 in the U.S. A positive readout could put Cara on the path for filing with the Food and Drug Administration (FDA) for its first commercial drug later this year, a development that would no doubt be cheered by investors.
+
+We may see an interim assessment of the IV pain trial
+Cara is also conducting a pivotal phase 3 trial of IV CR845 for post-operative pain. The company set expectations that the trial will be reading out in the first half, so it's likely we will not see the final results this month. But this is an innovative approach to pain trials in that it is adaptive. Midway through the trial, an assessment will be made in consultation with the FDA, and the study will be adjusted according to the data seen to that point. Efficacy data will not be released at that time, but the adjustments made to the trial will give observers some clues as to how the trial is progressing. If the results are strong, sample sizes could be decreased in order to speed the trial, and that would be a very positive sign. On the other side of the coin, if the company increases sample sizes, adds another treatment arm, or even halts the trial altogether as a consequence of the assessment, the stock could take a dive. We could get this information on March 9 or within the coming weeks.
+
+Expect volatility in this stock
+This company has put all its bets on CR845, and that horse is making the final turn for the home stretch this year. One characteristic of these pain and itching trials is that they progress very quickly. The pruritus study involves an eight-week treatment period, and post-operative pain results are available within days for each patient. With results reading out on two out of three late-stage clinical trials in the first half -- and important information potentially coming out within days -- shareholders could be in for a wild ride.
+
+This small company with a market capitalization of only $500 million could be on to something, though, and investors with a high tolerance for risk should take a look. The stock has run up in anticipation of news this quarter, but it is still 25% below its peak in 2015.
+As the cost to sequence the human genome falls and the movement toward personalized medicine accelerates, the use of genetic information to predict potential diseases will continue to grow. According to United Health, the U.S. genetic testing and diagnostics market in 2010 was worth about $5 billion. By 2021, that number is expected to triple to $15 billion.
+
+Below are two companies with the potential to profit from this huge secular growth trend.
+
+Genomic Health (NASDAQ:GHDX) is a leading provider of genomic diagnostic tests for early stage cancer. The company offers these diagnostics through its Oncotype DX-branded cancer tests. These tests use a form of genomic analysis to provide cancer-specific information about a tumor (aka the "oncotype"). Genomic Health then uses this information to predict the likelihood of cancer occurrence or recurrence following treatment.
+
+2016 was a strong year for Genomic Health, with the company delivering four consecutive quarters of double-digit revenue growth. Total revenue for the year came in at $328 million, up 14% over 2015. Looking forward, management has guided toward 2017 revenue between $355 and $370 million, representing a projected growth rate of 8% to 13%.
+
+While the company has struggled to post a profit in the past, management has guided toward profitability in 2017, mainly on the back of its prostate cancer test, which, though it was a small percentage of overall revenue last year, has been growing at a rapid pace. Currently trading at around two times next year's projected sales, Genomic Health could be a value play in the rapidly growing genetic diagnostics space.
+
+Invitae
+Invitae (NYSE:NVTA) is a San Francisco-based company focused on making comprehensive genetic testing more affordable and easily accessible. Since going public in early 2015, its share price has languished below its IPO value, yet Invitae has been steadily executing on its goals of driving down the cost of genetic testing for disorders though aggregated genetic testing -- basically combining hundreds of genetic tests into one cheaper, comprehensive test.  Currently, the company provides a diagnostic test that covers over 100 different conditions associated with oncology, cardiology, pediatrics, and neurology -- and it's rapidly adding more each quarter.
+
+Since Invitae went public, the number of genes its genetic tests cover has increased from 600 to over 1,000, and the cost per test has decreased from $750 to $400. As a result of these two factors, the company has posted tremendous growth metrics. In its most recent quarter, the firm reported revenues of $9.2 million -- a nearly 200% increase year over year. Compared to the same quarter in the prior year, test volume has tripled, and Invitae has been growing sales at roughly 25% to 30% quarterly since going public.
+
+The company currently sports a market cap of around $440 million. Management has guided toward 2017 revenue between $55 million and $65 million. While earnings are negative (and thus a traditional method of valuation such as P/E is inappropriate), it must be stated that while the company is growing quickly, it is also trading at the somewhat lofty valuation of six to seven times next year's revenue estimates. However, management has guided that they are well on their way toward achieving their long-term goal of 50% gross margin and 10% operating profits and expect to be cash-flow positive by Q4 2017.
+
+The better pick
+While both Genomic Health and Invitae both look set to profit from the growth of genetic diagnostics, these two companies could not be more different as investments. Trading at two times forward sales and projecting high-single-digit to low-double-digit revenue growth, Genomic Health is definitely the safer "value" approach to playing this space. However, assuming Invitae's management's guidance of $55 million to $65 million in revenue for 2017 is correct, this would imply a growth rate of over 100%. This, combined with the competitive edge Invitae enjoys by producing the most affordable, comprehensive genetic screening test, makes Invitae the better buy for me.
+
+Shares of Aurinia Pharmaceuticals (NASDAQ:AUPH) rose as much as 20% Tuesday morning after the company announced that it will present phase 2b data for its lead drug, voclosporin, at the National Kidney Foundation 2017 Spring Clinical Meetings in April. As of 11:36 a.m. EST, the stock had settled to gains of 19.2%.
+
+The company's abstract was accepted as part of the "late-breaking" component of the meetings, which is a common mechanism for scientific gatherings that provides a way for conference organizers to balance advanced planning with the desire to include the most up-to-date events. Voclosporin only released data from the phase 2b trial evaluating its ability to treat lupus nephritis on the first day of this month. 
+The lead drug not only met the 48-week endpoints for remission, but achieved the highest remission rate of any global lupus nephritis study ever completed. Both the low and high doses of voclosporin performed significantly better than the control arm, which is doubly important considering no drugs to date have shown a clear benefit for treating lupus nephritis. 
+Aurinia Pharmaceuticals announced that it would waste no time advancing the drug's development and initiate a phase 3 trial in the second quarter of 2017. Moreover, since the drug is intended to be used as a complement to standard care procedures, rather than completely upending standard care, it should have quick success in the market if it's eventually approved by regulators. An encore performance in a larger late-stage trial would make that a near-certainty.
+Presenting at the National Kidney Foundation isn't necessarily important for Aurinia Pharmaceuticals stock in the near term, but it will introduce voclosporin to the very doctors that will be prescribing it if it successfully reaches the market. Investors are betting that approval is pretty likely after great phase 2b data, so they're considering this event to be a crucial step in laying the groundwork for a successful commercial launch. The optimism is certainly understandable, but keep in mind there is still over one year before regulators make a decision one way or the other.
+
+Shares of Bristol-Myers Squibb (NYSE:BMY), a U.S. drug giant that's primarily focused on oncology, cardiovascular, and immunoscience therapies, catapulted higher by 15% during February, according to data from S&P Global Market Intelligence. The jump in Bristol-Myers' stock can mostly be attributed to increasing chatter regarding the potential for a buyout.
+
+The real surge in Bristol-Myers' shares began on Valentine's Day, when rumors started that Roche, Novartis, and Pfizer were actively exploring the idea of taking over Bristol-Myers, and Gilead Sciences was tinkering with the idea.
+Investors also found out during February that billionaire activist investor Carl Icahn had taken a stake in the company, based on a report from The Wall Street Journal. Icahn has a tenured track record of eliciting positive change with the management teams of the companies he invests in, whether that includes a simple restructuring or a full-fledged attempt to get a company to sell itself.
+
+Long story short, investors believe Bristol-Myers Squibb might be on the selling block, and its valuation has been bid up in the process.
+
+Now what
+Though there are plenty of reasons to believe Bristol-Myers could be a takeover target, with the company's valuation taking a hit in recent months, betting your chips solely on the idea of a buyout probably isn't a smart move. Instead, if you're considering buying into Bristol-Myers, I'd suggest giving credit where credit is due with Opdivo and Eliquis.
+While we can't ignore the disappointment Opdivo brought to the table in the CheckMate-026 study in first-line NSCLC, investors also shouldn't overlook the fact that Opdivo could be a foundational therapy in a variety of other cancer types for years to come. It's still a key player in advanced melanoma, second-line renal cell carcinoma, and second-line NSCLC. Plus, Opdivo is in countless combination and monotherapy studies for a number of other cancer types. Failures happen from time to time, but Opdivo is still poised to be a growth driver for Bristol-Myers.
+
+Likewise, Bristol-Myers and Pfizer's Eliquis continues to motor along as the leading next-gen oral anticoagulant. Label expansion opportunities and organic growth in existing indications should help push the top lines of both drugmakers higher.
+
+Bristol-Myers' PEG ratio of 1.4 and dividend yield of 2.7% could very well put it on the radars of value and income investors. It's a company I'd certainly suggest investors add to their watchlist and consider buying into for the long haul.
+
