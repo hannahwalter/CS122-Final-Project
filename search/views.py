@@ -12,19 +12,34 @@ from operator import and_
 from functools import reduce
 
 
+def give_recommendations(company_name, date, graphical_analysis = False, numerical_analysis = False):
+    return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]], ['/graphs/apple_1', '/graphs/apple_2']]
 
 def _valid_result(res):
     """
     Validates results returned by give_recommendations
     which is expected to be of the format:
-    [['Buy', confidence level (float based on sentiment index)],
-     ['Neutral', confidence level],
-     ['Sell', confidence level]]
+    [[['Buy', confidence level (float based on sentiment index)],
+      ['Neutral', confidence level],
+      ['Sell', confidence level]],
+     [['Positive sentiment', positive_sentiment_index_from_Twitter, positive_sentiment_index_from_New_York_Times],
+      ['Negative sentiment', negative_sentiment_index_from_Twitter, negative_sentiment_index_from_New_York_Times]],
+     [graph_file_path_1, graph_file_path_2, ...]]
     """
     for i in range(0, 3):
-        if not isinstance(res[i][0], str):
+        if not isinstance(res[0][i][0], str):
             return False
-        if not isinstance(res[i][1], float):
+        if not isinstance(res[0][i][1], float):
+            return False
+    for j in range(0, 2):
+        if not isinstance(res[1][j][0], str):
+            return False
+        if not isinstance(res[1][j][1], float):
+            return False
+        if not isinstance(res[1][j][2], float):
+            return False
+    for k in range(0, len(res[2])):
+        if not isinstance(res[2][k], str):
             return False
     return True
 
@@ -49,8 +64,7 @@ class SearchForm(forms.Form):
     date = forms.DateField(
             label='Date to look for recommendation',
             widget=SelectDateWidget,
-            required=True,
-            auto_now_add=True)
+            required=True)
     investment_horizon = forms.MultipleChoiceField(
             label='Investment_horizon',
             choices=[('days', 'a couple of days'), ('weeks', 'a couple of weeks'), ('months', 'a couple of months'), ('years', 'a couple of years')],
@@ -58,6 +72,10 @@ class SearchForm(forms.Form):
             required=False)
     show_args = forms.BooleanField(label='Show args_to_ui',
                                    required=False)
+    show_numerical_analysis = forms.BooleanField(label='Show numerical_analysis',
+                                    required=False)
+    show_graphical_analysis = forms.BooleanField(label='Show graphical_analysis',
+                                    required=False)
 
 
 def home(request):
@@ -71,14 +89,18 @@ def home(request):
 
             # Convert form data to an args dictionary for find_courses
             args = {}
-            if form.cleaned_data['company_name']:
-                args['company_name'] = form.cleaned_data['company_name']
+            # if form.cleaned_data['company_name']:
+            #     args['company_name'] = form.cleaned_data['company_name']
             if form.cleaned_data['date']:
-                args['date'] = form.cleaned_data['date']
+                args['date'] = form.cleaned_data['date'].isoformat()
             if form.cleaned_data['investment_horizon']:
                 args['investment_horizon'] = form.cleaned_data['investment_horizon']
+            if form.cleaned_data['show_numerical_analysis']:
+                args['numerical_analysis'] = form.cleaned_data['show_numerical_analysis']
+            if form.cleaned_data['show_graphical_analysis']:
+                args['graphical_analysis'] = form.cleaned_data['show_graphical_analysis']
             if form.cleaned_data['show_args']:
-                context['args'] = 'args_to_ui = ' + json.dumps(args, indent=2)
+                context['args'] = 'args_to_ui:\n' + json.dumps(args, indent=4)
 
             try:
                 res = give_recommendations(args)
@@ -98,19 +120,15 @@ def home(request):
     # Handle different responses of res
     if res is None:
         context['result'] = None
-    elif isinstance(res, str):
-        context['result'] = None
-        context['err'] = res
-        result = None
     elif not _valid_result(res):
         context['result'] = None
-        context['err'] = ('Return of fgive_recommendation has the wrong data type. '
-                         'Should be a list of length 3 of [str, float]')
+        context['err'] = ('Return of fgive_recommendation has the wrong data format. ')
     else:
-        result = res
-        context['result'] = result
-        context['num_results'] = len(result)
-        context['columns'] = ['recommendation', 'confidence level']
+        context['result'] = res[0:min(2, len(res))]
+        if len(res) == 3:
+            context['image'] = res[2]
+        else:
+            context['image'] = None
 
     context['form'] = form
     return render(request, 'index.html', context)
