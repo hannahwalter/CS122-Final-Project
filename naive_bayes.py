@@ -64,10 +64,10 @@ def gen_train_list(num_pos, num_neg):
     pos_train = []
     neg_train = []
     for i in range(num_pos):
-        pos_file = "/positive_train/pos_"i+1".txt"
+        pos_file = "/positive_train/pos_"+str(i+1)+".txt"
         pos_train.append(pos_file)
     for i in range(num_neg):
-        neg_file = "/negative_train/neg_"i+1".txt"
+        neg_file = "/negative_train/neg_"+ str(i+1)+".txt"
         neg_train.append(pos_file)
     return pos_train, neg_train
 
