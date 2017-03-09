@@ -22,6 +22,7 @@ import urllib
 import random
 import collections
 import matplotlib.pyplot as plt
+#from fake_useragent import UserAgent
 
 import opinion_words
 import stock_scraper_v3
@@ -36,12 +37,104 @@ stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just',
 'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
 'percent'}
 
+headers = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"}
+
 month_dict = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 
             'June': '06', 'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
 
+### SCRAPING SEEKING ALPHA WITH BEAUTIFUL SOUP ###
+
+def scrape_sa(search_term, date, days):
+
+    y = int(date[0:4])
+    m = int(date[4:6])
+    d = int(date[6:8])
+    end_date_obj = dt.date(y, m, d)
+    month_obj = dt.timedelta(days)
+    begin_date_obj = end_date_obj - month_obj
+
+    end_date = end_date_obj.isoformat()
+    begin_date = begin_date_obj.isoformat()
+
+    search_term = urllib.parse.quote_plus(search_term)
+
+    url = "https://seekingalpha.com/symbol/AAPL/focus?page={}"
+    base = "https://seekingalpha.com"
+    page_count = 1
+
+    url_dict = {}
+
+    more_scrapes = True
+
+    while more_scrapes:
+        current_d = ''
+        time.sleep(1)
+        r = requests.get(url.format(str(page_count)), headers = headers)
+        if r.status_code != 200:
+            print(page_count, 'error')
+        html = r.text
+        soup = bs4.BeautifulSoup(html, 'lxml')
+        items = soup.find_all('div', class_='symbol_article')
+
+        for item in items:
+            link = item.find_all('a')[0]['href']
+            link = base + link
+            date = item.find_all('div', class_='date_on_by')[0].text
+            if 'Yesterday' in date:
+                current_d = (dt.date.today() - dt.timedelta(1)).isoformat()
+            date = re.findall('(?:(?:[A-Z][a-z]{2}, [A-Z][a-z]{2}\. [0-9]*)|(?:[A-Z][a-z]{2}\. [0-9]{1,2}, [0-9]{4}))', date)
+            if len(date) > 0:
+                date = date[0]
+                date_m = month_dict[date[5:8]]
+                date_d = date[-2:len(date)]
+                if ' ' in date_d:
+                    date_d = re.sub(' ' , '0', date_d)
+                current_d = str(y) + '-' + date_m + '-' + date_d
+
+                if current_d > end_date:
+                    continue
+                if current_d < begin_date:
+                    more_scrapes = False
+                    break
+                else:
+                    if current_d not in url_dict:
+                        url_dict[current_d] = [link]
+                    else:
+                        url_dict[current_d].append(link)
+
+        page_count += 1
+
+    return url_dict
+
+def scrape_urls(url_dict):
+    article_dict = {}
+
+    for date, url_list in url_dict.items():
+        article_dict[date] = []
+        for url in url_list:
+            article = ''
+            time.sleep(random.random)
+            r = requests.get(url, headers = headers)
+            if r.status_code != 200:
+                print('error', url)
+            html = r.text
+            soup = bs4.BeautifulSoup(html, 'lxml')
+
+            p_text_1 = soup.find_all('div', class_='p p1')
+            p_text_2 = soup.find_all('p', class_='p p1')
+
+            p_text = p_text_1 + p_text_2
+
+            for p in p_text:
+                article = article + p.text
+
+            article_dict[date].append(article)
+
+    return article_dict
+
 ### SCRAPING TWITTER THROUGH HTML ###
 
-def html_search(search_term, date):
+def html_search(search_term, date, days):
     headers = {'User-Agent': 'Mozilla/5.0'}
 
     search_term = urllib.parse.quote_plus(search_term)
@@ -53,7 +146,7 @@ def html_search(search_term, date):
     m = int(date[4:6])
     d = int(date[6:8])
     end_date_obj = dt.date(y, m, d)
-    month_obj = dt.timedelta(days=10)
+    month_obj = dt.timedelta(days)
     begin_date_obj = end_date_obj - month_obj
 
     end_date = end_date_obj.isoformat()
@@ -132,41 +225,49 @@ def monte_carlo(sorted_daily_list, search_term):
     end_date = sorted_daily_list[-1][0]
     ticker = search_term[1:]
 
-    stock_vals, stock_dates = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
-    deltas = [abs(float(x) - float(y)) for x, y  in zip(stock_vals[1:], stock_vals[:-1])]
-    max_delta = max(deltas)
-    min_delta = min(deltas)
-
-    run_count = 100000
+    stock_vals_df = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
+    max_delta = max(abs(stock_vals_df['delta']))
+    print(stock_vals_df)
+    run_count = 10000
     current_run_count = 0
-
     current_sum_sq = None
     best_a = 0
     best_b = 0
     best_c = 0
     best_d = 0
 
+
     while current_run_count <= run_count:
         index_diff = 0
 
-        A = random.uniform(-max_delta, max_delta)
-        B = random.uniform(-max_delta, max_delta)
-        C = random.uniform(-max_delta, max_delta)
-        D = random.uniform(-max_delta, max_delta)
+        A = random.uniform(0*max_delta, 200*max_delta)
+        B = random.uniform(0*max_delta, 200*max_delta)
+        C = random.uniform(0,1)
+        D = random.uniform(0,1)
 
         sum_sq = 0
+        model = 0
+        initial_found = False
 
-        for i, day in enumerate(sorted_daily_list[1:]):
+        for i, day in enumerate(sorted_daily_list):
 
-            if day[0] not in stock_dates:
+            if day[0] not in stock_vals_df.index:
                 index_diff += 1
                 continue
             positive = float(day[1]['positive'])
             negative = float(day[1]['negative'])
-            sq_error = (deltas[i - index_diff] - ((A*positive)**C - (B*negative)**D))**2
-            if type(sq_error) is complex:
-                print(sq_error)
-                print(A, B, C, D)
+
+            if not initial_found:
+                model = stock_vals_df.loc[day[0], 'stock_val']
+                intial_found = True
+
+            val = A*(positive**C) - B*(negative**D)
+
+            model += val
+
+            #sq_error = (stock_vals_df.loc[day[0], 'delta'] - val)**2
+            sq_error = (stock_vals_df.loc[day[0], 'stock_val'] - model)**2
+
             sum_sq += sq_error
 
         if current_sum_sq == None or current_sum_sq > sum_sq:
@@ -179,7 +280,8 @@ def monte_carlo(sorted_daily_list, search_term):
         current_run_count += 1
 
     ax = plt.axes()
-    ax.plot(range(len(stock_vals)), stock_vals)
+    ax.plot(range(len(stock_vals_df)), stock_vals_df['stock_val'])
+    print(stock_vals_df['stock_val'])
 
     monte_carlo_sim = []
     current = 0
@@ -188,26 +290,31 @@ def monte_carlo(sorted_daily_list, search_term):
     index_diff = 0
 
     for i, day in enumerate(sorted_daily_list):
-        if day[0] not in stock_dates:
-            index_diff += 1
+        print(i, day)
+        if day[0] not in stock_vals_df.index:
+            print('not in stock')
             continue
         if initial_not_found:
-            monte_carlo_sim.append(float(stock_vals[i-index_diff]))
-            current = float(stock_vals[i-index_diff])
+            print('initial value')
+            monte_carlo_sim.append(stock_vals_df.loc[day[0], 'stock_val'])
+            current = stock_vals_df.loc[day[0], 'stock_val']
             initial_not_found = False
             continue
 
-        positive = day[1]['positive']
-        negative = day[1]['negative']
+        print('regular calculation')
+        positive = float(day[1]['positive'])
+        negative = float(day[1]['negative'])
 
-        val = current + float((positive*best_a)**best_c - (negative*best_b)**best_d) 
-        monte_carlo_sim.append(val)
+        current += (positive**best_c)*best_a - (negative**best_d)*best_b
+        monte_carlo_sim.append(current)
 
-    ax.plot(range(len(stock_vals)), monte_carlo_sim)
+    ax.plot(range(len(stock_vals_df)), monte_carlo_sim)
 
     plt.show()
 
-    return best_a, best_b
+    print(monte_carlo_sim)
+
+    return best_a, best_b, best_c, best_d
 
 def plot(stock_vals, daily_list, best_a, best_b):
     
