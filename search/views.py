@@ -15,13 +15,13 @@ from django.forms.extras.widgets import SelectDateWidget
 from django.forms import ModelForm, Form
 from django.utils import timezone
 
-def give_recommendations(company_name, date=datetime.datetime.now(), investment_horizon = None, graphical_analysis = False, numerical_analysis = False):
-    l = [[['Buy', .10], ['Neutral', .40], ['Sell', .35]]]
-    if graphical_analysis:
-        return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]], graphical_analysis]
-    else:
-        return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]]]
-
+# def give_recommendations(company_name, date=datetime.datetime.now(), investment_horizon = None, graphical_analysis = False, numerical_analysis = False):
+#     l = [[['Buy', .10], ['Neutral', .40], ['Sell', .35]]]
+#     if graphical_analysis:
+#         return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]], graphical_analysis]
+#     else:
+#         return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]]]
+# 
 # def _valid_result(res):
 #     """
 #     Validates results returned by give_recommendations
@@ -51,17 +51,16 @@ def give_recommendations(company_name, date=datetime.datetime.now(), investment_
 #             if not isinstance(res[2][k], str):
 #                 return False
 #     return True
+# 
+# def _valid_date(date):
+#     if not isinstance(date, str):
+#         return False
+#     if not date[4] == '-':
+#         return False
+#     if not date[6] == '-':
+#         return False
+#     return True
 
-def _valid_date(date):
-    if not isinstance(date, str):
-        return False
-    if not date[4] == '-':
-        return False
-    if not date[6] == '-':
-        return False
-    return True
-
-today_date = datetime.datetime.now()
 class SearchForm(forms.Form):
     company_name = forms.CharField(
             label='Key word(s) in company name or ticker',
@@ -134,12 +133,16 @@ def home(request):
         context['result'] = res[0]
         if form.cleaned_data['show_graphical_analysis']:
             context['image'] = True
+            if form.cleaned_data['show_numerical_analysis']:
+                context['number'] = res[1]
+            else:
+                context['number'] = None
         else:
             context['image'] = None
-        if form.cleaned_data['show_numerical_analysis']:
-            context['number'] = res[1]
-        else:
-            context['number'] = None
+            if form.cleaned_data['show_numerical_analysis']:
+                context['number'] = res[1]
+            else:
+                context['number'] = None
 
     context['form'] = form
     return render(request, 'index.html', context)

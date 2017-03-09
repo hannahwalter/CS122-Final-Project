@@ -26,7 +26,7 @@ except ImportError:
 from json import loads
 import pandas as pd
 
-def find_ticker_from_internet(company_name):
+def find_ticker_and_name_from_internet(company_name):
     '''
     Given an input of company name or ticker, finds the associated ticker or returns
     possible options in case the input is contained in multiple companies.
@@ -40,7 +40,8 @@ def find_ticker_from_internet(company_name):
               "\nPlease check your spelling and try again: ")
     elif len(json_obj) == 2: 
         ticker = json_obj[0]['symbol']
-        return ticker
+        name = json_obj[0]['company']
+        return ticker, name
     else:
         print('We found the following company names and tickers that contain your input: ')
         for index, company in enumerate(json_obj[:-1]):
