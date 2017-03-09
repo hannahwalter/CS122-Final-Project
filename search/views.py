@@ -8,12 +8,15 @@ import sys
 import csv
 import os
 from operator import and_
-# from give_recommendations import give_recommendations
+# from create_output import create_output
 from functools import reduce
 import datetime
 from django.forms.extras.widgets import SelectDateWidget
 from django.forms import ModelForm, Form
 from django.utils import timezone
+
+def create_output(d):
+    return 'abc'
 
 # def give_recommendations(company_name, date=datetime.datetime.now(), investment_horizon = None, graphical_analysis = False, numerical_analysis = False):
 #     l = [[['Buy', .10], ['Neutral', .40], ['Sell', .35]]]
@@ -71,16 +74,13 @@ class SearchForm(forms.Form):
             widget=SelectDateWidget,
             initial=datetime.date.today(),
             required=True)
-    investment_horizon = forms.MultipleChoiceField(
-            label='Investment_horizon',
-            choices=[('days', 'a couple of days'), ('weeks', 'a couple of weeks'), ('months', 'a couple of months'), ('years', 'a couple of years')],
-            widget=forms.CheckboxSelectMultiple,
-            required=False)
     show_args = forms.BooleanField(label='Show args_to_ui',
                                    required=False)
-    show_numerical_analysis = forms.BooleanField(label='Show numerical_analysis',
+    bag_of_words = forms.BooleanField(label='Show bag of words',
                                     required=False)
-    show_graphical_analysis = forms.BooleanField(label='Show graphical_analysis',
+    monte_carlo = forms.BooleanField(label='Show Monte Carlo',
+                                    required=False)
+    naive_bayes = forms.BooleanField(label='Show naive bayes',
                                     required=False)
 
 
@@ -95,21 +95,25 @@ def home(request):
 
             # Convert form data to an args dictionary for find_courses
             args = {}
-            if form.cleaned_data['company_name']:
-                args['company_name'] = form.cleaned_data['company_name']
-            if form.cleaned_data['date']:
-                args['date'] = form.cleaned_data['date'].isoformat()
-            if form.cleaned_data['investment_horizon']:
-                args['investment_horizon'] = form.cleaned_data['investment_horizon']
-            if form.cleaned_data['show_numerical_analysis']:
-                args['numerical_analysis'] = form.cleaned_data['show_numerical_analysis']
-            if form.cleaned_data['show_graphical_analysis']:
-                args['graphical_analysis'] = form.cleaned_data['show_graphical_analysis']
+            args['company_name'] = form.cleaned_data['company_name']
+            args['date'] = form.cleaned_data['date'].isoformat()
+            if form.cleaned_data['bag_of_words']:
+                args['bag_of_words'] = True
+            else:
+                args['bag_of_words'] = False
+            if form.cleaned_data['monte_carlo']:
+                args['monte_carlo'] = True
+            else:
+                args['monte_carlo'] = False
+            if form.cleaned_data['naive_bayes']:
+                args['naive_bayes'] = True
+            else:
+                args['naive_bayes'] = False
             if form.cleaned_data['show_args']:
                 context['args'] = 'args_to_ui:\n' + json.dumps(args, indent=4)
 
             try:
-                res = give_recommendations(args)
+                res = create_output(args)
             except Exception as e:
                 print('Exception caught')
                 bt = traceback.format_exception(*sys.exc_info()[:3])
@@ -130,19 +134,10 @@ def home(request):
     #     context['result'] = None
     #     context['err'] = ('Return of fgive_recommendation has the wrong data format. ')
     else:
-        context['result'] = res[0]
-        if form.cleaned_data['show_graphical_analysis']:
+        context['result'] = res
+        if form.cleaned_data['monte_carlo']:
             context['image'] = True
-            if form.cleaned_data['show_numerical_analysis']:
-                context['number'] = res[1]
-            else:
-                context['number'] = None
         else:
-            context['image'] = None
-            if form.cleaned_data['show_numerical_analysis']:
-                context['number'] = res[1]
-            else:
-                context['number'] = None
-
+            context['image'] = False
     context['form'] = form
     return render(request, 'index.html', context)
