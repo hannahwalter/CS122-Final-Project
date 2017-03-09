@@ -59,13 +59,14 @@ class Bayes:
         else:
             ret_prob = math.log(PRIOR_PROB_NEG) + sum_probs
         return ret_prob
-def classify(pos_text, neg_text, test_text, order):
+
+def classify(pos_list, neg_list, test_text, order):
     len_test = len(re.sub("[^\w]", " ",  test_text).split())
 
-    pos_model = Bayes(pos_text, order, "positive")
+    pos_model = Bayes(pos_list, order, "positive")
     pos_prob = pos_model.get_probs(test_text)/len_test
 
-    neg_model = Bayes(neg_text, order, "negative")
+    neg_model = Bayes(neg_list, order, "negative")
     neg_prob = neg_model.get_probs(test_text)/len_test
 
     conclusion = None
