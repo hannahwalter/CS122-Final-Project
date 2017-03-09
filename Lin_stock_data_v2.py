@@ -77,10 +77,6 @@ while ticker == '':
                 print('Sorry, we could not recognize the index that you entered just now.\n\nPlease try again from the start: ')
                 break
 
-
-
-
-
 def historical_basic(start_date, end_date, only_start_and_end):
     '''
     Inputs:
@@ -102,8 +98,6 @@ def historical_basic(start_date, end_date, only_start_and_end):
         for day_data in raw:
             processed.append(day_data['Close'])
         return processed
-
-
 
 def find_date_range_start(approximate_date, range_of_approximation):
     '''
@@ -167,8 +161,6 @@ def find_date_range_end(approximate_date, range_of_approximation):
 
     end_date = str(year) + '-' + str(month) + '-' + str(day)
     return end_date
-
-
 
 def historical_optimized(approximate_start_date, approximate_end_date, range_of_approximation):
     '''
