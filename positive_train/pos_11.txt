@@ -1,0 +1,33 @@
+2 New Technologies That Could Power Cirrus Logic Higher
+Here's how Cirrus Logic could diversify beyond Apple.
+Cirrus Logic (NASDAQ:CRUS) paid the price of depending on Apple (NASDAQ:AAPL) for 85% of its revenue in the third quarter. Though it delivered a tremendous financial performance due to the ramp up in iPhone 7 production, a tepid outlook sent alarm bells ringing. The stock market took note of Cirrus Logic's weak outlook and its shares dropped 14% the next day.
+
+The problem is that Cirrus' revenue is highly dependent on the iPhone production cycle, which is like putting all your eggs in one basket. If Apple does not increase Cirrus' content in its phones or cuts its production volumes, the latter's financial performance gets severely impacted. Apple is not expected to bring any new Cirrus technology into its next iPhone.
+
+No increase in chip content at Apple is going to hurt Cirrus' revenue growth. Consensus estimates indicate that its revenue will grow only 6.5% in fiscal year 2018 as compared to estimated gains of 31% in the current fiscal year.
+
+Cirrus needs the power of diversification in order to sustain its strong revenue growth and avoid Apple-related fluctuations. The good news for Cirrus investors is that there are two key technologies that could help it diversify not just in smartphones but into other industries as well.
+
+Voice biometrics will be a big deal
+Cirrus' research in voice biometrics will play a major role in its push to diversify itself as this technology, which allows people to interact with their devices via voice, will find application in a variety of fields. Voice biometrics has several use cases, ranging from connected cars to smart homes to the Internet of Things. The technology is also gaining traction in the fields of banking and financial services for user authentication.
+
+Infiniti Research forecasts that the voice recognition biometrics market will grow at an annual pace of almost 19.4% from 2017 to 2021. This is close to the 22.9% annual growth expected by Tractica in the overall biometrics market, which includes other sub-segments such as facial, fingerprint, and iris recognition.
+
+In all, the total biometrics market is expected to be worth $15.1 billion by 2025, according to Tractica, and voice recognition stands to be an important pillar of its growth due to its application across industries. Banks, for instance, are increasingly deploying voice biometrics. Both Barclays and HSBC started using voice recognition to securely identify customers last year.
+
+What's more, the adoption of voice biometrics in mobile devices is also expected to pick up pace going forward. Apple itself filed a patent last February related to voice-recognition-based authentication. Apple's patent filing says that:
+
+A device can be configured to receive speech input from a user. The speech input can include a command for accessing a restricted feature of the device. The speech input can be compared to a voiceprint (e.g., text-independent voiceprint) of the user's voice to authenticate the user to the device.
+
+Cirrus can capitalize on the possibility of Apple deploying voice biometrics in its future phones as it is all set to "tape out" its first component in 2017. Cirrus management says that the company will start sampling its voice-biometrics-enabling components in the quarter that runs July September of 2017.
+
+Cirrus believes that it could start generating revenue from this technology after the next fiscal year ends. Therefore, it won't be surprising if Cirrus' growth gets back on track after a weak fiscal 2018 once it launches its voice biometrics-enabling chips.
+
+Active noise cancellation is a more immediate catalyst
+TechSci Research forecasts that the market for earphones and headphones could surpass $19 billion in revenue over the next five years as smartphone makers try to deliver a superior audio experience to customers. The use of active noise cancellation (ANC) technology is one way to deliver an immersive audio experience. 
+
+Samsung (NASDAQOTH:SSNLF), for instance, is expected to sell ANC-enabled wireless headphones alongside the upcoming Galaxy S8. Samsung believes that the use of ANC will allow it to cut out ambient noise by a maximum of 20 decibels and result in a better audio experience, which will give it a differentiating factor against rivals.
+
+An immersive audio experience, however, will not come cheap as Samsung is expected to charge 130 euros (or $138 approximately) for the headphones. Now, Cirrus' first headset with ANC technology is expected to be launched soon. As Samsung is one of its customers, it is likely that a Cirrus chip is powering the Korean giant's ANC-enabled headphone.
+
+What's more, Cirrus is already in talks with more customers for its ANC headsets and seems to have landed a few design wins already. As the design wins materialize and the adoption of voice biometrics and ANC gains traction, Cirrus Logic will find new avenues to augment its growth. Therefore, despite a year of slow growth in fiscal 2018, Cirrus Logic's long-term prospects appear to be bright based on the possibilities presented by these two technologies.

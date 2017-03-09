@@ -1,0 +1,38 @@
+Better Buy: NVIDIA Corporation vs. Texas Instruments
+Which semiconductor stock is more attractive today?
+NVIDIA (NASDAQ:NVDA) has been one of the hottest stocks on the market over the last year, though notably not the hottest. The GPU specialist's enviable rally over the last year or so has obscured the equally impressive broad rally that has taken place in shares of similar semiconductor stocks like Texas Instruments (NASDAQ:TXN), albeit to very different degrees.
+
+Both companies are benefiting in different ways from important trends moving the broader semiconductor market. To determine which stock is more attractive, we'll run NVIDIA and Texas Instruments through a three-part analysis to gain a deeper sense of what's happening with each company's investment thesis.
+
+Financial fortitude
+Both NVIDIA and Texas Instruments appear to be in perfectly fine financial shape. Here's a quick preview of some of the most important solvency and liquidity measures for both companies.
+
+In assessing which company is in better shape, it's something of a mixed bag. As you can see, NVIDIA carries more cash and less debt. You can also use the metric net cash, which is calculated as cash and equivalents minus debt. It's also important to remember that companies can carry debt for any number of reasons, some productive and destructive.
+
+Investors looking at either company in question here should take comfort in the fact that both chipmakers have more cash than borrowings as of their most recent earnings reports. Barring some undisclosed risk, solvency issues are not a factor for either company. Both companies have plenty of working capital, too, as evidenced by their current ratios, which are well above 1.0.
+
+Lastly, Texas Instruments' substantially larger operating cash flow might seem like an advantage here, and it is -- to a certain degree. Importantly though, it's also a reflection of Texas Instruments' larger overall financial footprint.
+
+For context, Texas Instruments and NVIDIA generated sales of $13.4 billion and $6.9 billion, respectively, last year. They similarly produced profits of $3.6 billion and $1.6 billion, respectively, as well. While it's indeed an advantage that Texas Instruments generates more cash flow from operations, it's primarily due its more sizable sales base.
+Durable competitive advantages
+Comparing the qualitative business factors of NVIDIA and Texas Instruments is something of an exercise in contrasts. NVIDIA is an established, but high-growth,company whose leading graphics-processing chips lie at the heart of important growth markets, including eSports, self-driving cars, artificial-intelligence software, and more.
+
+Fortunately for the company and its shareholders, NVIDIA largely invented the graphics processing unit -- colloquially, the GPU -- and its historical expertise in this area of the semiconductor space has enabled its chips to generally remain among the most competitive in the industry. Many of NVIDIA's core-growth markets remain in the early stages, but NVIDIA's long-standing leadership in its areas of expertise provide it with some degree of a durable competitive advantage.
+
+Unlike NVIDIA, Texas Instruments' competitive advantage lies not in the innovative chips it makes, but largely in the innovative way it makes its chips. If you pay attention to the company for a while, you'll inevitably hear about TI's "flexible capacity" approach to manufacturing. In it, the company owns and produces the bulk silicon wafers and chips in-house, but it maintains active contractor relationships with third-party chip foundries, as well. This uniquely flexible approach to its supply chain allows TI to shift its production to wherever it is the most economical at any given time.
+
+Doing so allows the company to gain cost advantages in its two main semiconductor segments -- analog and embedded processing -- which enables it to compete for market share while maintaining an above-average margin profile. This will help TI compete effectively for market share in the generational growth market the Internet of Things represents.
+
+Valuation
+Like their competitive advantages, NVIDIA and TI are two very different companies, so comparing their valuations presents something of an apples-vs.-oranges analysis. To help frame this discussion, though, here are three of the most commonly used valuation metrics as they appear for each company.
+
+The most important element in framing this discussion is time frame. Analysts see Texas Instruments growing its earnings per share (EPS) by 18% this year, so it easily could be argued that it's the better stock to own over the next 12 months. For comparison's sake, analysts see NVIDIA only growing its EPS by 10% during its current year.
+
+However, we're avowed long-term investors here at the Fool. Looking at both companies from a five-to-10-year perspective, NVIDIA's dominance of several big-ticket growth markets likely gives it larger opportunities for meaningful sales, profit, and thus, stock-price growth over the long term.
+
+Winner: NVIDIA, with some caveats.
+
+And the winner is NVIDIA -- by a nose
+It's important to stress that both NVIDIA and Texas Instruments are intriguing buy candidates. Texas Instruments' management prowess, commitment to dividend growth, and exposure to the Internet of Things make this mature chipmaker an interesting candidate for investors looking for gradual growth. However, as previously referenced, NVIDIA's growth runway gives it the potential to deliver market-beating results for years to come, albeit with some added risk.
+
+At the end of the day, NVIDIA and Texas Instruments are both great stocks, but I like NVIDIA more for its growth potential.
