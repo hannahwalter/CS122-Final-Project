@@ -8,61 +8,12 @@ import sys
 import csv
 import os
 from operator import and_
-# from create_output import create_output
+from create_output import create_output
 from functools import reduce
 import datetime
 from django.forms.extras.widgets import SelectDateWidget
 from django.forms import ModelForm, Form
 from django.utils import timezone
-
-def create_output(d):
-    return 'abc'
-
-# def give_recommendations(company_name, date=datetime.datetime.now(), investment_horizon = None, graphical_analysis = False, numerical_analysis = False):
-#     l = [[['Buy', .10], ['Neutral', .40], ['Sell', .35]]]
-#     if graphical_analysis:
-#         return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]], graphical_analysis]
-#     else:
-#         return [[['Buy', .10], ['Neutral', .40], ['Sell', .35]], [['Positive sentiment', .776, .522], ['Negative sentiment', .283, .554]]]
-# 
-# def _valid_result(res):
-#     """
-#     Validates results returned by give_recommendations
-#     which is expected to be of the format:
-#     [[['Buy', confidence level (float based on sentiment index)],
-#       ['Neutral', confidence level],
-#       ['Sell', confidence level]],
-#      [['Positive sentiment', positive_sentiment_index_from_Twitter, positive_sentiment_index_from_New_York_Times],
-#       ['Negative sentiment', negative_sentiment_index_from_Twitter, negative_sentiment_index_from_New_York_Times]],
-#      [graph_file_path_1, graph_file_path_2, ...]]
-#     """
-#     for i in range(0, 3):
-#         if not isinstance(res[0][i][0], str):
-#             return False
-#         if not isinstance(res[0][i][1], float):
-#             return False
-#     if len(res) == 2:
-#     for j in range(0, 2):
-#         if not isinstance(res[1][j][0], str):
-#             return False
-#         if not isinstance(res[1][j][1], float):
-#             return False
-#         if not isinstance(res[1][j][2], float):
-#             return False
-#     if len(res) == 3:
-#         for k in range(0, len(res[2])):
-#             if not isinstance(res[2][k], str):
-#                 return False
-#     return True
-# 
-# def _valid_date(date):
-#     if not isinstance(date, str):
-#         return False
-#     if not date[4] == '-':
-#         return False
-#     if not date[6] == '-':
-#         return False
-#     return True
 
 class SearchForm(forms.Form):
     company_name = forms.CharField(
@@ -82,7 +33,6 @@ class SearchForm(forms.Form):
                                     required=False)
     naive_bayes = forms.BooleanField(label='Show naive bayes',
                                     required=False)
-
 
 def home(request):
     context = {}
@@ -130,9 +80,6 @@ def home(request):
     # Handle different responses of res
     if res is None:
         context['result'] = None
-    # elif not _valid_result(res):
-    #     context['result'] = None
-    #     context['err'] = ('Return of fgive_recommendation has the wrong data format. ')
     else:
         context['result'] = res
         if form.cleaned_data['monte_carlo']:
