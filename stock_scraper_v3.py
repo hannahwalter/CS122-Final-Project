@@ -79,7 +79,6 @@ def historical_basic(ticker, start_date, end_date, only_start_and_end):
         processed = {'date': [], 'stock_val': [], 'delta': []}
         deltas = []
         for i, day_data in enumerate(raw):
-            print(day_data['Date'])
             if i == 0:
                 processed['delta'].append(0)
             else:
