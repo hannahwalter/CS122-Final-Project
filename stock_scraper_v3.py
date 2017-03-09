@@ -14,6 +14,8 @@ from yahoo_finance import Share
 import math
 import datetime as dt
 import quandl
+import numpy as np
+import pandas as pd
 quandl.ApiConfig.api_key = 'DZFGSrUkQDFyReYx1gvx'
 try:
     from urllib.request import urlopen
@@ -68,31 +70,28 @@ def historical_basic(ticker, start_date, end_date, only_start_and_end):
                     will return information for the closest date after or before the specified date
     '''
 
-    s_y = int(start_date[0:4])
-    s_m = int(start_date[5:7])
-    s_d = int(start_date[8:10])
-
-    e_y = int(end_date[0:4])
-    e_m = int(end_date[5:7])
-    e_d = int(end_date[8:10])
-
-    end_date_obj = dt.date(e_y, e_m, e_d)
-    start_date_obj = dt.date(s_y, s_m, s_d)
-    day_obj = dt.timedelta(days=1)
-
-    start = (start_date_obj - day_obj).isoformat()
-    end = (end_date_obj + day_obj).isoformat()
-
-    raw = Share(ticker).get_historical(start, end)
+    raw = Share(ticker).get_historical(start_date, end_date)
+    raw = raw[::-1]
     if only_start_and_end:
         return_rate_per_day = math.pow(( float(raw[0]['High']) / float(raw[-1]['Low']) ), (1/(len(raw)-1))) - 1
         multiple = float(raw[0]['High']) / float(raw[-1]['Low'])
         return return_rate_per_day, multiple
     else:
-        processed = []
-        for day_data in raw:
-            processed.append(day_data['Close'])
-        return processed
+        processed = {'date': [], 'stock_val': [], 'delta': []}
+        deltas = []
+        for i, day_data in enumerate(raw):
+            print(day_data['Date'])
+            if i == 0:
+                processed['delta'].append(0)
+            else:
+                processed['delta'].append(float(raw[i-1]['Close']) - float(day_data['Close']))
+            processed['date'].append(day_data['Date'])
+            processed['stock_val'].append(float(day_data['Close']))
+
+        processed_df = pd.DataFrame(processed)
+        processed_df = processed_df.set_index(['date'], drop=True)
+
+        return processed_df
 
 def find_date_range_start(approximate_date, range_of_approximation):
     '''

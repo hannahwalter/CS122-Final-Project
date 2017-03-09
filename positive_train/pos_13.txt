@@ -1,0 +1,27 @@
+Struggling gaming giant Nintendo (NASDAQOTH:NTDOY) recently released its next-gen gaming platform, known as the Nintendo Switch. The device has seen lukewarm reviews in the tech press, with IGN saying that the Switch is a "jack of many trades, but a master of none" and PC Advisor praising its design and versatility but criticizing its "Joy-Con performance problems, limited software, and expensive accessories."
+
+At this point, it's probably too early to tell how the device will do in the marketplace (though, frankly, my hopes aren't high). However, should the product ultimately perform well, here are three suppliers -- revealed in iFixit's recent teardown of a Nintendo Switch -- that could potentially benefit.
+The brains of the Nintendo Switch come from...
+The biggest potential winner from the Switch is graphics specialist NVIDIA (NASDAQ:NVDA). NVIDIA has done extremely well for itself in the lucrative market for stand-alone graphics processors targeted at gaming personal computers, but it has been largely absent from the game console market for quite some time.
+
+Inside of the Nintendo Switch is an applications processor developed by NVIDIA. Not too much is known about the chip itself (though it is said to be a derivative of the company's Tegra X1 processor), but for every Nintendo Switch that gets sold, NVIDIA will generate some revenue and, presumably, a reasonable amount of gross profit.
+
+Though a more extensive teardown will be required to verify the following, Taiwan Semiconductor Manufacturing Company may also be a winner here as it is likely the contract chip manufacturer for the NVIDIA chip design (since the Tegra X1 is manufactured by TSMC). A teardown of the chip itself by the likes of Chipworks will be required to confirm this, though.
+
+Memory sourced from South Korea
+The iFixit teardown shows that the Nintendo Switch includes DRAM -- that is, the main system memory -- built by South Korean memory giant Samsung (NASDAQOTH:SSNLF).
+
+Now, the Switch apparently comes with two 2-gigabyte memory chips for a total of 4 gigabytes of modern LPDDR4 memory. LPDDR4 is the memory type currently in use in premium smartphones, and high-end smartphones these days have between 2 and 6 gigabytes, so the memory content inside of the Nintendo Switch is essentially equivalent to that of a reasonably high-end smartphone.
+
+This is by no means a game-changing win for Samsung, which generated 34.29 trillion Korean won (equivalent to about $30 billion in U.S. dollars) in memory revenue (this includes both DRAM and NAND flash), but every bit helps.
+
+Would the real Wi-Fi supplier stand up?
+The iFixit teardown shows that the Wi-Fi chip is a chip known as the BCM4356. The chip's part number indicates that it's a Broadcom (NASDAQ:AVGO) chip design, but iFixit lists it as a Broadcom/Cypress Semiconductor (NASDAQ:CY) part.
+
+As it turns out, the BCM4356 was part of Broadcom's Internet of Things (IoT) lineup. Broadcom sold its IoT business to Cypress Semiconductor in the middle of last year, so it's not Broadcom that gets the win here -- it's Cypress Semiconductor.
+
+By way of reference, though the chip was called the BCM4356 by Broadcom, it has been rebranded as the CYW4356 by Cypress.
+
+When the transaction to sell Broadcom's IoT business to Cypress was announced, the companies said that this business unit "generated $189 million in revenue during the last twelve months." 
+
+If Cypress is selling these chips to Nintendo for perhaps $5-$10 a piece, then significant Nintendo Switch unit shipments could translate into real revenue growth for this business. 
