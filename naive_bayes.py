@@ -2,17 +2,19 @@ import sys
 import math
 import re
 
+
 PRIOR_PROB_POS = .5
 PRIOR_PROB_NEG = .5
 
 class Bayes:
-    def __init__(self, s, k, sign):
-        self.s = s
+    def __init__(self, train_list, k, sign):
+        self.train_list = train_list
         self.k = k
         self.sign = sign
         self.grams = {}
-        self.words = re.sub("[^\w]", " ",  self.s).split()
-        self.count_grams()
+        self.num_words = 0
+        self.train_all()
+
     def get_k_words(self, word_list):
         ret_list = []
         for i in range(len(word_list)-self.k+1):
@@ -20,19 +22,28 @@ class Bayes:
             string_gram= " ".join(gram)
             ret_list.append(string_gram)
         return ret_list
-    def count_grams(self):
-        gram_list = self.get_k_words(self.words)
+
+    def train(self, word_list):
+        self.num_words+= len(word_list)
+        gram_list = self.get_k_words(word_list)
         for gram in gram_list:
             if gram not in self.grams:
                 self.grams[gram] = 1
             if gram in self.grams:
                 self.grams[gram]+=1
         pass
+    def train_all(self):
+        for fil in self.train_list:
+            txt = open(fil, "r").read()
+            txt_list = re.sub("[^\w]", " ",  txt).split()
+            self.train(txt_list)
+        pass
+
     def get_probs(self, test_stg):
         test_list = re.sub("[^\w]", " ",  test_stg).split()
         test_grams = self.get_k_words(test_list)
         prob_list = []
-        V = len(self.words)
+        V = self.num_words
         for gram in test_grams:
             count = 0
             if gram not in self.grams:
