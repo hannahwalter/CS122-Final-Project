@@ -60,6 +60,35 @@ class Bayes:
             ret_prob = math.log(PRIOR_PROB_NEG) + sum_probs
         return ret_prob
 
+def gen_train_list(num_pos, num_neg):
+    pos_train = []
+    neg_train = []
+    for i in range(num_pos):
+        pos_file = "/positive_train/pos_"+str(i+1)+".txt"
+        pos_train.append(pos_file)
+    for i in range(num_neg):
+        neg_file = "/negative_train/neg_"+ str(i+1)+".txt"
+        neg_train.append(pos_file)
+    return pos_train, neg_train
+
+
+
+def mass_class(pos_model, neg_model, test_list, order):
+    pos_count = 0
+    neg_count = 0
+
+    for test_text in test_list:
+        len_test = len(re.sub("[^\w]", " ",  test_text).split())
+        pos_prob = pos_model.get_probs(test_text)/len_test
+        neg_prob = neg_model.get_probs(test_text)/len_test
+        if pos_prob >= neg_prob:
+            pos_count +=1
+        if pos_prob < neg_prob:
+            neg_count+=1
+    pos_perc = pos_count*100/(pos_count+neg_count)
+    neg_perc = neg_count*100/(pos_count+neg_count)
+    return (pos_perc,neg_perc)
+
 def classify(pos_list, neg_list, test_text, order):
     len_test = len(re.sub("[^\w]", " ",  test_text).split())
 

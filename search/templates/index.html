@@ -36,20 +36,13 @@
         <div class="frame">
             {% if result != None %}
             <div class="results">Results:
-                <div class="recommendations & numerical_analysis">
+                <div class="results">
                     {{ result }}
                 </div>
-                {% if number %}
-                <div class = 'numerical_analysis'>
-                    {{ number }}
-                </div>
-                {% endif %}
                 {% if image %}
                 <div class = 'graphical_analysis'>
                     {% load static %}
-                    <img src="{% static 'image_1.png' %}" alt="Graphical Analysis_1"/>
-                    <img src="{% static 'image_2.png' %}" alt="Graphical Analysis_2"/>
-                    <img src="{% static 'image_3.png' %}" alt="Graphical Analysis_3"/>
+                    <img src="{% static 'twitter.png' %}" alt="Graphical Analysis_1"/>
                 </div>
                 {% endif %}
             </div>
