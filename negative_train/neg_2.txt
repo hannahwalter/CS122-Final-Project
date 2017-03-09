@@ -1,0 +1,20 @@
+RigNet Inc. Finally Hits Bottom
+The provider of remote communications solutions saw some improvements this quarter.
+
+RigNet's (NASDAQ:RNET) financial results had been on a steady decline for more than a year because of the impact low oil prices are having on the offshore-drilling market. However, that decline finally came to an end during the fourth quarter, when the company's results rebounded ever so slightly. But conditions in the offshore-drilling sector remain quite challenging, so it's not yet apparent if this was just a breather or if a recovery is about to take hold.
+What happened with RigNet this quarter? 
+RigNet's results showed some improvement:
+
+Managed-services revenue was $47.2 million, which was flat from last quarter and down 17.3% year over year. Driving the year-over-year weakness was reduced spending by oil and gas companies on offshore-drilling projects as a result of lower oil prices.
+Revenue from systems integration and automation (SI&A) was $5.6 million during the quarter. That's up from $3.4 million last quarter and a negative-$4.9 million in the year-ago quarter, when the company took a negative revenue adjustment of $9.6 million because of a contract dispute with a customer. Contributing to the sequential improvement was the timing of SI&A projects.
+While earnings did improve year over year, the company's net loss deepened from last quarter's $1.4 million loss, primarily because of higher general and administrative expenses.
+The company was cash flow positive during the quarter, reporting unlevered free cash flow of $5.7 million. While that's down from $6.6 million last quarter, it's up substantially from the year-ago period, when unlevered free cash flow was a negative-$13.7 million.
+What management had to say 
+CEO Steven Pickett commented on the results:
+
+Despite continued headwinds in the offshore oil and gas market, we are pleased with the progress we have made related to cost containment and capex management, which produced unlevered free cash flow of $5.7 million for the quarter. We remain focused on continuing implementation of initiatives to improve operating leverage of the company, developing a broad range of SaaS [software as a service] and cyber-security solutions for our customers, and growing our business in new vertical markets.
+
+RigNet continues to focus on what it can control, which are its costs and the expansion of its offerings and customer base. The company did a solid job on both efforts last quarter, keeping costs low enough that it generated free cash flow. Meanwhile, it announced several contract awards during the quarter, including a multimillion-dollar remote communication contract with a leading offshore-drilling contractor, an SI&A contract for a remote facility in the Middle East, and a managed-services contract with maritime vessels.
+
+Looking forward 
+The offshore-drilling market remains challenging, with drilling contractors offering conflicting views on what lies ahead. For example, leading offshore driller Transocean (NYSE:RIG) noted in its fourth-quarter earnings release that it was seeing "improving market fundamentals." In addition, Transocean said it was witnessing "a steady flow of customer inquiries" that was "increasing our confidence that the offshore drilling market trough is near." Meanwhile, Diamond Offshore Drilling (NYSE:DO) had an entirely different view. Diamond Offshore Drilling's management noted on the company's fourth-quarter call that it had "yet to see a floor in the declining demand of deepwater assets." Worse yet, the company "does not anticipate a recovery until 2019 or 2020." These dueling opinions show just how much uncertainty remains in the market right now and suggest that RigNet's results could remain volatile until the sector is back on solid footing.
