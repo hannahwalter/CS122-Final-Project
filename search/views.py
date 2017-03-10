@@ -1,19 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django import forms
 import json
 import traceback
-from io import StringIO
 import sys
-import csv
-import os
-from operator import and_
 from create_output import create_output
-from functools import reduce
 import datetime
 from django.forms.extras.widgets import SelectDateWidget
-from django.forms import ModelForm, Form
-from django.utils import timezone
 
 class SearchForm(forms.Form):
     company_name = forms.CharField(
@@ -81,7 +73,7 @@ def home(request):
     if res is None:
         context['result'] = None
     else:
-        context['result'] = res
+        context['result'] = json.dumps(res, indent=8)
         if form.cleaned_data['monte_carlo']:
             context['image'] = True
         else:
