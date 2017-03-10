@@ -3,9 +3,14 @@ from django import forms
 import json
 import traceback
 import sys
-from create_output import create_output
+# from create_output import create_output
 import datetime
 from django.forms.extras.widgets import SelectDateWidget
+
+
+def create_output(d):
+    return 'hello'
+
 
 class SearchForm(forms.Form):
     company_name = forms.CharField(
