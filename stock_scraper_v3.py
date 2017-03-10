@@ -3,59 +3,30 @@
 
 '''
 This code collects historical and real-time data on stocks
-from Yahoo finance and Quandl via API.
+from Yahoo finance API.
 
 Packages to install:
-    - yahoo-finance
-    - quandl
+    yahoo-finance
 '''
 
 from yahoo_finance import Share
 import math
-import datetime as dt
-import quandl
-import numpy as np
-import pandas as pd
-quandl.ApiConfig.api_key = 'DZFGSrUkQDFyReYx1gvx'
-try:
-    from urllib.request import urlopen
-except ImportError:
-    from urllib2 import urlopen
-try:
-    from urllib.parse import urlencode
-except ImportError:
-    from urllib import urlencode
-from json import loads
 import pandas as pd
 
-def find_ticker_and_name_from_internet(company_name):
-    '''
-    Given an input of company name or ticker, finds the associated ticker or returns
-    possible options in case the input is contained in multiple companies.
-    '''
-
-    response = urlopen('http://chstocksearch.herokuapp.com/api/{}'.format(company_name))
-    string = response.read().decode('utf-8')
-    json_obj = loads(string)
-    if len(json_obj) == 1:
-        print("Sorry, we could not find any company name or ticker that contains your input." \
-              "\nPlease check your spelling and try again: ")
-    elif len(json_obj) == 2: 
-        ticker = json_obj[0]['symbol']
-        name = json_obj[0]['company']
-        return ticker, name
-    else:
-        print('We found the following company names and tickers that contain your input: ')
-        for index, company in enumerate(json_obj[:-1]):
-            print(index + 1, company)
-        print('Please retry again using the proper name or ticker.')
-        return
-
-def find_sector_and_industry(ticker):
+def find_ticker_and_name(company_input):
     df = pd.read_csv('companylist.csv')
-    sector = df['Sector'].loc[df['Symbol'] == ticker].tolist()[0]
-    industry = df['Industry'].loc[df['Symbol'] == ticker].tolist()[0]
-    return sector, industry
+    df_by_ticker_match = df[df['Symbol'] == company_input.upper()]
+    if df_by_ticker_match.shape[0] == 1:
+        ticker = df_by_ticker_match['Symbol'].tolist()[0]
+        name = df_by_ticker_match['Name'].tolist()[0]
+    else:
+        df_by_name_match = df[df['Name'].str.contains(company_input.upper(), case=False)]
+        if df_by_name_match.shape[0] == 1:
+            ticker = df_by_name_match['Symbol'].tolist()[0]
+            name = df_by_name_match['Name'].tolist()[0]
+        else:
+            return None
+    return ticker, name
 
 def historical_basic(ticker, start_date, end_date, only_start_and_end):
     '''
