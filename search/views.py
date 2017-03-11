@@ -3,9 +3,17 @@ from django import forms
 import json
 import traceback
 import sys
-from create_output import create_output
+# from create_output import create_output
 import datetime
 from django.forms.extras.widgets import SelectDateWidget
+
+
+def create_output(d):
+    return {'bag_of_words': {'Positive words': ['57%', '43%', '23%'], 
+    'Negative words': ['43%', '57%', '77%'],
+    '10 words': ['twitter 10 words', 'nytimes 10 words', 'seeking alpha 10 words']},
+    'monte_carlo': {'Monte Carlo Values': ['value_1_1', 'value_1_2'], 'Stock Values': ['value_2_1', 'value_2_2']},
+    'naive_bayes': {'Positive essays': ['x%', 'x%', 'x%'], 'Negative essays': ['y%', 'y%', 'y%']}}
 
 
 
@@ -32,12 +40,10 @@ def home(request):
     context = {}
     res = None
     if request.method == 'GET':
-        # create a form instance and populate it with data from the request:
         form = SearchForm(request.GET)
         # check whether it's valid:
         if form.is_valid():
-
-            # Convert form data to an args dictionary for find_courses
+            # Convert form data to an args dictionary for create_output
             args = {}
             args['company_name'] = form.cleaned_data['company_name']
             args['date'] = form.cleaned_data['date'].isoformat()
@@ -75,10 +81,11 @@ def home(request):
     if res is None:
         context['result'] = None
     else:
-        context['result'] = json.dumps(res, indent=8)
+        if form.cleaned_data['bag_of_words']:
+            context['bag_of_words'] = res['bag_of_words']
         if form.cleaned_data['monte_carlo']:
-            context['image'] = True
-        else:
-            context['image'] = False
+            context['monte_carlo'] = res['monte_carlo']
+        if form.cleaned_data['naive_bayes']:
+            context['naive_bayes'] = res['naive_bayes']
     context['form'] = form
     return render(request, 'index.html', context)

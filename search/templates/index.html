@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FiSci Technology</title>
+        <title>FiSci Technoslogy</title>
         <link rel="stylesheet" type="text/css" href="{% static "/static/main.css" %}" />
     </head>
     <body>
@@ -33,18 +33,78 @@
 
 
 
+        <div id='header'>
+            <h2>Our Analysis and Recommendation:</h2>
+        </div>
         <div class="frame">
-            {% if result != None %}
-            <div class="results">Our Recommendation:
-                <div class="results">
-                    <pre>{{ result }}</pre>
-                </div>
-                {% if image %}
-                <div class = 'graphical_analysis'>
-                    {% load static %}
-                    <img src="{% static 'twitter.png' %}" alt="Graphical Analysis_1"/>
-                </div>
-                {% endif %}
+            {% if bag_of_words %}
+            <div id='header'>
+                <h3>Bag of Words Analysis</h3>
+            </div>
+            <div class="bag of words">
+                <table>
+                    <tr>
+                        <td>Sources</td>
+                        <td>Twitter:</td>
+                        <td>NYTimes:</td>
+                        <td>Seeking Alpha:</td>
+                    </tr>
+                    {% for sources, values in bag_of_words.items %}
+                    <tr>
+                        <td>{{sources}}</td>
+                        {% for v in values %}
+                        <td>{{v}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+            {% if monte_carlo %}
+            <div id='header'>
+                <h3>Monte Carlo Analysis</h3>
+            </div>
+            <div class = 'monte carlo'>
+                {% load static %}
+                <img src="{% static 'twitter.png' %}" alt="Scatterplot Analysis"/>
+                <table>
+                    <tr>
+                        <td>Sources</td>
+                        <td>Value_1:</td>
+                        <td>Value_2:</td>
+                    </tr>
+                    {% for sources, values in monte_carlo.items %}
+                    <tr>
+                        <td>{{sources}}</td>
+                        {% for v in values %}
+                        <td>{{v}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+            {% if naive_bayes %}
+            <div id='header'>
+                <h3>Naive Bayes Analysis</h3>
+            </div>
+            <div class = 'naive bayes'>
+                <table>
+                    <tr>
+                        <td>Sources</td>
+                        <td>Twitter:</td>
+                        <td>NYTimes:</td>
+                        <td>Seeking Alpha:</td>
+                    </tr>
+                    {% for sources, values in naive_bayes.items %}
+                    <tr>
+                        <td>{{sources}}</td>
+                        {% for v in values %}
+                        <td>{{v}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
             {% endif %}
         </div>
