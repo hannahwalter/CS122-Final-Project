@@ -5,6 +5,7 @@ import traceback
 import sys
 from create_output import create_output
 import datetime
+import pandas as pd
 from django.forms.extras.widgets import SelectDateWidget
 
 
@@ -84,4 +85,5 @@ def home(request):
         else:
             context['image'] = False
     context['form'] = form
+    
     return render(request, 'index.html', context)

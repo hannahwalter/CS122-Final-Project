@@ -21,6 +21,8 @@ def create_output(args):
         dictionary with the desired data
     '''
 
+    
+
     name = args['company_name']
     date = args['date']
     days = args['days']
@@ -115,21 +117,24 @@ def create_output(args):
         words_scraper.monte_carlo(daily_words_list, ticker, 5000)
 
     if args['naive_bayes']:
-        output_dict['naive_bayes'] = {}
-        pos_train, neg_train = naive_bayes.gen_train_list(14, 16)
-        pos_model = naive_bayes.Bayes(pos_train, 1, "positive")
-        neg_model = naive_bayes.Bayes(neg_train,1,"negative")
+        if nyt_continue:
+            output_dict['naive_bayes'] = {}
+            pos_train, neg_train = naive_bayes.gen_train_list(14, 16)
+            pos_model = naive_bayes.Bayes(pos_train, 1, "positive")
+            neg_model = naive_bayes.Bayes(neg_train,1,"negative")
 
-        result_tup = naive_bayes.mass_class(pos_model, neg_model, nyt_articles_list, 1)
-        nb_p_percentage = result_tup[0]
-        nb_n_percentage = result_tup[1]
-        nb_recommendation = words_scraper.recommendation(nb_p_percentage, nb_n_percentage)
+            result_tup = naive_bayes.mass_class(pos_model, neg_model, nyt_articles_list, 1)
+            nb_p_percentage = result_tup[0]
+            nb_n_percentage = result_tup[1]
+            nb_recommendation = util.recommendation(nb_p_percentage, nb_n_percentage)
 
-        nb_percentage_string = ('Our Naive Bayes analysis for New York Times found '
-            '{}% positive articles and {}% negative articles.'.format(nb_p_percentage, 
-            nb_n_percentage))
+            nb_percentage_string = ('Our Naive Bayes analysis for New York Times found '
+                '{}% positive articles and {}% negative articles.'.format(nb_p_percentage, 
+                nb_n_percentage))
 
-        output_dict['naive_bayes']['Percentages'] = nb_percentage_string
-        output_dict['naive_bayes']['Recommendation'] = nb_recommendation
-
+            output_dict['naive_bayes']['Percentages'] = nb_percentage_string
+            output_dict['naive_bayes']['Recommendation'] = nb_recommendation
+        else:
+            output_dict['naive_bayes'] = 'There were no articles for this company and timeframe'
+    
     return output_dict

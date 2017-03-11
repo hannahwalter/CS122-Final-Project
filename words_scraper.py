@@ -71,8 +71,8 @@ def get_sa_urls(ticker, begin_date, end_date):
             else:
                 raw_date = re.findall('(?:(?:[A-Z][a-z]{2}, [A-Z][a-z]{2}\. '
                     '[0-9]*)|(?:[A-Z][a-z]{2}\. [0-9]{1,2}, [0-9]{4}))', date)
-                if raw_date == []: #
-                    return False #
+                if raw_date == []:
+                    return False
                 elif len(raw_date) > 0:
                     date = raw_date[0]
                     # Determining format of date: 'Wed, Mar. 8' or 'Mar. 8, 2016'
@@ -97,7 +97,7 @@ def get_sa_urls(ticker, begin_date, end_date):
 
         page_count += 1
 
-    if url_list is []:
+    if len(url_list) == 0:
         return "No articles could be found or accessed for this company."
     else:
         return url_list, inaccessible
@@ -275,9 +275,8 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
     plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d)
 
 def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
-    
-    ax = plt.axes()
-    ax.plot(range(len(stock_vals_df)), stock_vals_df['stock_val'])
+
+    plt.plot(stock_vals_df['stock_val'])
 
     monte_carlo_sim = []
     current = 0
@@ -298,9 +297,11 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
         current += (positive**best_c)*best_a - (negative**best_d)*best_b
         monte_carlo_sim.append(current)
 
-    ax.plot(range(len(stock_vals_df)), monte_carlo_sim)
+    plt.plot(monte_carlo_sim)
     
     plt.savefig('static/twitter.png')
+
+    plt.clf()
 
 ### SCRAPING NEW YORK TIMES ###
 
