@@ -11,8 +11,46 @@ Packages to install:
 
 from yahoo_finance import Share
 import math
+import datetime as dt
+import quandl
+import numpy as np
 import pandas as pd
+quandl.ApiConfig.api_key = 'DZFGSrUkQDFyReYx1gvx'
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib2 import urlopen
+try:
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
+from json import loads
+import re
 
+def find_ticker_company(company_name):
+    '''
+    Given an input of company name or ticker, finds the associated ticker or returns
+    possible options in case the input is contained in multiple companies.
+    '''
+    company_name = re.sub(' ', '-', company_name)
+    response = urlopen('http://chstocksearch.herokuapp.com/api/{}'.format(company_name))
+    string = response.read().decode('utf-8')
+    json_obj = loads(string)
+    if len(json_obj) == 1:
+        return "Sorry, we could not find any company name or ticker that contains your input." \
+              " Please check your spelling and try again."
+    elif len(json_obj) == 2:
+        ticker = json_obj[0]['symbol']
+        name = json_obj[0]['company']
+        return {'ticker': ticker, 'name': name}
+    else:
+        string = 'We found the following company names and tickers that contain your input: '
+        for i, company in enumerate(json_obj[:-1]):
+            string += ' ' + str(i+1) + '. ' + company['company'] + ', ' + company['symbol'] + '.'
+        string += ' Please retry again using the proper name or ticker.'
+        return string
+
+import pandas as pd
 
 
 def find_ticker_and_name(company_input):
@@ -53,7 +91,6 @@ def historical_basic(ticker, start_date, end_date, only_start_and_end):
         processed = {'date': [], 'stock_val': [], 'delta': []}
         deltas = []
         for i, day_data in enumerate(raw):
-            print(day_data['Date'])
             if i == 0:
                 processed['delta'].append(0)
             else:

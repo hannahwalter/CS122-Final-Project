@@ -28,6 +28,8 @@ class SearchForm(forms.Form):
             widget=SelectDateWidget,
             initial=datetime.date.today(),
             required=True)
+    days = forms.IntegerField(label = 'Number of days to scrape before date',
+            required = True, max_value = 30, min_value = 1)
     show_args = forms.BooleanField(label='Show args_to_ui',
                                    required=False)
     bag_of_words = forms.BooleanField(label='Show bag of words',
@@ -48,6 +50,7 @@ def home(request):
             args = {}
             args['company_name'] = form.cleaned_data['company_name']
             args['date'] = form.cleaned_data['date'].isoformat()
+            args['days'] = form.cleaned_data['days']
             if form.cleaned_data['bag_of_words']:
                 args['bag_of_words'] = True
             else:
@@ -71,7 +74,7 @@ def home(request):
                 context['err'] = """
                 An exception was thrown in give_recommendations:
                 <pre>{}
-{}</pre>
+                {}</pre>
                 """.format(e, '\n'.join(bt))
 
                 res = None
