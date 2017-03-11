@@ -3,17 +3,17 @@ from django import forms
 import json
 import traceback
 import sys
-# from create_output import create_output
+from create_output import create_output
 import datetime
 from django.forms.extras.widgets import SelectDateWidget
 
 
-def create_output(d):
-    return {'bag_of_words': {'Positive words': ['57%', '43%', '23%'], 
-    'Negative words': ['43%', '57%', '77%'],
-    '10 words': ['twitter 10 words', 'nytimes 10 words', 'seeking alpha 10 words']},
-    'monte_carlo': {'Monte Carlo Values': ['value_1_1', 'value_1_2'], 'Stock Values': ['value_2_1', 'value_2_2']},
-    'naive_bayes': {'Positive essays': ['x%', 'x%', 'x%'], 'Negative essays': ['y%', 'y%', 'y%']}}
+# def create_output(d):
+#     return {'bag_of_words': {'Positive words': ['57%', '43%', '23%'], 
+#     'Negative words': ['43%', '57%', '77%'],
+#     '10 words': ['twitter 10 words', 'nytimes 10 words', 'seeking alpha 10 words']},
+#     'monte_carlo': {'Monte Carlo Values': ['value_1_1', 'value_1_2'], 'Stock Values': ['value_2_1', 'value_2_2']},
+#     'naive_bayes': {'Positive essays': ['x%', 'x%', 'x%'], 'Negative essays': ['y%', 'y%', 'y%']}}
 
 
 
