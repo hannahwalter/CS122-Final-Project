@@ -1,0 +1,46 @@
+S.E.C. Rejects Winklevoss Brothers’ Bid to Create Bitcoin E.T.F.
+The Securities and Exchange Commission said on Friday it had rejected an application to create an exchange-traded fund tied to the price of Bitcoin.
+
+Within a few minutes of S.E.C.’s announcement, the price of a single Bitcoin tumbled more than 15 percent, to around $1,060. The price soon recovered some of the lost ground, however.
+
+The decision was a significant setback for Tyler and Cameron Winklevoss, twin brothers who began working on a proposed Bitcoin exchange-traded fund, or E.T.F., four years ago. An exchange-traded fund tracks an index, or basket, of assets but trades like a stock.
+
+The commission said it was rejecting the Winklevoss Bitcoin Trust because the markets where Bitcoin are currently traded are largely unregulated.
+
+The lack of such regulation, the commission said, raised “concerns about the potential for fraudulent or manipulative acts and practices in this market.”
+
+The price of Bitcoin has climbed sharply in recent weeks in anticipation of the commission approving the Winklevoss brothers’ fund, with the price of a single Bitcoin surging to a record high above $1,300.
+
+Bitcoin aficionados had hoped that an exchange-traded fund would help bring the virtual currency into the mainstream by making it available to retail investors through brokerage firms like Charles Schwab and eTrade.
+
+Several other companies have also applied to operate Bitcoin exchange-traded funds, and the S.E.C. could reach a different decision on those proposed funds. But the commission’s broad concern about the unregulated nature of Bitcoin markets suggests that an approval may be unlikely in the near future.
+
+“It seems as if the other E.T.F.s in the pipeline for the S.E.C. are facing the same stone wall,” Charles Hayter, founder of the virtual currency data provider CryptoCompare, said on Friday.
+
+The commission wrote in its decision that Bitcoin was “still in the relatively early stages of its development and that, over time, regulated Bitcoin-related markets of significant size may develop.”
+
+The commission added that it could reconsider a Bitcoin exchange-traded fund if more mature markets developed.
+Tyler Winklevoss said that he and his brother were not giving up on the exchange-traded fund.
+
+“We began this journey almost four years ago, and are determined to see it through,” he said. “We agree with the S.E.C. that regulation and oversight are important to the health of any marketplace and the safety of all investors.”
+
+The twins rose to fame through their legal tussles with Mark Zuckerberg, the founder of Facebook.
+
+More recently, the brothers have bought significant quantities of Bitcoin and have dedicated themselves to promoting the virtual currency and bringing it into the mainstream.
+
+The twins already won regulatory approval from New York authorities for their Gemini Exchange, where virtual currencies can be bought and sold by professional traders. The proposed E.T.F. would have been tied to the price of Bitcoin on the exchange.
+
+Most Bitcoin, however, are traded outside the United States, beyond the reach of American regulators. The virtual currency emerged in 2009 and was celebrated for its ability to circumvent government authorities.
+
+Since then, Bitcoin has gained prominence partly because of its use on shadowy online black markets, where it is exchanged for drugs, and in countries like China and Venezuela, where some citizens are looking to evade government oversight.
+
+Over time, it has become clear that Bitcoin’s growth prospects are probably limited if it is not easily available through regulated institutions to ordinary investors.
+
+Jerry Brito, executive director of the Coin Center, a virtual currency advocacy group, said that the S.E.C.’s decision presented a problem for the further development of the technology.
+
+“How do we develop well-capitalized and regulated markets in the U.S. and Europe if financial innovators aren’t allowed to bring products to market that grow domestic demand for digital currencies like Bitcoin?” Mr. Brito said in a statement on Friday.
+
+Many large financial institutions have mostly declined to invest significant resources into Bitcoin, because of the regulatory questions that surround it.
+
+But the same institutions have been showing a great deal of interest in the technological concept introduced by Bitcoin, known as the blockchain, which presents a new way of keeping track of all types of information.
+

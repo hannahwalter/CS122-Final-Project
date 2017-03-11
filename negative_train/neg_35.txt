@@ -1,0 +1,32 @@
+Apple’s Devices Lose Luster in American Classrooms
+Apple is losing its grip on American classrooms, which technology companies have long used to hook students on their brands for life.
+
+Over the last three years, Apple’s iPads and Mac notebooks — which accounted for about half of the mobile devices shipped to schools in the United States in 2013 — have steadily lost ground to Chromebooks, inexpensive laptops that run on Google’s Chrome operating system and are produced by Samsung, Acer and other computer makers.
+
+Mobile devices that run on Apple’s iOS and MacOS operating systems have now reached a new low, falling to third place behind both Google-powered laptops and Microsoft Windows devices, according to a report released on Thursday by Futuresource Consulting, a research company.
+Of the 12.6 million mobile devices shipped to primary and secondary schools in the United States in 2016, Chromebooks accounted for 58 percent of the market, up from 50 percent in 2015, according to the report. School shipments of iPads and Mac laptops fell to 19 percent, from about 25 percent, over the same period. Microsoft Windows laptops and tablets remained relatively stable at about 22 percent, Futuresource said.
+
+“Apple is struggling,” said Mike Fisher, an education technology analyst at Futuresource.
+
+Apple said education was a longstanding value for the company.
+
+“Mac and iPad are the best tools in education to help teachers teach and students learn,” Susan Prescott, Apple’s vice president of product marketing, wrote in an email. “We’re incredibly passionate about education and new programs like Apple Teacher,” a site for teachers who want to learn how to more creatively use Apple tools with their students, she said.
+
+The rise of Google’s Chromebooks has disrupted the momentum of Apple, which has been marketing its computers to schools for some 40 years.
+
+Apple has recently widened its education offerings. Last year, it introduced an app, called Classroom, to help teachers see and manage their students’ activities on iPads. It also created a free iPad app, called Swift Playgrounds, that introduces students to writing computer code.
+
+The shift toward Google-powered devices is hurting Apple’s revenue. Of the $7.35 billion that schools, colleges and universities spent on mobile and desktop computers in 2016, sales of Apple devices fell to $2.8 billion in 2016, from about $3.2 billion in 2015, according to IDC, a market research firm. Windows devices generated $2.5 billion in 2016, up from $2.1 billion in 2015, while Chrome devices reached $1.9 billion, up from $1.4 billion.
+
+The Chromebook has beaten out classroom competitors on pricing, usability and other factors. Chromebooks run apps through Google’s cloud-based Chrome operating system, making them cheaper — and often faster to boot up — than traditional laptops that rely on hard drives.
+
+Because Chromebooks store documents in the cloud, they can be shared among students, who can grab any school device to access their class work. Google also provides school administrators with an online dashboard to remotely manage thousands of the laptops at once.
+Then there is the keyboard issue. While school administrators generally like the iPad’s touch screens for younger elementary school students, some said older students often needed laptops with built-in physical keyboards for writing and taking state assessment tests.
+
+The public school system in Eudora, Kan., for instance, used to have rolling carts of iPads for elementary school classrooms and MacBook carts for older students to share. But last year, when administrators wanted to provide a laptop for each high school student, the district bought 500 Chromebooks at about $230 each.
+
+“At the end of the day, I can get three Chromebooks for each of the Mac devices I would have purchased,” said Steve Splichal, the superintendent of Eudora Public Schools. He added that Eudora students continued to use MacBooks for certain creative courses and that first graders and younger students still used iPads.
+
+To compete with Chromebooks, Microsoft announced last month that it had worked with Acer, HP and Lenovo to develop low-cost Windows laptops for schools, with prices starting at $189. The company also introduced an app, called Microsoft Intune for Education, to enable schools to more easily set up and manage their Windows devices.
+
+Google, for its part, announced last month that it had worked with Asus and Acer to develop for schools new Chromebooks that can also convert to tablets.

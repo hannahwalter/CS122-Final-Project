@@ -1,0 +1,64 @@
+‘Fintech’ Loses Some of Its Attraction for Investors
+When Elevate Credit sought an initial public offering of stock in January, its pitch went like this: Elevate uses big technology to approve nonprime borrowers for loans quickly.
+
+The word “technology” was plastered all over its marketing documents, appearing 122 times in its 200-page prospectus. Elevate would operate solely online, the prospectus showed. Its proprietary software and analytics would replace the hordes of people who in the past were required to approve loans for those with credit scores below 700. The company was even backed by Sequoia Capital and Technology Crossover Ventures, two of the most prestigious Silicon Valley venture capital firms.
+
+So Elevate, based in Fort Worth, wanted I.P.O. investors to pay up for its stock, with a valuation more in line with that of a technology company — higher than one for a conventional subprime lender.
+
+But investors did not bite.
+
+One day before Elevate was to have its debut, the company withdrew its offering, citing “market volatility.” True, the market was inhospitable to new issues at that time. Behind the scenes, though, investors did not think Elevate warranted such a high valuation.
+
+Continue reading the main story
+RELATED COVERAGE
+
+
+SPECIAL SECTION
+DealBook: Fintech’s Power Grab
+
+‘Fintech’ Start-Up Boom Said to Threaten Bank Jobs MARCH 30, 2016
+Another online mortgage lender, LoanDepot, faced similar investor sentiment, pulling its own I.P.O. two months earlier.
+
+Just as slapping “.com” at the end of any corporate name in the early 2000s increased the amount investors were willing to pay, the term “fintech,” or financial technology, has had the same power.
+
+Investments from venture capital, hedge funds, private equity and mutual funds have poured into fintech start-ups. In 2015, $19.1 billion was invested in the industry, almost eight times the amount invested in 2011, according to data compiled by CB Insights, a research firm. Where the money went, the start-ups followed, with about 4,000 businesses now labeled fintech, by CB Insights’ categorization.
+
+“The word fintech is a bit overused,” said R.A. Farrokhnia, a professor at Columbia Business School and Columbia’s School of Engineering and Applied Science. “Saying something’s driven by tech is akin to saying fire is driven by oxygen.”
+
+These days, public investors have become much more scrupulous about the sector — which has expanded to cover things as varied as lending, payments, currency and investment management. Their challenge has been to distinguish those that deserve the fintech premium from others that are simply putting lipstick on a lender.
+
+One problem for Elevate is that its technology does not truly overcome a crucial hurdle faced by subprime lenders: high default rates. The company’s documents show that a large proportion of the loans it underwrites are likely to never be repaid. So-called net charge-offs represent about half of its annual revenue — a big price tag for an already unprofitable company.
+
+Elevate said net charge-offs have not made its margins worse over time. For the first nine months of 2015, Elevate’s operating margin was negative 1 percent, compared with negative 29 percent during the same period in 2014.
+
+“We have delivered strong margin expansion at this target loss rate as our loan portfolio has matured,” Ken Rees, the chief executive of Elevate, said by e-mail. “As we continue to improve our underwriting, our goal is not to drive down losses as a percentage of revenue but to drive down the average interest rate to our customers.”
+
+Who gets a membership to the fintech club is still somewhat unclear. Even industry leaders are divided over what separates a fintech company from a plain old financial services company that uses technology.
+
+Matt Burton, the chief executive of Orchard Platform, which sells technology services to online lenders, said real fintech companies should have more than half of their employees in engineering or coding roles. Mr. Burton estimated that only about 30 percent of companies that are said to be fintech companies actually are.
+On the other hand, Ravi Viswanathan, a general partner at New Enterprise Associates and one of the earliest venture investors in fintech, said his firm defined fintech much more broadly. “We don’t really use technology as a lens,” he said. “We use disruption.”
+
+Jon Stein, the chief executive of Betterment, said fintech was also about using technology to make finance better for individuals. That’s the mission of his company, he said; it uses software to customize investment portfolios with automated rebalancing aimed at each customer’s goal.
+
+Over time, though, the public-market investors will decide which companies should be awarded the technology multiples.
+
+“The term fintech has gotten broader and broader every year,” Mr. Burton of Orchard said. “Investors are going to start to differentiate technology companies that are in finance from financial services companies that are using technology.”
+
+Some of that will stem from what is in their public filings. Technology companies are often characterized by having simple balance sheets, fast revenue growth and high operating margins. Words like “net interest margin” and “securitization” describe banks — typically not technology businesses.
+
+The discrepancy between the valuations fintech companies have received privately and what public-market investors are willing to pay has already narrowed.
+
+Shares of LendingClub, which is viewed as one of the more tech-like companies in fintech, have plummeted over the last few months, trading at half their I.P.O. price from December 2014. As opposed to a traditional lender, LendingClub uses a marketplace model, meaning it connects lenders with borrowers without taking on much of the risk.
+
+Square, an online payments provider and small-business lender, priced its November initial offering well below the valuation it achieved in the private markets.
+
+That has not stopped banks from trying to look more like fintech companies. The financial crisis turned “bank” into a dirty word. As traditional banks were skewered for their lending practices and blamed for the decline of the broader economy, new models were popping up. This was also the time that fintech became a greater part of the vernacular. BankSimple, founded during the trough of the crisis, soon changed its name to just Simple.
+
+Last month, Goldman Sachs acquired Honest Dollar, a year-old digital retirement savings start-up. JPMorgan Chase is teaming up with On Deck Capital to help facilitate lending to small businesses. Bank of America holds a tech conference every year, inviting start-ups that the bank can either acquire or provide investment banking services to.
+
+No matter how much technology is incorporated into finance, the companies will always have to deal with regulatory risk — something that can often weigh on a valuation. Fintech companies must grapple with current regulation and the potential for more, since they are dealing with the finances of consumers and businesses.
+
+Additionally, many of these companies have yet to withstand a downturn in the economic cycle, since they had their starts after the latest recession. Companies will need more history behind them before investors can truly price and categorize fintech.
+
+“The defining attribute of fintech is you are helping the financial services industry reduce costs and boost returns in a very regulated environment,” said Rory Eakin, the founder and chief operating officer of CircleUp, a start-up that helps investors take a stake in small consumer businesses. “It’s very different from other types of V.C. investing.”
+

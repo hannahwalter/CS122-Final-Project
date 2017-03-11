@@ -1,0 +1,57 @@
+SolarCity’s Ties to Foreclosure Cases Raise Questions on Vetting Policies
+SolarCity, the nation’s leading installer of rooftop solar panels and a renewable energy darling, has pitched its value to investors on a simple premise: Once customers sign up to lease a system, they will make payments to the company month after month for at least 20 years.
+
+But even when the customers look good enough on paper, it does not always work out that way.
+
+In dozens of cases over the last three years, The New York Times has found, SolarCity has reached long-term lease agreements with homeowners shortly before or even after they defaulted on mortgages. In at least 14 cases, the homeowners were already in default, or had other liens on the property, by the time SolarCity filed paperwork about the panels with the government.
+
+The cases raise questions about how well the company vets customers. In addition, it is unclear how many foreclosure lawsuits involve the company over all.
+
+In September, a lawyer for SolarCity, Mohammed Ahmed Gangat, filed a document in New York state court arguing that the company needed to file another document late because it had in recent months been “inundated with hundreds of lawsuits in New York, and thousands across the country, all of which have named SolarCity as a defendant in a residential foreclosure action.”
+
+Continue reading the main story
+But when asked about that filing, SolarCity said that it was currently involved in far fewer cases — 139 — and that the lawyer had been mistaken. The company said the court filing had been made without the company’s reviewing or approving it. Mr. Gangat is not a SolarCity employee.
+
+“Out of more than 305,000 installed customers, SolarCity is currently involved in 139 such proceedings,” the company said in a statement. “The litigation is not adversarial — being named in the foreclosure proceeding provides us with advance notice that we need to reassign a contract, and many are immediately resolved with the relevant bank.”
+
+The company is also involved in foreclosure proceedings outside the courts but said it could not say how many.
+
+Mr. Gangat did not immediately respond to calls or emails.
+
+If the lawyer’s figures are correct, SolarCity, which is now owned by the automaker Tesla, may be facing a threat to its financial performance that it has not disclosed to the government and investors. The foreclosures can lead to a pause, or an end, of the lucrative monthly payments customers pay for the leases.
+
+If the lawyer’s figures are false, he could face disciplinary proceedings under ethics rules, depending on the circumstances. The company said it was planning to have the document filed in court on its behalf corrected.
+
+In either situation, details of the cases identified by The Times raise questions about how well the company, relying on one credit check, vets potential customers.
+
+What SolarCity offers its customers is simple in theory: savings on their electricity bills from the solar panels glistening on their roofs.
+
+The company often pays most or all of the bill for the installation, worth $25,000 to $30,000 on average, and charges the customer an agreed-upon rate for the electricity the panels produce, typically 10 to 15 percent less than they would normally pay for power. In return, SolarCity receives steady monthly payments.
+
+In the years since the company’s founding in 2006, it has lowered the FICO score, the widely used credit score created by the Fair Isaac Corporation, it requires to get its solar panels. It now uses a score of 650, generally considered a “fair” rating, as the cutoff.
+
+But often, the score is assessed several months before a solar panel system is installed and registered — plenty of time for financial circumstances to change.
+“For a consumer with a sub-700 score, it’s likely that there are already some indicators of risk there, but not a severe one to that particular lender, I guess, at that point,” said Rod Griffin, director of public education at Experian, a credit reporting agency.
+
+SolarCity is not the only company to find itself in the midst of such lawsuits. Sunrun, a competitor, has been named in a small number of cases.
+
+The foreclosure lawsuits do not appear to have made much of a dent in SolarCity’s bottom line. When a customer loses a home to a bank in foreclosure, the company also risks losing income from its energy system unless it can reach a deal to take the system back or contract with the new homeowners. Company executives say that even after figuring in foreclosures, more than 99 percent of contracts are ultimately reassigned, relocated or paid off in advance.
+
+Executives at the company have never expressed much worry about the risks of foreclosures, boasting that customers tend to pay their electricity bills even when they are not paying anything else. “We have customers that are foreclosed,” Lyndon Rive, chief executive of SolarCity, said in an interview in 2012. “They’re still paying their electric bill, so they still pay us.”
+
+When a customer loses a home to a bank, the ownership of the solar panels can become unclear. Banks often consider them part of the overall property as fixtures. SolarCity has argued that the panels are its “personal property.”
+
+The company has succeeded in convincing some banks that the panels are not fixtures, according to court records. But several foreclosure lawyers who have not been involved with these cases said SolarCity might face an uphill battle, especially if it does not act in court to protect its ownership interest in the panels.
+
+“SolarCity needs to contest every foreclosure to have any realistic chance of getting either paid for or the return of their solar panels,” said Christopher McCormick, a lawyer in Connecticut who spent a decade representing banks in foreclosure proceedings and now defends homeowners in the cases.
+
+“Those panels are pretty valuable,” he said. “It makes sense that the company would not want to lose them.”
+
+Even if foreclosures are a problem for SolarCity, its services may help some customers get by during rough financial times. Alexis Hickerson, a resident of West Haven, Conn., said she had the company install panels while she was still trying to work out a deal with her bank to keep her home after she and her husband lost money on investments.
+
+According to court records, Ms. Hickerson stopped paying her mortgage on Feb. 1, 2016. SolarCity filed paperwork with the government on May 6, 2016, about the installation. Ms. Hickerson said she was now going through a short sale of her home.
+
+Ms. Hickerson said her power bills had been lower with SolarCity. The company, she said, will be able to either lease its panels to the new buyers of her home or remove them.
+
+“I am happy with SolarCity,” she said in a phone interview. “It’s one thing that hasn’t been a problem.”
+
