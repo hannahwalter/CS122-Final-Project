@@ -26,30 +26,30 @@ try:
 except ImportError:
     from urllib import urlencode
 from json import loads
-import pandas as pd
+import re
 
-def find_ticker_and_name_from_internet(company_name):
+def find_ticker_company(company_name):
     '''
     Given an input of company name or ticker, finds the associated ticker or returns
     possible options in case the input is contained in multiple companies.
     '''
-
+    company_name = re.sub(' ', '-', company_name)
     response = urlopen('http://chstocksearch.herokuapp.com/api/{}'.format(company_name))
     string = response.read().decode('utf-8')
     json_obj = loads(string)
     if len(json_obj) == 1:
-        print("Sorry, we could not find any company name or ticker that contains your input." \
-              "\nPlease check your spelling and try again: ")
-    elif len(json_obj) == 2: 
+        return "Sorry, we could not find any company name or ticker that contains your input." \
+              " Please check your spelling and try again."
+    elif len(json_obj) == 2:
         ticker = json_obj[0]['symbol']
         name = json_obj[0]['company']
-        return ticker, name
+        return {'ticker': ticker, 'name': name}
     else:
-        print('We found the following company names and tickers that contain your input: ')
-        for index, company in enumerate(json_obj[:-1]):
-            print(index + 1, company)
-        print('Please retry again using the proper name or ticker.')
-        return
+        string = 'We found the following company names and tickers that contain your input: '
+        for i, company in enumerate(json_obj[:-1]):
+            string += ' ' + str(i+1) + '. ' + company['company'] + ', ' + company['symbol'] + '.'
+        string += ' Please retry again using the proper name or ticker.'
+        return string
 
 def find_sector_and_industry(ticker):
     df = pd.read_csv('companylist.csv')

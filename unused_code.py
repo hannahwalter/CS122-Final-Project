@@ -10,6 +10,7 @@ import urllib
 import opinion_words
 import oauth2
 import random
+import lxml.html
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
@@ -29,6 +30,33 @@ ACCESS_SECRET = 'eYShWymyKJPi2myY0E7hyPU9HdZz1y6MlrSDDyR5rhdpw'
 
 URL = "https://api.twitter.com/1.1/search/tweets.json?q={}&count=100"
 
+# Trying to login to seeking alpha
+def test_sa():
+    login = "https://seekingalpha.com/account/login"
+    s = requests.session()
+    login_page = s.get(login, headers = headers)
+
+    soup = bs4.BeautifulSoup(login_page.text, 'lxml')
+    inputs = soup.find_all('input', attrs = {'name': True})
+
+    form = {}
+
+    for i in inputs:
+        if not i.has_attr('value'):
+            form[i['name']] = ''
+        else:
+            form[i['name']] = i['value']
+
+    form['user[email]'] = 'hannahni@uchicago.edu'
+    form['user[password]'] = 'deanboyer'
+
+    response = s.post(login, data = form, headers = headers)
+    sa_text = response.text
+    soup = bs4.BeautifulSoup(sa_text, 'lxml')
+
+    title = soup.find_all('div', class_='title_tab')
+
+    print(title)
 # Using Selenium to scrape Twitter
 def selenium_search(search_term, date):
 

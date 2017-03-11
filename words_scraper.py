@@ -1,15 +1,10 @@
-# Team FiSci
-# Hannah Ni, Hannah Walter, Lin Su
-
 '''
-This code scrapes words from Twitter and NYTimes.
+TEAM: FiSci
+PEOPLE: Hannah Ni, Hannah Walter, Lin Su
 
-Packages to install:
-    - bs4 (beautiful soup)
-    - urllib3
-    - requests
-    - regex
+This file scrapes words from Twitter, NYTimes, and Selenium.
 '''
+
 import bs4
 import urllib3
 import requests
@@ -22,172 +17,170 @@ import urllib
 import random
 import collections
 import matplotlib.pyplot as plt
-#from fake_useragent import UserAgent
+from fake_useragent import UserAgent
 
-import opinion_words
+import util as u
 import stock_scraper_v3
-from imp import reload
-reload(stock_scraper_v3)
 
+ua = UserAgent()
 pm = urllib3.PoolManager()
 
-f = open('stop_words.txt', 'r')
-stop_words = set(f.read().splitlines())
-stop_words |= {'say', 'says', 'said', 'mr', 'like', 'likely', 'just', 
-'including', 'way', 'going', 'dont', 'cant', 'company', 'companies', 
-'percent'}
+STOP_WORDS = u.get_stop_words()
+POSITIVE, NEGATIVE = u.get_word_lexicons()
 
-headers = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"}
+HEADER = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"}
 
-month_dict = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 
-            'June': '06', 'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'}
+MONTH_DICT = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05', 
+            'June': '06', 'Jul': '07', 'Aug': '08', 'Sep': '09', 'Oct': '10', 
+            'Nov': '11', 'Dec': '12'}
 
-### SCRAPING SEEKING ALPHA WITH BEAUTIFUL SOUP ###
+### SCRAPING SEEKING ALPHA ###
 
-def scrape_sa(search_term, date, days):
+def get_sa_urls(ticker, begin_date, end_date):
 
-    y = int(date[0:4])
-    m = int(date[4:6])
-    d = int(date[6:8])
-    end_date_obj = dt.date(y, m, d)
-    month_obj = dt.timedelta(days)
-    begin_date_obj = end_date_obj - month_obj
-
-    end_date = end_date_obj.isoformat()
-    begin_date = begin_date_obj.isoformat()
-
-    search_term = urllib.parse.quote_plus(search_term)
-
-    url = "https://seekingalpha.com/symbol/AAPL/focus?page={}"
+    reload_url = "https://seekingalpha.com/symbol/" + ticker + "/focus?page={}"
     base = "https://seekingalpha.com"
     page_count = 1
+    url_list = []
+    more_pages = True
+    inaccessible = 0
 
-    url_dict = {}
-
-    more_scrapes = True
-
-    while more_scrapes:
+    while more_pages:
+        time.sleep(random.random())
         current_d = ''
-        time.sleep(1)
-        r = requests.get(url.format(str(page_count)), headers = headers)
+
+        r = requests.get(reload_url.format(str(page_count)), headers = 
+            {'User-Agent': ua.random})
         if r.status_code != 200:
-            print(page_count, 'error')
+            inaccessible += 1
         html = r.text
         soup = bs4.BeautifulSoup(html, 'lxml')
-        items = soup.find_all('div', class_='symbol_article')
+        search_items = soup.find_all('div', class_='symbol_article')
 
-        for item in items:
+        for item in search_items:
             link = item.find_all('a')[0]['href']
             link = base + link
+
+            # Determining the date of the article
             date = item.find_all('div', class_='date_on_by')[0].text
             if 'Yesterday' in date:
                 current_d = (dt.date.today() - dt.timedelta(1)).isoformat()
-            date = re.findall('(?:(?:[A-Z][a-z]{2}, [A-Z][a-z]{2}\. [0-9]*)|(?:[A-Z][a-z]{2}\. [0-9]{1,2}, [0-9]{4}))', date)
-            if len(date) > 0:
-                date = date[0]
-                date_m = month_dict[date[5:8]]
-                date_d = date[-2:len(date)]
-                if ' ' in date_d:
-                    date_d = re.sub(' ' , '0', date_d)
-                current_d = str(y) + '-' + date_m + '-' + date_d
-
-                if current_d > end_date:
-                    continue
-                if current_d < begin_date:
-                    more_scrapes = False
-                    break
-                else:
-                    if current_d not in url_dict:
-                        url_dict[current_d] = [link]
+            elif 'Today' in date:
+                current_d = (dt.date.today()).isoformat()
+            else:
+                raw_date = re.findall('(?:(?:[A-Z][a-z]{2}, [A-Z][a-z]{2}\. '
+                    '[0-9]*)|(?:[A-Z][a-z]{2}\. [0-9]{1,2}, [0-9]{4}))', date)
+                if raw_date == []: #
+                    return False #
+                elif len(raw_date) > 0:
+                    date = raw_date[0]
+                    # Determining format of date: 'Wed, Mar. 8' or 'Mar. 8, 2016'
+                    if not re.search(r'[0-9]{4}', date):
+                        date_m = MONTH_DICT[date[5:8]]
+                        date_d = date[-2:len(date)]
+                        if ' ' in date_d:
+                            date_d = re.sub(' ' , '0', date_d)
+                        current_d = (str(dt.datetime.now().year) + '-' + date_m 
+                                    + '-' + date_d)
                     else:
-                        url_dict[current_d].append(link)
+                        current_d = (dt.datetime.strptime(date, '%b. %d, %Y').date()
+                                    .isoformat())
+
+            if current_d > end_date:
+                continue
+            elif current_d < begin_date:
+                more_pages = False
+                break
+            else:
+                url_list.append(link)
 
         page_count += 1
 
-    return url_dict
+    if url_list is []:
+        return "No articles could be found or accessed for this company."
+    else:
+        return url_list, inaccessible
 
-def scrape_urls(url_dict):
-    article_dict = {}
+def scrape_sa_urls(url_list):
 
-    for date, url_list in url_dict.items():
-        article_dict[date] = []
-        for url in url_list:
-            article = ''
-            time.sleep(random.random)
-            r = requests.get(url, headers = headers)
-            if r.status_code != 200:
-                print('error', url)
-            html = r.text
-            soup = bs4.BeautifulSoup(html, 'lxml')
+    article_list = []
+    inaccessible = 0
 
-            p_text_1 = soup.find_all('div', class_='p p1')
-            p_text_2 = soup.find_all('p', class_='p p1')
+    for url in url_list:
+        time.sleep(1)
+        article = ''
 
-            p_text = p_text_1 + p_text_2
+        r = requests.get(url, headers = HEADER)
+        if r.status_code != 200:
+            inaccessible += 1
+        html = r.text
+        soup = bs4.BeautifulSoup(html, 'lxml')
 
-            for p in p_text:
-                article = article + p.text
+        summary = soup.find_all('div', class_='article-summary article-width')
+        p_text = soup.find_all('div', class_='sa-art article-width')
+        article_text = summary + p_text
+        article_text = [x.text for x in article_text]
 
-            article_dict[date].append(article)
+        article = ' '.join(article_text)
 
-    return article_dict
+        article_list.append(article)
 
-### SCRAPING TWITTER THROUGH HTML ###
+    return article_list, inaccessible
 
-def html_search(search_term, date, days):
-    headers = {'User-Agent': 'Mozilla/5.0'}
+### SCRAPING TWITTER ###
 
-    search_term = urllib.parse.quote_plus(search_term)
+def get_tweets(ticker, begin_date, end_date):
 
-    base_url = "https://twitter.com/search?f=tweets&vertical=default&q={}%20since%3A{}%20until%3A{}&src=typd"
-    reload_url = "https://twitter.com/search?f=tweets&vertical=default&q={}%20since%3A{}%20until%3A{}&max_position={}&src=typd"
+    search_term = urllib.parse.quote_plus('#' + ticker)
 
-    y = int(date[0:4])
-    m = int(date[4:6])
-    d = int(date[6:8])
-    end_date_obj = dt.date(y, m, d)
-    month_obj = dt.timedelta(days)
-    begin_date_obj = end_date_obj - month_obj
-
-    end_date = end_date_obj.isoformat()
-    begin_date = begin_date_obj.isoformat()
+    base_url = ("https://twitter.com/search?f=tweets&vertical=default&q={}"
+                "%20since%3A{}%20until%3A{}&src=typd")
+    reload_url = ("https://twitter.com/search?f=tweets&vertical=default&q={}"
+                "%20since%3A{}%20until%3A{}&max_position={}&src=typd")
 
     tweets_dict = {}
-
     initial_run = True
 
     while True:
-        time.sleep(random.random())
+        time.sleep(random.uniform(.5,1))
+
         if initial_run:
-            r = requests.get(base_url.format(search_term, begin_date, end_date), headers = headers)
+            r = requests.get(base_url.format(search_term, 
+                begin_date, end_date), headers = HEADER)
             initial_run = False
         else:
-            r = requests.get(reload_url.format(search_term, begin_date, end_date, pos), headers = headers)
+            r = requests.get(reload_url.format(search_term,
+                begin_date, end_date, pos), headers = HEADER)
 
         html = r.text
         soup = bs4.BeautifulSoup(html, 'lxml')
-        tweets = soup.find_all('li', class_='js-stream-item stream-item stream-item ')
+        tweets = soup.find_all('li', class_='js-stream-item stream-item '
+            'stream-item ')
 
         if tweets == []:
             break
 
         for tweet in tweets:
-            text = tweet.find_all('p', class_=re.compile('TweetTextSize js-tweet-text tweet-text*'))[0]
-            date = tweet.find_all('a', class_='tweet-timestamp js-permalink js-nav js-tooltip')[0]
-            date_text = date['title'][-11:len(date['title'])]
-            date_text = date_text[7:11] + '-' + month_dict[date_text[3:6]] + '-' + date_text[0:2]
-            if date_text not in tweets_dict:
-                tweets_dict[date_text] = [text.text]
+            text = tweet.find_all('p', class_=re.compile('TweetTextSize '
+                'js-tweet-text tweet-text*'))[0]
+            date = tweet.find_all('a', class_='tweet-timestamp js-permalink '
+                'js-nav js-tooltip')[0]
+
+            date_text = re.findall('[0-9]+ [A-Z][a-z]+ [0-9]{4}', str(date))[0]
+            date_iso = dt.datetime.strptime(date_text, '%d %b %Y').date().isoformat()
+  
+            if date_iso not in tweets_dict:
+                tweets_dict[date_iso] = [text.text]
             else:
-                tweets_dict[date_text].append(text.text)
+                tweets_dict[date_iso].append(text.text)
 
         pos = re.findall('data-max-position=\"(TWEET-[0-9]+-[0-9]+)', html)[0]
 
     return tweets_dict
 
-def get_daily_twitter_sentiment(tweets_dict, search_term):
-    search_term = re.sub('[^a-z0-9\-\']', '', search_term.lower())
-    positive, negative = opinion_words.get_word_lexicons()
+def get_twitter_words(tweets_dict, ticker):
+    ticker = ticker.lower()
 
     daily_dict = {}
     total_dict = {}
@@ -198,14 +191,14 @@ def get_daily_twitter_sentiment(tweets_dict, search_term):
             tweet_l = tweet.split()
             for word in tweet_l:
                 word = re.sub('[^a-z0-9\-\']', '', word.lower())
-                if (word in stop_words or word == '' or word == '-' 
+                if (word in STOP_WORDS or word == '' or word == '-' 
                     or word.isdigit() or 'twittercom' in word or 'http' in word
-                    or word[0] in ['$', '@'] or word == search_term):
+                    or word == ticker):
                     continue
                 else:
-                    if word in positive:
+                    if word in POSITIVE:
                         daily_dict[key]['positive'] += 1
-                    elif word in negative:
+                    elif word in NEGATIVE:
                         daily_dict[key]['negative'] += 1
 
                     if word not in total_dict:
@@ -213,46 +206,47 @@ def get_daily_twitter_sentiment(tweets_dict, search_term):
                     else:
                         total_dict[word] += 1
 
-    sorted_words = sorted(total_dict.items(), key = lambda x: x[1], reverse = True)
+    sorted_words = sorted(total_dict.items(), key = lambda x: x[1], 
+                    reverse = True)
     sorted_daily_list = sorted(daily_dict.items())
 
     return sorted_daily_list, sorted_words
 
 ### ANALYZING TWITTER SENTIMENT ###
 
-def monte_carlo(sorted_daily_list, search_term):
+def monte_carlo(sorted_daily_list, ticker, run_count):
     begin_date = sorted_daily_list[0][0]
     end_date = sorted_daily_list[-1][0]
-    ticker = search_term[1:]
 
     stock_vals_df = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
     max_delta = max(abs(stock_vals_df['delta']))
-    print(stock_vals_df)
-    run_count = 10000
+
     current_run_count = 0
     current_sum_sq = None
     best_a = 0
     best_b = 0
     best_c = 0
     best_d = 0
-
+    initial_found = False
 
     while current_run_count <= run_count:
-        index_diff = 0
 
-        A = random.uniform(0*max_delta, 200*max_delta)
-        B = random.uniform(0*max_delta, 200*max_delta)
+        A = random.uniform(0, 10*max_delta)
+        B = random.uniform(0, 10*max_delta)
         C = random.uniform(0,1)
         D = random.uniform(0,1)
 
+        #A = random.uniform(0, 10*max_delta)
+        #B = random.uniform(0, 10*max_delta)
+        #C = random.uniform(0,1)
+        #D = random.uniform(0,1)
+
         sum_sq = 0
         model = 0
-        initial_found = False
 
-        for i, day in enumerate(sorted_daily_list):
+        for i, day in enumerate(sorted_daily_list[1:]):
 
             if day[0] not in stock_vals_df.index:
-                index_diff += 1
                 continue
             positive = float(day[1]['positive'])
             negative = float(day[1]['negative'])
@@ -262,10 +256,9 @@ def monte_carlo(sorted_daily_list, search_term):
                 intial_found = True
 
             val = A*(positive**C) - B*(negative**D)
-
             model += val
 
-            #sq_error = (stock_vals_df.loc[day[0], 'delta'] - val)**2
+            #sq_error = (abs(stock_vals_df.loc[day[0], 'delta']) - abs(val))**2
             sq_error = (stock_vals_df.loc[day[0], 'stock_val'] - model)**2
 
             sum_sq += sq_error
@@ -279,29 +272,26 @@ def monte_carlo(sorted_daily_list, search_term):
 
         current_run_count += 1
 
+    plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d)
+
+def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
+    
     ax = plt.axes()
     ax.plot(range(len(stock_vals_df)), stock_vals_df['stock_val'])
-    print(stock_vals_df['stock_val'])
 
     monte_carlo_sim = []
     current = 0
-
-    initial_not_found = True
-    index_diff = 0
+    initial_found = False
 
     for i, day in enumerate(sorted_daily_list):
-        print(i, day)
         if day[0] not in stock_vals_df.index:
-            print('not in stock')
             continue
-        if initial_not_found:
-            print('initial value')
+        if not initial_found:
             monte_carlo_sim.append(stock_vals_df.loc[day[0], 'stock_val'])
             current = stock_vals_df.loc[day[0], 'stock_val']
-            initial_not_found = False
+            initial_found = True
             continue
 
-        print('regular calculation')
         positive = float(day[1]['positive'])
         negative = float(day[1]['negative'])
 
@@ -309,65 +299,12 @@ def monte_carlo(sorted_daily_list, search_term):
         monte_carlo_sim.append(current)
 
     ax.plot(range(len(stock_vals_df)), monte_carlo_sim)
-
-    plt.show()
-
-    print(monte_carlo_sim)
-
-    return best_a, best_b, best_c, best_d
-
-def plot(stock_vals, daily_list, best_a, best_b):
     
-    ax = plt.axes()
-    ax.plot(range(len(stock_vals)), stock_vals)
+    plt.savefig('static/twitter.png')
 
-    monte_carlo_sim = [float(stock_vals[0])]
-    current = float(stock_vals[0])
+### SCRAPING NEW YORK TIMES ###
 
-    for day in daily_list[1:]:
-        positive = day[1]['positive']
-        negative = day[1]['negative']
-
-        val = current + float(positive*best_a - negative*best_b) 
-        monte_carlo_sim.append(val)
-
-    ax.plot(range(len(stock_vals)), monte_carlo_sim)
-
-    plt.show()
-
-
-def get_percentages(sorted_daily_list):
-    y_vals = []
-    x_vals = []
-    negative_l = []
-    positive_l = []
-    current = 0
-
-    for item in sorted_daily_list:
-        negative = item[1]['negative']
-        positive = item[1]['positive']
-        total = negative + positive
-
-        positive_l.append(positive/total)
-        negative_l.append(negative/total)
-
-        if negative > positive:
-            ratio = (positive-negative)/total
-        elif positive > negative:
-            ratio = (positive-negative)/total
-        else:
-            ratio = 0
-
-        current += ratio
-
-        y_vals.append(current)
-        x_vals.append(item[0])
-
-    return x_vals, y_vals, positive_l, negative_l
-
-### USING NEW YORK TIMES API ###
-
-def get_search_urls(search_item, date):
+def get_nyt_urls(search_item, beginning_date, ending_date):
     '''
     INPUTS:
         search_item: string to search
@@ -377,24 +314,22 @@ def get_search_urls(search_item, date):
         url_list: list of urls to articles from the past month,
             returned when item is searched
     ''' 
-    y = int(date[0:4])
-    m = int(date[4:6])
-    d = int(date[6:8])
-    end_date = dt.date(y, m, d)
-    month = dt.timedelta(days=30)
-    begin_date = end_date - month
-    begin_date = begin_date.isoformat()
-    begin_date = re.sub('-', '', begin_date)
+    
+    end_date = re.sub('-', '', ending_date)
+    begin_date = re.sub('-', '', beginning_date)
 
-    url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=1175ef9507b5439ebd57ec8cc75b576d&q="
-    s = search_item.lower()
-    s = re.sub(' ', '+', s)
+    url = ("https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key"
+        "=1175ef9507b5439ebd57ec8cc75b576d&q=")
+    s = re.sub(' ', '+', search_item.lower())
 
-    url = url + s + '&begin_date=' + begin_date + '&end_date=' + date + '&sort=newest'
+    url += (s + '&begin_date=' + begin_date + '&end_date=' + end_date 
+            + '&sort=newest')
 
-    r = requests.get(url)
+    r = requests.get(url, headers = HEADER)
     json = r.json()
     num_results = json['response']['meta']['hits']
+    if num_results == 0:
+        return "No results available"
     pages = math.ceil(num_results/10)
 
     url_list = []
@@ -413,11 +348,12 @@ def get_search_urls(search_item, date):
 
     return url_list
 
-def scrape_url_list(url_list, search_item):
+def scrape_nyt_urls(url_list, search_item):
     '''
     INPUTS:
         url_list: list of urls to scrape
         search_item: string to search
+        naive_bayes: Boolean
 
     OUTPUTS:
         l: sorted list (in descending order) of all the words obtained from
@@ -425,50 +361,65 @@ def scrape_url_list(url_list, search_item):
     '''
 
     words_dict = {}
+    articles = []
+    inaccessible = 0
 
     for url in url_list:
-        r = requests.get(url)
-        if not r.status_code == requests.codes.ok:
-            continue
+
+        r = requests.get(url, headers = HEADER)
+        if r.status_code != 200:
+            inaccessible += 1
         html = r.text
         soup = bs4.BeautifulSoup(html, 'lxml')
 
         story_text = soup.find_all('p', class_ = 'story-body-text story-content')
+        story_text = [x.text for x in story_text]
+            
+        article = ' '.join(story_text)
+        
+        articles.append(article)
 
-        for paragraph in story_text:
-            text = paragraph.text
-            text_l = text.split()
+    return articles, inaccessible
 
-            for word in text_l:
-                word = re.sub('[^a-z0-9\-\']', '', word.lower())
-                if (word in stop_words or word == '' or word == '-' 
-                    or word in search_item.lower() or word.isdigit()):
-                    continue
-                elif word not in words_dict:
-                    words_dict[word] = 1
-                else:
-                    words_dict[word] += 1
+### GENERAL FUNCTIONS ###
 
-    l = sorted(words_dict.items(), key = lambda x: x[1], reverse = True)
-
-    return words_dict
-
-### NYT GET OPINION SCORE ###
-
-def get_opinion_score(search_item, date):
-    positive, negative = opinion_words.get_word_lexicons()
-
-    # NYT
-    nyt_urls = get_search_urls(search_item, date)
-    nyt_words = scrape_url_list(nyt_urls, search_item)
+def bag_of_words_score(words_list):
 
     p_score = 0
     n_score = 0
 
-    for word, count in nyt_words.items():
-        if word in positive:
+    for word, count in words_list:
+        if word in POSITIVE:
             p_score += count
-        elif word in negative:
+        elif word in NEGATIVE:
             n_score += count
+
+    p_percentage = (p_score / (p_score + n_score)) * 100
+    n_percentage = (n_score / (p_score + n_score)) * 100
     
-    return p_score, n_score
+    return p_percentage, n_percentage
+
+def split_strings_into_list(strings_list, search_item):
+
+    words_dict = {}
+
+    for string in strings_list:
+        string_l = string.split()
+
+        for word in string_l:
+            word = re.sub('[^a-z0-9\-\']', '', word.lower())
+            if (word in STOP_WORDS or word == '' or word == '-' 
+                or word == search_item.lower() or word.isdigit()):
+                continue
+            elif word not in words_dict:
+                words_dict[word] = 1
+            else:
+                words_dict[word] += 1
+    
+    sorted_words = sorted(words_dict.items(), key = lambda x: x[1], 
+        reverse = True)
+
+    return sorted_words
+
+
+
