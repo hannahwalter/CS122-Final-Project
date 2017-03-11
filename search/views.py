@@ -10,11 +10,13 @@ from django.forms.extras.widgets import SelectDateWidget
 
 
 def create_output(d):
-    return {'recommendation': 'Buy',
-    'bag_of_words': [['Positive words', '57%', '43%', '23%'], 
-    ['Negative words', '43%', '57%', '77%'],
-    ['Top 10 words associated', 'twitter 10 words', 'nytimes 10 words', 'seeking alpha 10 words']],
-    'monte_carlo': [['Monte Carlo Values', 'value_1_1', 'value_1_2'], ['Stock Values', 'value_2_1', 'value_2_2']],
+    return {'bag_of_words': [['Positive words', '57%', '43%', '23%'], 
+    ['Negative words', '43%', '57%', '77%'], ['Recommendation', 'Buy', 'Buy', 'Hold']],
+    'top_words': [['1', 'a', 'b', 'c'], ['2', 'a', 'b', 'c'], ['3', 'a', 'b', 'c'],
+    ['4', 'a', 'b', 'c'], ['1', 'a', 'b', 'c'], ['1', 'a', 'b', 'c'], ['1', 'a', 'b', 'c']
+    , ['1', 'a', 'b', 'c'], ['1', 'a', 'b', 'c']],
+    'bag_of_words_error': ['Could not find articles for NYTimes'],
+    'monte_carlo': [['Dates', 'date1', 'date2'], ['Monte Carlo Values', 'value1', 'value2'], ['Stock Values', 'value1', 'value2']],
     'naive_bayes': [['Positive articles', 'x%', 'x%', 'x%'], ['Negative articles', 'y%', 'y%', 'y%']]}
 
 
@@ -92,7 +94,10 @@ def home(request):
             context['monte_carlo'] = res['monte_carlo']
         if form.cleaned_data['naive_bayes']:
             context['naive_bayes'] = res['naive_bayes']
-        context['recommendation'] = res['recommendation']
+        context['top_words'] = res['top_words']
+        context['recommendation'] = 'header'
+        if 'bag_of_words_error' in res:
+            context['bag_of_words_error'] = res['bag_of_words_error']
     context['form'] = form
     
     return render(request, 'index.html', context)

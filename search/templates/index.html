@@ -36,27 +36,51 @@
         <div class="frame">
             {% if recommendation %}
             <div id='header'>
-                <h1>Our Recommendation and Analysis:</h1>
+                <h1>Our Recommendations and Analysis:</h1>
             </div>
             {% endif %}
-            <div id='header'>
-                <h2>Recommendation: {{recommendation}}</h2>
             {% if bag_of_words %}
             <div id='header'>
                 <h2>Bag of Words Analysis</h2>
             </div>
+            {% if bag_of_words_error %}
+                {% for values in bag_of_words_error %}
+                    {{values}}
+                {% endfor %}
+            {% endif%}
             <div class="bag of words">
+                <br>
                 <table>
                     <tr>
                         <td></td>
-                        <td>Twitter:</td>
-                        <td>NYTimes:</td>
-                        <td>Seeking Alpha:</td>
+                        <td style = 'padding-right: 20px'><strong>Twitter</strong></td>
+                        <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
+                        <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
                     </tr>
                     {% for values in bag_of_words %}
                     <tr>
                         {% for v in values %}
-                        <td>{{v}}</td>
+                        <td style = 'padding-right: 40px'>{{v}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+
+                <br>
+                <div id='header'>
+                    <h4> Top 10 words </h4>
+                </div>
+                <table>
+                    <tr>
+                        <td></td> 
+                        <td style = 'padding-right: 20px'><strong>Twitter</strong></td>
+                        <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
+                        <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
+                    </tr>
+                    {% for values in top_words %}
+                    <tr>
+                        {% for v in values %}
+                        <td style = 'padding-right: 40px'>{{v}}</td>
                         {% endfor %}
                     </tr>
                     {% endfor %}
@@ -69,13 +93,8 @@
             </div>
             <div class = 'monte carlo'>
                 {% load static %}
-                <img src="{% static 'twitter.png' %}" alt="Scatterplot Analysis"/>
+                <img src="{% static 'twitter.png' %}" alt="Monte Carlo Analysis"/>
                 <table>
-                    <tr>
-                        <td></td>
-                        <td>Value_1:</td>
-                        <td>Value_2:</td>
-                    </tr>
                     {% for values in monte_carlo %}
                     <tr>
                         {% for v in values %}
@@ -94,14 +113,14 @@
                 <table>
                     <tr>
                         <td></td>
-                        <td>Twitter:</td>
-                        <td>NYTimes:</td>
-                        <td>Seeking Alpha:</td>
+                        <td style = 'padding-right: 20px'><strong>Twitter</strong></td>
+                        <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
+                        <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
                     </tr>
                     {% for values in naive_bayes %}
                     <tr>
                         {% for v in values %}
-                        <td>{{v}}</td>
+                        <td style = 'padding-right: 40px'>{{v}}</td>
                         {% endfor %}
                     </tr>
                     {% endfor %}
