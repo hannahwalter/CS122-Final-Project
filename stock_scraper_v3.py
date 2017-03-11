@@ -3,11 +3,10 @@
 
 '''
 This code collects historical and real-time data on stocks
-from Yahoo finance and Quandl via API.
+from Yahoo finance API.
 
 Packages to install:
-    - yahoo-finance
-    - quandl
+    yahoo-finance
 '''
 
 from yahoo_finance import Share
@@ -51,11 +50,23 @@ def find_ticker_company(company_name):
         string += ' Please retry again using the proper name or ticker.'
         return string
 
-def find_sector_and_industry(ticker):
+import pandas as pd
+
+
+def find_ticker_and_name(company_input):
     df = pd.read_csv('companylist.csv')
-    sector = df['Sector'].loc[df['Symbol'] == ticker].tolist()[0]
-    industry = df['Industry'].loc[df['Symbol'] == ticker].tolist()[0]
-    return sector, industry
+    df_by_ticker_match = df[df['Symbol'] == company_input.upper()]
+    if df_by_ticker_match.shape[0] == 1:
+        ticker = df_by_ticker_match['Symbol'].tolist()[0]
+        name = df_by_ticker_match['Name'].tolist()[0]
+    else:
+        df_by_name_match = df[df['Name'].str.contains(company_input.upper(), case=False)]
+        if df_by_name_match.shape[0] == 1:
+            ticker = df_by_name_match['Symbol'].tolist()[0]
+            name = df_by_name_match['Name'].tolist()[0]
+        else:
+            return None
+    return ticker, name
 
 def historical_basic(ticker, start_date, end_date, only_start_and_end):
     '''
