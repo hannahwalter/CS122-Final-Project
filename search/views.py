@@ -3,12 +3,12 @@ from django import forms
 import json
 import traceback
 import sys
-# from create_output import create_output
+from create_output import create_output
 import datetime
 import pandas as pd
 from django.forms.extras.widgets import SelectDateWidget
 
-
+'''
 def create_output(d):
     return {'bag_of_words': [['Positive words', '57%', '43%', '23%'], 
     ['Negative words', '43%', '57%', '77%'], ['Recommendation', 'Buy', 'Buy', 'Hold']],
@@ -18,8 +18,7 @@ def create_output(d):
     'bag_of_words_error': ['Could not find articles for NYTimes'],
     'monte_carlo': [['Dates', 'date1', 'date2'], ['Monte Carlo Values', 'value1', 'value2'], ['Stock Values', 'value1', 'value2']],
     'naive_bayes': [['Positive articles', 'x%', 'x%', 'x%'], ['Negative articles', 'y%', 'y%', 'y%']]}
-
-
+'''
 
 class SearchForm(forms.Form):
     company_name = forms.CharField(
@@ -88,16 +87,19 @@ def home(request):
     if res is None:
         context['result'] = None
     else:
-        if form.cleaned_data['bag_of_words']:
-            context['bag_of_words'] = res['bag_of_words']
-        if form.cleaned_data['monte_carlo']:
-            context['monte_carlo'] = res['monte_carlo']
-        if form.cleaned_data['naive_bayes']:
-            context['naive_bayes'] = res['naive_bayes']
-        context['top_words'] = res['top_words']
         context['recommendation'] = 'header'
+        if 'bag_of_words' in res:
+            context['bag_of_words'] = res['bag_of_words']
+        if 'monte_carlo' in res:
+            context['monte_carlo'] = res['monte_carlo']
+        if 'naive_bayes' in res:
+            context['naive_bayes'] = res['naive_bayes']
         if 'bag_of_words_error' in res:
             context['bag_of_words_error'] = res['bag_of_words_error']
+        if 'input_error' in res:
+            context['input_error'] = res['input_error']
+        if 'top_words' in res:
+            context['top_words'] = res['top_words']
     context['form'] = form
     
     return render(request, 'index.html', context)

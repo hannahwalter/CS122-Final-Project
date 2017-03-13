@@ -2,11 +2,11 @@
 
 Contributors: Hannah Ni, Hannah Walter, Lin Su
 
-Through this project, we attempted to draw from three common sources of stock commentary: Twitter, new articles, and stock blogs. We scraped Twitter, New York Times, and Seeking Alpha to represent these outlets. After scraping the appropriate tweets and articles, we used a bag-of-words method and a naive-bayes model to gauge sentiment. We also used a random Monte-Carlo simulation assess how well sentiment follows stock movement.
+Through this project, we attempted to draw from three common sources of stock commentary: Twitter, new articles, and stock blogs. We scraped Twitter, New York Times, and Seeking Alpha to represent these outlets. After scraping the appropriate tweets and articles, we used a bag-of-words method and a Naive-Bayes model to gauge sentiment. We also used a random Monte-Carlo simulation assess how well sentiment follows stock movement.
 
 To use our program:
 
-Through this project, we ran into several challenges.
+Through this project, we ran into several challenges:
 
 - Scraping our sources: While NYTimes provided an API for us to use, Twitter's API did not provide the desired flexibility, and Seeking Alpha had no API at all. As a result, we had to find a way to scrape these sources the traditional way. In order to prevent being blocked for scraping, our code implements some pauses which can slow the data gathering process. Furthermore, the use of "infinite scrolling" proved more difficult to deal with.
 
