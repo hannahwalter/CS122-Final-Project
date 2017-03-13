@@ -38,7 +38,14 @@
             <div id='header'>
                 <h1>Our Recommendations and Analysis:</h1>
             </div>
+
             {% endif %}
+            {% if input_error %}
+                {% for values in input_error %}
+                    {{values}}
+                {% endfor %}
+            {% endif %}
+
             {% if bag_of_words %}
             <div id='header'>
                 <h2>Bag of Words Analysis</h2>
@@ -47,7 +54,7 @@
                 {% for values in bag_of_words_error %}
                     {{values}}
                 {% endfor %}
-            {% endif%}
+            {% endif %}
             <div class="bag of words">
                 <br>
                 <table>
@@ -113,7 +120,6 @@
                 <table>
                     <tr>
                         <td></td>
-                        <td style = 'padding-right: 20px'><strong>Twitter</strong></td>
                         <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
                         <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
                     </tr>

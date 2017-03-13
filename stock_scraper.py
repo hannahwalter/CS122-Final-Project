@@ -30,13 +30,13 @@ import re
 quandl.ApiConfig.api_key = 'DZFGSrUkQDFyReYx1gvx'
 
 def find_ticker_and_name(company_input):
-    df = pd.DataFrame(pd.read_csv('companylist.csv'))
+    df = pd.DataFrame(pd.read_csv('files_for_code/companylist.csv'))
     df_by_ticker_match = df[df['Symbol'] == company_input.upper()]
     if len(df_by_ticker_match) == 1:
         ticker = df_by_ticker_match['Symbol'].tolist()[0]
         name = df_by_ticker_match['Name'].tolist()[0]
+        return ticker, name
     else:
-
         df_by_name_match = df[df['Name'].str.contains(company_input.upper(), case=False)]
         symbols = df_by_name_match['Symbol'].tolist()
         names = df_by_name_match['Name'].tolist()
@@ -45,7 +45,7 @@ def find_ticker_and_name(company_input):
         elif len(symbols) == 1:
             return symbols[0], names[0]
         else:
-            matches_string = ("We found the following tickers and companies"
+            matches_string = ("We found the following tickers and companies "
                 "that contain your input. ")
             tuples = zip(symbols, names)
             for i, val in enumerate(tuples):
@@ -80,6 +80,6 @@ def historical_basic(ticker, start_date, end_date, only_start_and_end):
         processed['stock_val'].append(float(day_data['Close']))
 
     processed_df = pd.DataFrame(processed)
-    processed_df = processed_df.set_index(['date'], drop=True)
+    processed_df = processed_df.set_index(['date'], drop = False)
 
     return processed_df

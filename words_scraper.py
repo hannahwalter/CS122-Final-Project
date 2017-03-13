@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 from fake_useragent import UserAgent
 
 import util as u
-import stock_scraper_v3
+import stock_scraper
 
 ua = UserAgent()
 pm = urllib3.PoolManager()
@@ -50,8 +50,7 @@ def get_sa_urls(ticker, begin_date, end_date):
         time.sleep(random.random())
         current_d = ''
 
-        r = requests.get(reload_url.format(str(page_count)), headers = 
-            {'User-Agent': ua.random})
+        r = requests.get(reload_url.format(str(page_count)), headers = HEADER)
         if r.status_code != 200:
             inaccessible += 1
         html = r.text
@@ -59,6 +58,9 @@ def get_sa_urls(ticker, begin_date, end_date):
         search_items = soup.find_all('div', class_='symbol_article')
 
         for item in search_items:
+            if 'symbol_pro_research' in str(item):
+                continue
+
             link = item.find_all('a')[0]['href']
             link = base + link
 
@@ -218,7 +220,7 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
     begin_date = sorted_daily_list[0][0]
     end_date = sorted_daily_list[-1][0]
 
-    stock_vals_df = stock_scraper_v3.historical_basic(ticker, begin_date, end_date, False)
+    stock_vals_df = stock_scraper.historical_basic(ticker, begin_date, end_date, False)
     max_delta = max(abs(stock_vals_df['delta']))
 
     current_run_count = 0
@@ -272,7 +274,13 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
 
         current_run_count += 1
 
-    plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d)
+    monte_carlo_sim = plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d)
+
+    dates_list = stock_vals_df['date'].tolist()
+    stock_vals = [round(x, 2) for x in stock_vals_df['stock_val'].tolist()]
+
+    return dates_list, monte_carlo_sim, stock_vals
+
 
 def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
 
@@ -302,6 +310,8 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
     plt.savefig('static/twitter.png')
 
     plt.clf()
+
+    return [round(x, 2) for x in monte_carlo_sim]
 
 ### SCRAPING NEW YORK TIMES ###
 
@@ -395,8 +405,8 @@ def bag_of_words_score(words_list):
         elif word in NEGATIVE:
             n_score += count
 
-    p_percentage = (p_score / (p_score + n_score)) * 100
-    n_percentage = (n_score / (p_score + n_score)) * 100
+    p_percentage = round((p_score / (p_score + n_score)) * 100, 2)
+    n_percentage = round((n_score / (p_score + n_score)) * 100, 2)
     
     return p_percentage, n_percentage
 

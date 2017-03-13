@@ -21,13 +21,13 @@ def open_lexicon_files(file):
 
     return set(words)
 
-def get_word_lexicons(positive = 'positive-words.txt', negative = 'negative-words.txt'):
+def get_word_lexicons(positive = 'files_for_code/positive-words.txt', negative = 'files_for_code/negative-words.txt'):
     positive_set = open_lexicon_files(positive)
     negative_set = open_lexicon_files(negative)
 
     return positive_set, negative_set
 
-def get_stop_words(words_file = 'stop_words.txt'):
+def get_stop_words(words_file = 'files_for_code/stop_words.txt'):
     f = open(words_file, 'r')
     stop_words = set(f.read().splitlines())
 
