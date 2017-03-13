@@ -119,7 +119,7 @@ def create_output(args):
     if args['naive_bayes']:
         if nyt_continue:
             output_dict['naive_bayes'] = {}
-            pos_train, neg_train = naive_bayes.gen_train_list(14, 16)
+            pos_train, neg_train = naive_bayes.gen_train_list(40, 40)
             pos_model = naive_bayes.Bayes(pos_train, 1, "positive")
             neg_model = naive_bayes.Bayes(neg_train,1,"negative")
 
