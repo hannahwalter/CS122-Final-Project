@@ -34,7 +34,7 @@ class Bayes:
         pass
     def train_all(self):
         for fil in self.train_list:
-            txt = open(fil, "r").read()
+            txt = open(fil, "rU").read()
             txt_list = re.sub("[^\w]", " ",  txt).split()
             self.train(txt_list)
         pass
