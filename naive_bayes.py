@@ -32,6 +32,7 @@ class Bayes:
             if gram in self.grams:
                 self.grams[gram]+=1
         pass
+        
     def train_all(self):
         for fil in self.train_list:
             txt = open(fil, "rU").read()
@@ -70,8 +71,6 @@ def gen_train_list(num_pos, num_neg):
         neg_file = "negative_train/neg_"+ str(i+1)+".txt"
         neg_train.append(neg_file)
     return pos_train, neg_train
-
-
 
 def mass_class(pos_model, neg_model, test_list, order):
     pos_count = 0

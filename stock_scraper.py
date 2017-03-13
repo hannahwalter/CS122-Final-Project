@@ -30,7 +30,7 @@ import re
 quandl.ApiConfig.api_key = 'DZFGSrUkQDFyReYx1gvx'
 
 def find_ticker_and_name(company_input):
-    df = pd.DataFrame(pd.read_csv('companylist.csv'))
+    df = pd.DataFrame(pd.read_csv('files_for_code/companylist.csv'))
     df_by_ticker_match = df[df['Symbol'] == company_input.upper()]
     if len(df_by_ticker_match) == 1:
         ticker = df_by_ticker_match['Symbol'].tolist()[0]
