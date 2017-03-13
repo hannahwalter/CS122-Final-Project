@@ -1,0 +1,105 @@
+HSN, Inc.: 2016 Looks Like The Beginning Of A Long Decline
+HSN's 2016 was ugly by the company's own admission. Sales and earnings both declined, reversing a decent multi-year trend.
+
+The core question is whether the results are a one-off blip, or the beginning of a negative trend.
+
+I lean rather strongly toward the idea that HSNI's results aren't going to get better, which implies further downside for the stock.
+
+Liberty Interactive's ownership and a potential turnaround both cloud the short case, but I still think HSNI has more downside to come.
+
+The key question in trying to judge HSN, Inc. (NASDAQ:HSNI) is whether its 2016 results were merely a bump in the road, or the beginning of a long-term negative trend. After all, HSN was cruising along rather nicely until last year.
+If 2016 was just a blip, then HSNI's stock likely is somewhat undervalued. At Monday's close of $40.50, the stock trades at just 15.5x 2016 adjusted EPS, and 14.4x backing out ~$0.19 of expense related to implementation issues at one of the company's distribution centers. A sub-9x EV/EBITDA multiple appears to imply a modest discount to peer (and 38% owner) QVC Group (NASDAQ:QVCA) (QVCB) following its split from Liberty Interactive (NASDAQ:LVNTA) (NASDAQ:LVNTB), though that depends on how one calculates QVC's enterprise value.
+
+From a broader standpoint, those multiples imply that HSNI - down more than 40% in the past 18 months - is pricing in rather modest growth. And while there no doubt will be pressure on the legacy HSN television shopping business, 30%+ of revenue comes from high-end DTC brands, and HSN's digital business continues to grow. It doesn't take much to drive upside for HSNI - if 2016 was an aberration.
+
+But I don't believe that it was. There are clear pressures on HSN's core operating model, and focusing on the non-TV business ignores the fact that ~one-third of sales still come the old-fashioned way. Changes to HSNI's shipping policies imply a "new normal" in terms of margins, and the company's insistence on blaming short-term factors raises questions about its strategy going forward.
+
+The core problem for HSNI is that it's not at all clear what its competitive advantage is at this point. Yes, it has a relatively large base of committed customers, but it also appears to be struggling to attract newer shoppers. And the migration to digital means HSN now is competing with not just Amazon.com (NASDAQ:AMZN), but Wayfair (NYSE:W) and a host of other more experienced, more successful online retailers. All told, HSN looks increasingly like just another retailer - and that isn't a good place to be in 2017.
+
+Not Just Television Shopping
+
+(Author note: In the rest of this article, HSN as a whole will be referred to as "HSNi", or HSN, Inc. HSN will refer to the legacy HSN segment, in keeping with the company's usage of the acronyms).
+
+HSNi isn't just television shopping anymore. 31% of 2016 revenue, according to the 10-K, came from the company's Cornerstone business. That segment includes five brands (two were divested this year), most of which focus on home sales, except for apparel-focused Garnet Hill. Sales in that segment are overwhelmingly online, though the high-end Frontgate and Ballard Designs do have a few brick-and-mortar locations.
+
+Even in the HSN business, digital penetration hit 55% in Q4, per the Q4 conference call. And that figure isn't just a matter of customer preference: HSN is targeting customers where they are. With cord-cutting limiting broadcast reach - HSN subscribers declined 2.5% in 2016, per the 10-K, and HSN2 reach fell almost 5% - HSN has created channels on Roku and Apple (NASDAQ:AAPL) TV, while also hosting events on Facebook (NASDAQ:FB) Live and YouTube (NASDAQ:GOOG) (NASDAQ:GOOGL).
+
+Roughly speaking, HSNi sales as a whole are basically one-third Cornerstone, one-third HSN digital, and one-third HSN television. That diversification seems to limit somewhat the pressure from cord-cutting and the gradually lessening competitive edge of television selling. Indeed, as the chart above shows, HSNi posted rather consistent growth coming out of the financial crisis in a sector where few companies were able to do so, either online or offline. Consolidated EBITDA increased from $157 million in 2008 to $357 million in 2015. Obviously, the economic recovery helped, but HSN, in particular, seemed more than capable of managing increasing online competition. That changed in 2016.
+
+What Happened In 2016?
+
+What should be concerning about HSNi's 2016 results is that I don't think there's a single factor that drove the sudden decline in sales and profits in both segments. There's not an obvious fixable error in either merchandising or delivery, for instance. A stumble in efforts to phase in automation at a distribution center in Tennessee led to a $16 million ($0.19 after-tax) impact on Q4 expenses; those aside, however, Q4 Adjusted EBITDA still declined almost 10% and full-year profits dropped 12%.
+
+Rather, the business simply slowed down, with margins (and to a lesser extent revenue) pressured by a reduction in shipping and handling charges, put in in August. At HSN, sales declined 3%, with one point of the decline coming from the end of an infomercial starring musician Keith Urban. Health & beauty and jewelry sales appear to have been weak, and lower shipping and handling revenue had an impact as well. Cornerstone revenue - adjusted for the divestiture of the two brands and an extra week in 2016 - declined just 1%, with the company citing promotional pressure and weakness in its home brands. In commentary around the quarters and in a December presentation, HSNi CEO Mindy Grossman blamed election-year uncertainty as well.
+
+The news was worse on the margin front. HSN gross margin fell 140 bps after being flat in 2015. The distribution center problems added ~50 bps; the remainder came from shipping and handling rate cuts (both standard rates and through "free shipping" promotions) and increased costs. Cornerstone gross margin fell 170 bps due to higher promotional activity relative to both shipping and product pricing. HSN sales and marketing deleveraged 40 bps; Cornerstone gained 30 bps of leverage despite lower sales, largely due to lower catalog shipments. Both divisions managed to leverage G&A as well, with lower incentive comp helping and a ~25 bps benefit to HSN from lower bad debt after an elevated 2015 on that front.
+
+All told, the year doesn't sound that bad, particularly in the context of retail at the moment. A low-single-digit revenue decline and a bit of margin compression is not unlike what other retailers are seeing. But HSNi Adjusted EBITDA margins declined 130 bps year over year, with less than 50 bps coming from the distribution center problems. That led Adjusted EBITDA down over 16%, erasing four full years' worth of growth. And while I wouldn't expect necessarily the same rate of decline in 2017-2018, there's good reason to expect that another decline might be imminent, and that HSNi's long-term growth trajectory has turned negative.
+
+Why 2016 Is The Start Of A Trend
+
+1. This isn't a one-time slip-up.
+
+Again, there's nothing in the results to suggest a major execution error, or a significant product miss, or another factor that can be quickly reversed. The promotional environment isn't going to improve. The shipping and handling reduction took place in August, meaning S&H revenue should actually be even lower in 2017, unless HSNi can better hold the line on that front in terms of promotions. The $16 million in DC expenses do come off this year, but there's another $8-10 million in first-half spend, limiting that benefit to ~$0.08 after-tax.
+
+And it's not as if HSNi hasn't been busy, particularly on the HSN side of the business. The company is experimenting with digital content, including potential virtual reality videos. It's had success driving views through its Facebook page, including 70+ Facebook Live events, per the Q4 conference call. Ballard Designs has a podcast, and opened two "experiential" locations in high-income communities in Virginia and Pennsylvania. HSN is looking to build out a presence in Amazon Echo and Google Home as well.
+
+This isn't a case where a legacy retailer simply woke up and realized it had fallen behind. HSNi, to its credit, has been rather aggressive in getting ahead of the curve in terms of digital sales. It's not as if it is going to - or needs to - rebuild its online presence, or there are myriad customer acquisition channels the company has left untouched. Truthfully, it's not as if management has done a poor job, or rested on its laurels. The problem with that, however, is that there isn't much low-hanging fruit looking forward, or some easy path to sales and profit improvement. On the Q4 call, CEO Grossman said 2016 "was clearly a year of disruption in retail." I think that's probably true - and I think that's a problem for HSNi, which is not a disruptor itself.
+Cornerstone revenue already had stalled out somewhat heading into 2016. And margin pressure jumped in 2014, with the company in that year's 10-K citing promotional spending as a downward driver on gross profit.
+
+Gross margin in the segment now has declined 300 bps since 2013. Segment EBITDA margin has compressed from 7.3% in 2012 to 3.5% in 2016. Even excluding the impact of the divested brands (which drove almost $100 million in 2015 revenue and just $44 million before their sale in September), sales growth has dropped to the low-single digits the past few years.
+
+In other words, Cornerstone is trying to compete on price - and having limited success. Somewhat ironically, given the current state of retail, the one bright spot among the five brands in 2016 was the sole apparel-focused business, Garnet Hill. The company's home brands were down, and they account for ~81% of revenue, per the 10-K.
+
+Over the past four years then, Ballard Designs, Frontgate, Grandin Road, and Improvements have grown sales from ~$720 million in 2012 to $886 million in 2016, about a 5.3% CAGR. Over the same period, Wayfair sales increased from $601 million to $3.4 billion.
+
+Cornerstone isn't winning. And that matters not only for that business, but also for HSN as well.
+
+3. HSN's competitive advantage is disappearing.
+
+HSN doesn't break out new versus existing customer figures. But conference calls in 2016 seem to suggest roughly flat counts for the existing base, including a Q1 increase in "best customers," which Grossman has characterized as those who buy from the company 36 times or more a year (Yes, thirty-six).
+
+That's a problem going forward. HSN's customer has a median age of 59. New customers are generally in the 30-45 range, per Grossman's December commentary, but it appears, if anecdotally, the rate of customer acquisition is slowing, even while files cite higher marketing expense. There should be a concern that not only are core customers aging perhaps out of the ideal age range (going into retirement, where disposable income might lessen), but also that an older customer base naturally will come later to online shopping - and HSN competition.
+
+At the very least, it does appear that HSN is increasingly reliant on core customers. Increasing private label credit card penetration - 36% in 2016 versus 31% in 2014 and 27% in 2012 - might support that contention (Alternatively, it could just mean HSN is doing a better job pushing credit).
+
+That doesn't seem surprising, as HSN's digital penetration grows. The company is moving from having captive customers and a differentiated model to being just another online retailer. QVC is facing the same issue, and seeing the same profit and revenue weakness. Amazon aside, online retail hasn't proven to be a terribly profitable business so far. It's certainly a space that requires absolute efficiency in the supply chain. And HSN's difficulty in managing S&H pressure and in improving that supply chain doesn't bode well on that front, either.
+
+4. The TV business still matters - and there's no way that business grows.
+
+With digital penetration at 55%, and HSN driving 69% of HSNi sales, that implies that ~31% of revenue still comes from television. That is a declining business with little reason to expect a rebound. Reach for HSN declined from 95 million at the end of 2014 to 91.4 million at the end of 2016, with a modest acceleration last year (-2.5% versus -1.4%). HSN2 launched in 2010, but saw its reach drop almost 5% in 2016.
+
+Meanwhile, price points have declined in each of the last two years, accelerating to -3% in 2016, which HSNi attributed to product mix. And while HSNi is diversifying away from its legacy business, it remains large enough that continued declines will affect the consolidated top line, and likely lead to some sort of deleveraging below that line.
+
+5. All told, this looks like a "new normal."
+
+So, 30%+ of the business comes from TV, which is declining. 31% is Cornerstone, which needs to rebound, but has a clear industry leader in front of it in Wayfair. The rest of the business is starting to look like an undifferentiated Internet retailer, hardly a great spot given Amazon's dominance and the continuing efforts of brick-and-mortar retailers to boost their own online capabilities and marketing.
+
+That's not a recipe for much in the way of top-line growth. HSNi points to the fact that ~70% of its products are proprietary, but I'm skeptical that's quite as meaningful as it sounds. A lot of those "proprietary" products are collections from major, non-exclusive brands. And moving into the online world expands competition, particularly on pricing.
+
+It's in margins where the real risk lies. Mix shift into online seems highly likely to increase pricing pressure; it's much more difficult, if not impossible, for TV shoppers to comparison shop. It's clear that shipping is a pain point for HSNi in both segments; it's clear that promotional pressure is not abating, nor going to abate any time soon, as even management admits.
+
+And I'm simply not buying the argument that the election impacted 2016 results all that much. Retailers for several years now have bemoaned various supposedly cyclical factors such as "confidence" or "disruptions." But retail spend has been steadily increasing - the problem for most publicly-traded retailers is that they're losing share.
+This is a challenged business on the top line and on the bottom line. That's not going to change any time soon, if ever. HSNi will have to execute very well simply to keep profits flat. And even that type of performance doesn't support its current multiples.
+
+Shorting Into Liberty
+
+The one clear stumbling block for a HSNI short is the ownership by Liberty and John Malone. A tie-up of HSNI and QVC seems to make some intuitive sense, and with HSNI cheap and getting cheaper, Liberty could try and consolidate HSNI into QVC Group, driving synergies and burning HSNI shorts.
+
+Malone himself said in 2011 that whether as a 34% owner (as Liberty was then; it now owns 38%) or as a 100% owner, "we're happy either way." Malone did say that Liberty Interactive could "pay a substantial premium and get operating synergies," or simply keep its stake. But last September, LI CEO Greg Maffei said relative to an HSNI acquisition that the company was "not gonna do it at some crazy multiple."
+
+So the potential for a Liberty takeover becomes a bit of a circular argument. HSNI bulls surely would argue that there is some sort of floor to the stock's multiple since below that level Liberty/QVC would step in and buy the rest of the company. Besides, an eventual tie-up of QVC and HSN makes too much sense not to happen at some point (Bear in mind that QVC's Zulily and HSNI's Cornerstone might have some modest benefits of being combined as well).
+
+I'd retort that Malone is too smart to throw good money after bad; the Liberty Media empire wasn't built on buying declining businesses. As for the logic of a QVC/HSN deal, it does seem to make some sense on the surface. But it's not at all clear exactly what synergies really would be driven in the deal; one analyst in 2014 estimated nearly $200 million in savings, a number that sounds prima facie preposterous to me. It's not as if QVC and HSN can combine into one network; there are likely some headcount reduction possibilities here and there, and perhaps some supply chain integration help. But two declining businesses together don't make a growth business. I'd add too, that a QVC/HSN merger long has been speculated, and I mean looonnnggg: Variety cited the "widely rumored merger" between the two networks back in 1993.
+
+Modest snark aside, I do think HSNI is at a bit of an inflection point, both in terms of its perception in the market and its attractiveness as a takeover target. Even a ~flat 2017 can change the narrative here: in that event, HSNi looks like it's managing a tough retail climate well enough, and certainly better than most retailers. But if 2017 shows a continued decline, the story starts to look very different, and the long-term viability of the model comes into question.
+
+In the former scenario, however, I'm not sure how much multiple expansion really comes along. 15x+ EPS and 8x+ EBITDA actually both are rather high for the space at the moment. There's an argument that HSNI shouldn't be compared against brick-and-mortar peers, and should get the higher multiples being granted a company like Overstock.com (NASDAQ:OSTK), if not much-faster-growing Wayfair. But HSNI's growth profile looks much more like an old-line retailer than W or OSTK, the latter of which grew revenue 9% in 2016.
+
+To my eye, a decent 2017 for HSNi probably keeps multiples roughly in line, with a possible move into the high teens on an EPS basis and high-single digits in terms of EBITDA (Admittedly, there's some guessing here, but there really aren't a lot of good comps for HSNI or QVCA at the moment). A poor start moves HSNI's story in line with retail more broadly, and I think moves its multiples into the low-double-digit/6-7x range most retailers are receiving at the moment.
+
+That seems a reasonable risk/reward at $40. Something like 17x $2.70 in 2017 EPS gets the stock to $46, 15% upside. But 10-12x $2.30-2.40 pushes HSNI below $30 - and that's not a major decline given that HSNi has more leverage than most retailers at the moment. A 10% decline in Adjusted EBITDA this year requires just an ~80 bps contraction in margins (in line with 2016) at modest revenue declines; a 7.5x multiple gets the stock to $31.
+
+I'd argue that a good year offers less upside from current levels than a bad year offers downside. And I'd argue - strenuously - that a bad year is far more likely than a good year. The company is getting a $0.08/$7 million benefit to EPS/EBITDA from lapping the distribution center issues, with another $0.10/$9 million in 2018. But those issues also highlight a potential competitive problem in online retail, where service is based in large part on shipping speed and responsiveness. The TV shopping business is likely to decline; margin pressure at Cornerstone is unlikely to abate. HSN digital might see some modest strength given the myriad initiatives the company is pushing, but it seems highly unlikely that less than 40% of the business can offset pressures in the rest of HSNi.
+
+All told, this looks like a declining business, but it's still not quite priced like one. If 2017 supports long-term bearishness toward sales and margins, the stock has a lot of re-rating left to do. And I think that will wind up being the case.

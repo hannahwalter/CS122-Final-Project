@@ -1,0 +1,51 @@
+Intel to buy Israeli driverless car-tech firm Mobileye for $15 billion
+U.S. chipmaker Intel (INTC.O) agreed to buy Israeli driverless car-technology firm Mobileye (MBLY.N) for $15.3 billion on Monday, positioning itself for a dominant role in the fast-moving autonomous-driving sector.
+
+The $63.54-per-share cash deal marks the largest purchase of a company solely focused on the self-driving sector and could significantly alter the competitive landscape among key technology and systems suppliers, including chipmakers Nvidia Corp (NVDA.O) and Qualcomm Inc (QCOM.O) and systems integrator Delphi Automotive PLC (DLPH.N).
+
+Mobileye's shares jumped 30 percent to $61.30 in late morning U.S. trading, while Intel's shares were down 2 percent. Shares of Delphi, which has partnerships with both companies, were up 3 percent.
+
+The deal underscores the expanding alliances between automakers and their suppliers as they race to develop self-driving cars, a concept that once seemed a science-fiction dream but is drawing closer to reality.
+
+While Intel is known for hardware chips and Mobileye for collision detection and mapping software, the merger promises to create an expanded portfolio of technologies needed for driverless vehicles. It also strengthens Intel's position in the sector against rival chipmakers Nvidia and Qualcomm.
+
+The Intel-Mobileye portfolio includes cameras, sensor chips, in-car networking, roadway mapping, machine learning, cloud software and data fusion and management.
+
+"It's an area where (Intel) has had very little presence - the automotive market, and so this is a tremendous opportunity for them to get into a market that has significant growth opportunities," said Betsy Van Hees, an analyst at Loop Capital Markets.
+
+"Mobileye's technology is very critical... The price seems fair," she added.
+
+The offer represents a premium of about 33 percent to Mobileye's closing price of $47 on Friday.
+MERGING 'EYES' AND 'BRAIN'
+
+Intel will integrate its automated driving group with Mobileye's operations, with the combined entity being run by Mobileye Chairman Amnon Shashua from Israel.
+
+Intel Chief Executive Brian Krzanich said the acquisition was akin to merging the "eyes of the autonomous car with the intelligent brain that actually drives the car."
+
+Mobileye supplies integrated cameras, chips and software for driver-assist systems - the building blocks for self-driving cars - to more than two dozen vehicle manufacturers.
+
+In an interview in January, Shashua told Reuters: "If you want to build a truly autonomous car, this is a task for more than one player... The idea is to have a number of partners to share resources and data."
+
+Mobileye was an early supplier of vision systems to Tesla, but the two companies had an acrimonious and public break-up last summer after the driver of a Tesla Model S was killed while operating the vehicle using Tesla's Autopilot system.
+
+Intel said it expects the vehicle systems, data and services market to rise to $70 billion by 2030.
+
+Mobileye, founded in 1999, accounts for 70 percent of the global market for driver-assistance and anti-collision systems. It employs 660 people and had adjusted net income of $173.3 million last year.
+
+Analysts said that mounting a counter-bid would be difficult as Mobileye's Shashua would remain in charge and the combined entity would be based in Israel.
+Shashua and two other senior Mobileye executives stand to do well by the deal: together they own nearly 7 percent of the company. Shmuel Harlap, Israel's biggest car importer and one of Mobileye's earliest investors, also holds a 7 percent stake.
+
+BATTLE FOR SELF-CONTROL
+
+Mobileye and Intel are already collaborating with German automaker BMW (BMWG.DE) on a project to put a fleet of around 40 self-driving test vehicles on the road in the second half of this year.
+
+At the same time, Mobileye has teamed up with Intel for its fifth-generation of chips that will be used in fully autonomous vehicles that are scheduled for delivery around 2021. Mobileye also has partnered with Delphi on a self-driving platform that is being shopped to smaller car companies that may not have the resources to develop their own systems.
+
+Last October, Qualcomm announced a $47 billion deal to acquire the Netherlands' NXP, the largest automotive chip supplier, putting pressure on other chipmakers seeking to make inroads in the market, including Intel, Mobileye and Nvidia.
+
+The Qualcomm-NXP deal, which will create the industry's largest portfolio of sensors, networking and other elements vital to autonomous driving, is expected to close later in 2017.
+
+For a dozen years, Mobileye has relied on Franco-Italian chipmaker STMicroelectronics to produce chips that the Israeli company sells to many of the world's top automakers for its current, third-generation of driver-assistance systems.
+
+Mobileye's relationships with automakers, leading suppliers and STMicroelectronics will continue uninterrupted, the companies said in their statement, and Mobileye's current product roadmap will not be affected.
+

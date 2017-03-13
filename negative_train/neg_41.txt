@@ -1,0 +1,35 @@
+Chegg: Overpriced And Vulnerable
+Digital segment transition leaves Chegg significantly more vulnerable to competition.
+
+Growth story regarding transition well-understood and priced in.
+
+Subscriber growth will cap quickly due to Chegg's inability to increase user base.
+Thesis
+
+First, as Chegg, Inc. (NYSE:CHGG) completely finishes its entry into the digital services business, it will become more vulnerable to competition, as the barriers to entry for its digital segments are considerably lower than the traditional print textbook sale/rental business.
+
+Many of Chegg's digital services are very easy to enter: there is very little differentiation of why one would use Chegg's services over other services in the market. However, we believe that the market views these segments as strongly insulated from competition; for example, Jefferies states that Chegg's diversified segments are a "key differentiator and an effective barrier to entry." The digital segments of the Chegg business are extremely replicable and one can easily find numerous other businesses that offer the same service even through a simple Google search. The only portion of Chegg's digital business that is differentiated is its Chegg Study Service, because the database of textbook problems and solutions are not easily obtained. The only explanation that accounts for Chegg's position today is synergies between the various services of Chegg: One can imagine the scenario where if a student is renting a textbook on the subject of Biology from Chegg, that they would be more inclined to find a tutor in Biology on Chegg and vice versa. However, simply relying on this "convenience synergy" leaves Chegg extremely vulnerable to price-based competition, a risk that the market seems to be underestimating.
+
+Additionally, we believe that the overall growth story and the transition to digital are overplayed and priced in
+
+A major part of the bull thesis is that Chegg can grow out their digital service segments and therefore increase revenues through a higher-margin, higher growth business. For example, JPMorgan expects the "shift to fully digital by 2017 to significantly strengthen Chegg's financial profile" and Jefferies believes that "digital should continue to drive overall growth." Moreover, in early 2015 the stock jumped $1.87 (27%) to ~$8.35 per share when news was released about its partnership with Ingram in which Ingram would take over the logistics of running the print textbook library. We believe that the ample sell-side coverage of the digital transition as well previous price surges in response to transition milestones indicates that the market pricing takes the digital transition into account - it is no longer a transition that a differentiated view should be based on.
+
+Finally, we believe that subscriber growth will quickly cap due to the inability to attract new users to the site
+
+Most of the subscriber growth comes from converting usual visitors to the site to subscribers as opposed to attracting actually new subscribers. However, bullish views from the sell-side (for example, Jefferies) support the notion that technology-focused capex should continue to increase subscriber numbers. However, we believe that awareness of Chegg's brand is already quite high; this combined with Chegg's failure to meet its historical targets for user conversion to the higher-paid segments spells trouble for Chegg in the future. A Hall & Partners survey found that close to 80% of people have heard of Chegg, yet Chegg failed to achieve its goal of generating more than half of revenues from digital services by the end of 2016. What this means is that although Chegg has generated awareness, it has not succeeded in converting that awareness into high margin digital sales, which is another key component of the bull story.
+
+Business Overview
+
+Chegg, Inc. is an educational platform aimed at high school and college students. It was founded as a textbook rental/sale company for college students. Chegg began expanding its other business lines (online services, tutoring, test preparation) in 2010 and IPO'd in 2013.
+
+Business Segments
+
+Chegg's business is divided into two major divisions:
+
+Required Materials: This segment deals with textbook rental and sale options, as well as the eTextbook offering.
+
+Chegg Services: This segment includes multiple offerings, including Student Hub, test preparation, admissions & scholarship services, college marketing, and tutoring. Revenue is generated from students' and colleges' subscriptions.
+We assume 40% CAGR for the next five years for subscriber growth, eventually slowing at around 4.2 million. We assume that ARPU does not dilute, and rather stays constant at $85/year. We assume gross margins peak in the high 60% range. Our valuation summary is below:
+Catalysts - Catalysts would be that the market realizes that the digital transition is both coming to a close as well as priced in; earnings in the quarters following the digital transition should normalize the market's expectations for the growth story and show that the current price reflects extremely aggressive digital growth, more than we believe will manifest.
+
+Risks - There is a risk of a short squeeze due to the 30% short interest, and on a fundamental level, increased penetration in the key high school and middle school markets could help Chegg realize very strong results.

@@ -1,0 +1,149 @@
+Planet Fitness - I'd Rather Be Stuck On A Stairmaster For The Next 23 Years
+Private equity is slowly unloading their ownership onto the public since the IPO via a complicated structure and in a seemingly calculated manner.
+
+The complex structure involves the use of a tax receivable agreement which burdens the new stockholders with a liability, and annuity-type payments going forward for the next 23 years.
+
+The operating income is deceptive - we estimate more than 25% is from non-recurring items and needs to be evaluated separately from recurring income to value the company properly.
+
+We model the company’s future income using what we believe are generous growth projections, consistent with the company’s story, which reveal unlikely implied growth milestones over ten years.
+
+We arrive at a value of approximately $9.40 per share – a more than 50% downside from the current price.
+
+Background
+
+Planet Fitness, Inc. (NYSE: PLNT) is a very complicated and analytically challenging stock to deal with, but I try to uncover the major issues in the space of one article. I explain the business model, the IPO history, the growth story, and then get into the valuation.
+
+Business model summary
+
+The business model consists of a core base of 58 corporate owned stores plus 1,184 franchised units. The company's growth is focused on increasing franchised units, and they have a model in place which allows them to collect revenue from franchisees for a multitude of transactions, including royalty fees on revenue, member billing and processing fees, commissions on supplies or services provided to franchisees from third party vendors, a markup on all equipment supplied by third party vendors with required refresh schedules as well as placement fees for setting up the equipment in store. At current royalty rates for new franchisees these fees equate to about 7% of the franchisees' revenue.
+
+It's a capital light business model for the company, with franchisees forking out the capital - close to $2 million per new unit. Their growth and profitability is simply a function of growing the franchisee store base, the number of members per store, and the average membership rate. They have grown rapidly over the past five years and at their current run rate are adding about 160 units per year.
+Their value proposition is actually very smart. Because of their low $10 per month membership fee, they make it easy for people who may not normally consider a gym membership at $40 per month, to sign up just because it is cheap, feel good that they have got the workout process started, and then, as is common in the industry, don't use the gym after a few months but keep on paying. Then they make it difficult to cancel your membership, and since it is only $10 per month, you let it slide for a while longer than you would if it were a higher dollar amount. The gym model is sort of like the insurance industry, in that they mostly make money off the people who don't use it.
+
+The IPO
+
+The company was taken public in 2015 by TSG Consumer Partners ("TSG"), its private equity owners, with an unusually complex structure that seems carefully designed to maximize their proceeds from exiting their investment.
+
+The operating entity Pla-Fit Holdings, LLC is actually a partnership and the publicly listed Planet Fitness, Inc. receives pass through income from the partnership. At the IPO, TSG released about 15% of the outstanding stock to the public and in a series of secondary offerings in 2016 has sold off an additional 36%. Currently, 51% of the outstanding stock is in the public's hands (83.6% x 61.7%).
+The company took advantage of two exemptions on the reporting side that allows for less than the normal full disclosure; one is being classified as an emerging growth company and the other was being classified as a "controlled company" (as of September 2016 they ceased to be a controlled company).
+
+The most egregious part of the IPO was that TSG put in place a tax receivable agreement which requires the company to pay them 85% of the tax benefits from being able to amortize the goodwill paid for by the new shareholders in acquiring TSG's shares. Tax receivable agreements are not very common and are considered to be a very aggressive tax strategy.
+In simple terms this is how it works. I sell you my shares for $16, but because the basis is only $6 there is $10 worth of goodwill that you will be able to amortize over about twenty years. The effect of expensing this amortization will lower your tax bill, and so because I am putting you in a position to lower your taxes, you need to pay me 85% of the taxes that you would have paid in the absence of the amortization benefit. I will, however, let you keep 15% of the tax benefit, presumably to compensate you for having to prepare two sets of accounts to submit to us every quarter for the next 20 years, so that we can track each quarter's benefit and how much you will need to pay us. If in the future the stock price goes up, and we are able to locate buyers for an additional secondary offering, then, because the price is higher, you will be getting an even bigger amortization write-off and associated tax benefit, so the 85% you will pay us will be even more. For so long as you are making sufficient profits to utilize the tax benefit, you will be required to pay us. Oh, and by the way, if you want to sell the company or merge with another company, you will need to pay us the discounted present value of all those payments we would have received over the next 20 years; it would be about $1 billion today, but could be higher if they end up doing a secondary at a higher price.
+
+The whole thing, while legal, seems unethical and causes you to evaluate everything else with a lot of skepticism. I am guessing that 99% of individual investors in this stock do not know of, or understand this tax receivable agreement, and even sophisticated investors may not understand it. It's a niche strategy that has been used in a handful of cases, but is not common.
+
+Based on the holding units sold by TSG as at December 2015, the company disclosed a 23-year potential aggregate payout to TSG which is based on the IPO price of $15.63 of $576 million. On November 18, 2016, it was up to $904 million based on additional holding units sold at a higher price (see page S-11 of 424(b)(4) Prospectus filing).
+These obligations are the public company obligations, not the partnership obligations. If the public company for some reason does not receive enough in distributions from the partnership vehicle, perhaps because their loan agreements have restrictions, the company is still required to make payments and will pay interest on any unpaid amounts. And, a sale or merger is unlikely because the entire liability, approximately $1.0 billion, would need to be paid to TSG upon sale or merger. In summary, the tax receivable agreement is like having iron shackles attached for 20 years.
+
+The special dividend
+
+The company first announced it was considering a special dividend, estimated to be $280 million, as part of their Q3 earnings release on October 26, 2016, saying it would be paid out of borrowings and cash on hand, but did not specify the exact date it would happen. It's very unusual for a company that just went public a year earlier, with only $66 million in cash on hand, to borrow money for a large payout like this, particularly with private equity still owning such a large share and doing frequent secondaries.
+
+The stock moved up about $4 per share over the next two weeks presumably to account for the dividend, the optimism around their ability to pay such a special dividend, and/or due to their results seen as attractive by equity holders. The dividend was officially confirmed on November 10, 2016. Once the stock went ex-dividend it went back down by the $2.75 the following day, but still remained at the same level as the day it was first announced - so the special dividend ended up enriching TSG to the tune of $148 million without impacting the stock price. The company would probably argue that it was due to the Q3 results themselves, but we will never know because of the way they announced it together as part of their earnings.
+Let's be clear, the job of a private equity investor is to extract the maximum possible out of their investment. There are a lot of unusual elements to this stock:
+
+A complex ownership structure.
+Frequent staggered secondary offerings keeping them as a controlled company until September of 2016.
+The tax receivable agreement.
+The special dividend.
+Reporting exemptions as an emerging growth company and a controlled company.
+In our opinion, a misleading revenue calculation method.
+The staggered secondaries seem calculated, the tax receivable agreement and the special dividend seem crafty, but none of it is illegal. They are simply trying to maximize their exit proceeds for their investors. But as a buyer or owner of this stock, once you understand the picture, there are a lot of "Buyer-Beware" signs flashing.
+
+TSG has filed a shelf offering for the entire balance of their 47 million shares and I expect to see them unload it all in one or two secondaries sometime this year. The higher the price that can achieve for their stock will benefit them, both upon cashing out, as well as via an increase to the annual amounts due to them under the tax receivable agreement.
+
+The growth story
+
+The company says they offer a differentiated fitness experience at only $10 per month for their standard membership, designed to appeal to a broad population, including occasional gym users and the approximately 80% of the U.S. and Canadian populations over age 14 who are not gym members. That 80% represents about 240 million people in the US, but of that about 40 million are over 70 years of age, and while I have seen some seniors over 70 at our gym, it's a very small proportion of the membership. I would argue the real market size is closer to 200 million people.
+
+According to the International Health, Racquet & Sports Club Association, the industry is highly fragmented, with 34,460 clubs across the U.S. serving approximately 54 million members. Over the next five years, industry sources project that U.S. health club industry revenues will grow at an annualized rate of approximately 3%, primarily attributed to an increase in discretionary spending coupled with continued consumer awareness and public initiatives on the health benefits of exercise.
+
+So, about 25% of the potential 200 million customer base is currently a member of some health club.
+
+Planet Fitness has experienced compound annual growth rates in excess of 25% over the past five years and now has about 1,200 units. As with any franchise or retail concept, the bigger you get, the harder it becomes to maintain the same growth rate.
+
+There are three ways the company can grow revenue and we will address each separately:
+
+Growth in number of units.
+Growth in members per unit.
+Growth in membership fees per member.
+The franchisees have an association called the PFIFA and they publish a magazine called Geared Up. There is usually a column by an attorney who represents franchisees, J. Mark Dady, summarizing the various issues they are working on with the franchisor. In the 2016 Issue 2, p.25, there is a summary of negotiations regarding the pace at which franchisees with an ADA are required to open new units, which highlights a push by the company to bring units online, but a pushback from franchisees on the required pace. I quote from the article (note PFHQ refers to Planet Fitness Headquarters):
+
+PFHQ was concerned that some developers, if they were ahead of their development schedules, might let their territories "go dark" and stop developing for an extended period of time. PFHQ initially proposed requiring a developer to agree to build one club every 365 days (in addition to meeting the minimum development obligations). We said that was unacceptable and pushed back. After some back and forth, PFHQ agreed that a developer would only need to develop one club every two years in order to avoid being defaulted. In addition, PFHQ agreed that a developer could use a "grace period" if they did not develop within that two-year period. Overall, while we would have liked this to never have been included, we pushed back and made it significantly better than initially proposed."
+So, after some pushback from the franchisees, the company will allow them to slow the pace of new openings to one every two years, instead of every year. If the 200 franchise groups are somewhat representative of the number of ADA's then after the 500 units rollout over the next three years, it feels like we will see a slowdown to perhaps 100 units per year, i.e. 200 units every two years. The mere fact that franchisees are requesting a slowdown is a red flag though.
+
+In our modeling, we allow for 170 units per year for the next three years and then 100 units per year after that.
+
+Growth in members per store
+
+Currently their stores average 7,000 members per store. The corporate stores have higher volumes than the franchise stores, so we calculated that corporate stores may have about 7,600 members and franchise units about 6,500 members. The chart above shows membership annual growth rates averaging 3.4% for the past five years, with 2016 coming in at 7.86%, and 2015 being negative -2.26%. The key issue becomes whether they can maintain even their 3% average growth rate given the high member churn rate in the industry and the cannibalizing impact continued rollout of new stores will have on existing stores. The company specifically addresses the latter as a risk factor in the 10K:
+Opening new stores in close proximity to existing stores may attract some memberships away from those existing stores, which may lead to diminished revenues and profitability for us and our franchisees rather than increased market share. In addition, as a result of new stores opening in existing markets and because older stores will represent an increasing proportion of our store base over time, our same store sales increases may be lower in future periods than they have been historically."
+The cannibalization issue is difficult to estimate, but logically, as you add more units, the likelihood of cannibalization increases. We can also gain some insights on the member churn rate, which is not disclosed, from transcripts and other sources.
+
+On the 2016 Q3 earnings call, analyst Dave King from ROTH Capital Partners asks:
+
+And lastly actually Chris, one for you, in terms of churn rate I know that's been a subject in the past, if I sort of look at what the retention rate is, is it a substantial number to your clubs, I think it's kind of 63% [referring to the retention rate] or so, that implies churn, I think towards kind of 3% [(100%-63%)/12] on a monthly basis. So I think it's a little bit higher than maybe some other gym concepts, but I know in the past you talked about sort of that -- why that's not necessarily a great kind of metric, can you just remind us of that again and can you talk us through that?"
+To which Chris Rondeau, the CEO, responded:
+
+As Dorvin -- as you know we go after the 80% of population that don't belong to a gym and we put a -- what we think is a great value proposition out there to get people off the couch, and because A, people are going to try and they're not going to make it and that's why we have always stated that the way we look at it is, what happens after 12 months? Because frankly there's no comp out there that you could even compare us to. No one has the kind of members we have and et cetera, et cetera. So that math that we have talked about in the past is that the cancellation rate after you've been a member for greater than 12 months is low single digits a month, it can be 1.5% to 2.5% a month. And it has not changed as I mentioned a few minutes ago, certainly in the more recent time periods here.
+So, not a direct answer to the analyst's question, but at least acknowledging that the annual churn for members that have been members for at least one year is 18% - 30% and based on the analysts 3% number might be 36% if we include people who cancel before one year. The reason we focus on the churn rate is that when you project their growth out over ten years and account for this churn rate, as you shall see in the table below, the number of new member signups that need to happen, just based on adding the new stores but keeping the members per store growth rate flat, is in excess of 50 million, which implies that of the 150 million potential non-health club members in the US, Planet Fitness will need to sign up 33% of them at some point in the next ten years - assuming the same people aren't recirculating with multiple sign-ups and cancels in the ten years. This is a staggering target in my opinion.
+
+An interesting article in the Your Money section of the New York Times in January of 2016 entitled "Cutting Off Those Recurring Charges You Forgot About" adds color to how big the churn issue is. It describes a new online service called Trim that makes it easy for people to cancel their subscriptions which were set up on a credit card auto-pay. Of the four services listed as most likely to be cut off were two credit monitoring firms, an internet-on-the-airline service and Planet Fitness. According to the article, "Trim's founders find the cancellation process for health clubs to be particularly noxious. They often have to send registered mail to the companies to fulfill their customers' requests. A Planet Fitness spokesman said it did not have anyone available to comment on its 30.4 percent cancellation rate." 30.4% refers to the percent of Trim customers who have a recurring charge from Planet Fitness who request to cancel it.
+
+Lastly, as reported in the same Geared Up article we referenced earlier, the company has also changed the Franchise Agreement to increase, but cap, the presale marketing spend. It was previously $20,000 per 30 days during the presale period (45 days before to 180 days after opening) with no cap, and is now $30,000 per 30 days with a cap of $120,000.
+
+This obviously reflects either a more challenging environment to keep signing up new members, or a push by management to boost their earnings until they unload the rest of their stock to the public. The key takeaway is that signing up new members is a grind; it's not easy and for every two members you sign up, you're losing one.
+
+With these insights as a backdrop, in our modeling we assume that their current rate of 7,000 members per store remains consistent (i.e. no growth rate in new members per store) even after the addition of 1,200 units or a doubling of the store count. This seems like a very generous assumption, given the widespread knowledge that the churn rate in the industry is high, the absence of churn rate disclosure being a red flag, the competition from the multitude of other competitors, and suspending belief that they can sign up 50 million new members over ten years under these assumptions.
+Based on the industry growth rate of 3%, under our assumptions, Planet Fitness would go from having a 13% market share up to a 22% market share - which means that more than 1 out of every 5 members of a Health club in the nation would be a member at Planet Fitness - a generous assumptions in my opinion.
+
+Growth in membership fees per member
+
+The company has been able to increase their membership fees per member by offering a higher value PF Black Card package at $19.99. The average monthly dues per member have increased from $14.24 to $15.64 from 2011 to 2015 with Black Card membership increasing from 42% to 57% of members. This represents about a 2.3% annual growth rate in fees per member. As the percent of Black Card members (currently at 57%) increases, this rate of growth becomes more difficult to sustain.
+
+Nevertheless, we assume a 3% growth rate in member fees per year, partly Black Card signups and partly inflation.
+
+So in summary, in our model, the key growth assumptions which we use are:
+
+Store count increases at 170 per year for the next 3 years and then tails off to 100 per year.
+Average member per store remains flat at 7,000.
+Member check average increases by 3% per year.
+We feel that these are generous assumptions in light of the concerns we highlight, as well as the highly competitive nature of the industry, and the number of existing and new competitors out there, but will nevertheless show how today's valuation stacks up under these assumptions.
+
+Understanding how to properly value this company
+
+The most important part of valuing this business is to understand which income streams are recurring and which are one-time events. If they are one-time income amounts, then we do not want to apply a multiple to that income because it is not recurring; the correct way is to simply discount all the one-time income at some reasonable discount rate to get a present value, and then add that present value to the value of the recurring income business. In our spreadsheet, we break out the recurring and non-recurring items as best as possible, but given some limited disclosures we have to make some assumptions. Also, some items can have exceptions, like franchise fees, a one-time item but which could re-occur if a franchisee sells their store, but is mostly a non-recurring item.
+
+Mostly Non-recurring items
+
+The one-time items include franchise fees, ADA fees, equipment profit on new stores, and placement fees for equipment in new stores. The company, in their 10K, says that 90% of their revenue is recurring revenue, but this is deceptive.
+
+Because they classify their equipment revenue as the total equipment sales price paid by the franchisee, rather the 20% they actually receive (the equipment is sold by a third party vendor), this inflates their revenue by about $110 million in 2015, for example - a 50% inflation. They say they take title to the equipment and then sell it on to the franchisee, so their accounting method is technically acceptable, but the reality is that they are just making a commission as a middleman, and so the commission is the only real revenue. The table below shows what the revenue would look like if equipment sales were classified using our method.
+The revenue classification is a bit of a side distraction and doesn't impact our analysis, but it's another crafty accounting trick to make it look like top line growth is larger than it actually is.
+
+Returning to the non-recurring topic, the other revenue items, corporate store revenue and royalty revenue are non-comparable, so this 90% measure stated by the company is really meaningless. What really matters is what percent of EBITDA is recurring versus non-recurring. We figure, as shown below for 2015, about $79.7 million was recurring EBITDA and $30.45 million was non-recurring - about 27% of EBITDA is non-recurring, a big percentage. The non-recurring percentage declines over the ten years because the driver of non-recurring revenue, i.e. the number of new stores, becomes a smaller fraction of the total store base each year.
+The company's recurring revenue, includes income from their corporate-owned stores, and with respect to franchisees, from royalty fees on revenue, member billing and processing fees, commissions on supplies or services provided to franchisees from third party vendors, a markup on all equipment with required refresh schedules as well as placement fees for setting the equipment up in store.
+
+Based upon our growth assumptions which we outlined above, as well as some assumptions we needed to make, or imputed, on expense ratios and tax rates, we project out the net cash flows for the next ten years. The blue items are assumptions, and the red items are values we have imputed from their financial statements. Using our assumptions, our estimates come reasonably close to the reported numbers for 2015 and 2016 to capture the operating model, and we feel are sufficient to model this going forward.
+
+We are establishing a value for the enterprise, and then we will deduct the outstanding debt to arrive at a value for the equity. We apply a 13x multiple to year-10 cash flow to arrive at a terminal value and then discount all the cash flows to the present at 10%. A 13x multiple in year 10 seems reasonable for a company that has exhausted most of its growth potential, and a discount rate of 10% seems reasonable for a young company, in a highly competitive industry, not to mention the risks of reporting inadequacies and the tax receivable burden. Our recurring income valuation is shown below and results in a present value of $1.53 billion using our assumptions.
+The final part is to combine the recurring and non-recurring values plus add in the value of any excess cash on hand, and then subtract the debt. This will give us a value for the equity, which we then divide by the total fully diluted number of shares.
+
+The long-term debt was $482 million per the Q3 Form 10-Q, to which they added $230 million in new debt on November 10, 2016. They also increased the availability on their revolving facility by $40 million. We know that the $230 million was used to finance the special dividend of $275 million, but it is unclear from the 8-K filing if the balance was paid out of cash only, or by accessing the revolver facility - "approximately $275 million will be funded through existing cash and proceeds from the Credit Facilities"; Credit Facilities refers to the new debt and the increased revolver combined.
+
+In our value calculation in the table below, we assume they utilize $20 million of the revolver for the special dividend, and we assume that they require at least $30 million in cash for their day-to-day operations, so we exclude this amount from the enterprise value (a change in these two estimates would not impact our value estimate by more than a few pennies per share, so are not material).
+Unit economics - my final concern
+
+The key to a franchise business is that the franchisees remain successful otherwise the business will not succeed over the long term. With franchisees having to fork over 13%-14% of revenue to HQ, when including 7% for marketing, that can put some pressure on unit economics. While management says that franchise unit economics are in line with corporate, this does not include a reserve for equipment replacement, which is required every five to seven years, so that could be about $80,000 per year. Nor does it include anything for management level employees or the owner's salary, as the case may be.
+My sense is that if the franchisees were in fact generating 25% cash-on-cash returns after two years, as the company proclaims on their website, that would be $500,000 per year and sufficient to enable financing additional stores. The fact that franchisees are pushing back on the rollout schedule indicates that perhaps cash flow is an issue. My assessment, if they account for management and equipment reserves, is that the cash-on-cash return ends up in the high teens.
+
+Lastly, if your stores are operating on smaller margins, and the growth strategy results in cannibalization of members, then lower volume stores that experience a loss of top-line revenue will be at risk.
+
+Am I missing something?
+
+Am I ignoring the possibility of growth from international expansion or licensing agreements? Anything is possible but that is not a focus of theirs, nor do we know if their concept would even work in other countries, not to mention that it takes capital and resources to set up an overseas infrastructure. Gold's Gym is the only one I can find that has any meaningful international presence but it carries a celebrity type status so that is understandable.
+
+Conclusion
+
+This is a case of private equity doing what private equity is supposed to do. They bought into a growing company, helped it grow rapidly over five years, figured out a way to extract as much revenue as possible from franchisees, and then when the time was right, decided to take the company public and exit their investment for the highest price possible. The structure of the deal, with the tax receivable agreement, the controlled release of shares to the public, the special dividend, and the way they account for equipment revenue, seem like a carefully planned strategy by clearly some sophisticated investors. It's almost a textbook example on maximizing value extraction. With an understanding of how brilliantly TSG has managed this exit, I would probably expect another quarter or two of aggressive growth targets and maximizing non-recurring income which most people view as real income, as they push to keep the growth story momentum going before they unload their final tranche of equity onto the public. But my guess is that once they are out of the loop, we will see some serious moderation in growth.
+Based on using what we feel are very generous assumptions, and correctly understanding that the large part of their income which is non-recurring should not be capitalized or valued with a multiple, results in a value for the stock of $9.40 per share versus the $21.70 where it trades at today. Finally, just on pure principle, I would never own a company that was subject to a tax receivable agreement, but assuming you are okay with it, the valuation is still extremely high. Buy a gym membership, it's a good deal - but run away from the stock.

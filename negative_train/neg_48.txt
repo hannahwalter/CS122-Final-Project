@@ -1,0 +1,163 @@
+Tellurian Stock To Decline Following Issuance Of Over 190 Million New Shares
+
+Tellurian finalized its reverse merger with Magellan Petroleum on February 10.
+
+The company’s share count increased from under 6 million shares to over 199 million shares, with old Magellan shareholders owning only about 3% of the combined company.
+
+Tellurian is wildly overvalued compared to capital raisings completed in late 2016, especially given the lack of material news since those share sales.
+
+The combined company expects to earn no revenue until 2022, and needs to raise between $13.0 billion and $15.6 billion in order for its LNG project to proceed.
+
+Reverse merger background
+
+On February 10, Tellurian (NASDAQ:TELL) announced that it had closed its merger with Magellan Petroleum (former stock symbol MPET). February 9 was the last day of trading under the old MPET symbol, and on February 10, Tellurian continued trading under the symbol TELL.
+
+Under the terms of the merger, as described in the prospectus filed on January 13, each share of Tellurian Investments shareholders was converted into 1.30 Magellan Petroleum shares. The merged company then changed its name to Tellurian Inc.
+
+Market capitalization
+
+In an SEC filing on February 10, Tellurian stated that it had 199,382,948 shares outstanding.
+
+At the time of writing, Magellan last traded at $14.03.
+
+This gives a market capitalization of $2,797,342,760 ($14.03 * 199,382,948), or approximately $2.79 billion.
+
+Valuation - company discussions in early July 2016
+
+Starting at page 78 of the prospectus, Magellan revealed some useful information about the events leading up to the merger announcement.
+
+On page 82, it stated that
+
+· between July 7 and July 9, 2016, Magellan's financial advisor "negotiated with Tellurian Investments the exchange ratio representing the number of shares of Magellan common stock that would be issued to Tellurian Investments stockholders per issued and outstanding share of Tellurian Investments common stock, and tentatively agreed that the exchange ratio would be 1.300."
+
+· "This ratio was based on Tellurian Investments' view that the fair value of Magellan's assets was between $10 million and $15 million, which Magellan viewed as reasonable, and Magellan's view that the fair value of Tellurian Investments' business was between $200 million and $300 million, which Tellurian Investments viewed as reasonable." (emphasis added)
+"Based on approximately 90 million shares of Tellurian Investments common stock then outstanding, these values for Tellurian Investments implied a per share value of $2.22 to $3.33 per Tellurian Investments share. Based on approximately 5.9 million shares of Magellan common stock then outstanding, these values for Magellan implied a per share value of $1.70 to $2.54 per Magellan share." (emphasis added)
+
+· "Comparing the low and the high end of the range for each company to the corresponding portion of the range for the other company yielded a relationship of approximately 1.3 shares of Magellan common stock for each share of Tellurian Investments common stock."
+
+If Tellurian Investments thought the 1.30 ratio undervalued the (pre-merger) company, then it could have either negotiated a higher ratio, or filed for an IPO and gone public in a more traditional manner. However, it willingly accepted this ratio and proceeded with the merger.
+
+The last traded price for Magellan of $14.03 is more than 452% higher than $2.54, the highest share price discussed in early July 2016, and characterized as being the "fair value" for Magellan.
+
+Valuation based on GE Oil and Gas share sale (November 2016)
+
+On November 28, 2016, Tellurian announced that GE Oil and Gas made a $25 million investment in the company. In the SEC filing, Tellurian stated that the investment "has an implied Tellurian Investment Inc. Common Stock value of $5.94 per share."
+
+In a separate SEC filing on November 29, Tellurian stated that
+
+it sold 5,467,851 shares of convertible preferred stock for $25 million.
+Following the merger, "holders of the Tellurian preferred shares may convert all of such shares for shares of Magellan common stock on a one-for-one basis"
+"Alternatively, following the Merger, holders of the Tellurian Preferred Shares may convert or exchange all of such shares for Magellan Preferred Shares on a one-for-one basis."
+The shares will automatically convert into shares of Magellan common stock (if not already converted) on November 23, 2022.
+The price per preferred share was $4.57 (25 million / 5,467,851), and these shares will be converted into Magellan common shares before the end of 2022.
+
+Tellurian stated that the investment had an implied common stock value of $5.94 per share, which matches the implied Magellan common stock value of $4.57 per share. ($5.94 per Tellurian common share / 1.30 merger ratio = $4.57 per Magellan common share).
+
+The last traded price for Magellan of $14.03 is more than 207% higher than $4.57 at which GE Oil and Gas made its investment.
+
+Valuation based Total share sale (December 2016)
+
+On December 20, 2016, Tellurian announced another capital raising.
+
+In the company's press release, it stated that "Total is acquiring approximately 23% of Tellurian at $5.85 per share for an amount of 207 million dollars."
+
+In a separate SEC filing on December 21, Tellurian confirmed that it sold 35,384,615 shares at $5.85 for an aggregate purchase price of $206,999,997.75.
+
+Using the merger ratio of 1.30, we can calculate the equivalent share price of Magellan for this transaction as $4.50. ($5.85 per Tellurian share / 1.30 = $4.50 per Magellan share).
+
+The MPET price of $4.50 is substantially similar to the $4.57 price of the GE Oil and Gas transaction from late November.
+
+The last traded price for Magellan of $14.03 is more than 211% higher than $4.50 at which Total SA (NYSE:TOT) made its investment.
+
+Analysis - balance sheet
+
+On February 8, Magellan filed its 10-Q for the quarter ending December 31, 2016.
+
+Its balance sheet as at December 31, 2016, reveals the following:
+
+Assets $5.02 million
+
+Liabilities $3.05 million
+
+Stockholders' equity $1.97 million
+
+The most recent balance sheet for Tellurian Investments is in the prospectus, providing a statement of position as at September 30, 2016. It is important to note that this date was before the investments made by Total and GE Oil and Gas.
+
+As at September 30, 2016, Tellurian Investments' financial position was:
+
+Assets $35.7 million
+
+Liabilities $20.9 million
+
+Stockholders' equity $14.7 million
+As shown above, before consummation of the merger, Magellan Petroleum had stockholders' equity of less than $2 million. There were fewer than 6 million Magellan shares outstanding when the prospectus was filed, which represents less than 3% of the 199,382,948 shares outstanding as at February 10.
+
+It is reasonable to conclude that the main purpose of the merger was to facilitate a public listing for Tellurian. Although the (pre-merger) Tellurian had a stockholders' equity of only $14.7 million as at September 30, it plans to construct an LNG project ("Driftwood LNG Project") in Louisiana.
+
+Tellurian has provided some indicative time frames for this project. It expects to commence construction in 2018 and does not expect to earn any revenue until 2022 (page 92 of prospectus).
+
+Analysis - possible revenue from 2022 onwards from Driftwood project
+
+The financial statements for both Magellan and Tellurian Investments for 2016 reveal that neither entity earned any operating revenue.
+
+Of greatest relevance to shareholders is the analysis performed by Magellan's financial advisor, Petrie Partners, which commences on page 87 of the prospectus.
+
+Petrie Partners concluded (on page 93) that it calculated a valuation of between $2.25 to $5.25 per share of Tellurian Investments common stock. Using the 1.30 share ratio from the merger agreement, this equates to a valuation range of $1.73 ($2.25 / 1.30) to $4.04 ($5.25 / 1.30) per share of the merged company.
+
+On page 93 of the prospectus we are also provided with Tellurian Investments projected revenue and EBITDA for the period from 2016 to 2025. Although we can see that the company expects to start earning revenue in 2022 (a full five years from now), the company will incur significant construction expenses before that time. Furthermore, by definition, the projected EBITDA figures exclude significant expenses in the form of interest, depreciation and tax.
+
+Tellurian has stated that its estimate for construction costs for the Driftwood LNG Project will be between $13.0 billion and $15.6 billion, and in order for the company to raise this massive amount of capital, it will need to conduct dilutive share sales, and/or borrow interest-bearing debt - both of which would reduce potential shareholder returns.
+As Tellurian noted on page 53 of the prospectus:
+
+Tellurian Investments will be required to seek additional debt and equity financing in the future to complete the Driftwood LNG Project, and may not be able to secure such financing on acceptable terms, or at all."
+The prospectus contains a long list of the risks that Tellurian faces, commencing on page 32.
+
+Given there are large number of significant variables involved in Tellurian's future operations, it is difficult for the author to conduct a net present value analysis of the company's future cash flows.
+
+Halcon Resources precedent from 2012 - another overvalued "cash box"
+
+Tellurian's situation is similar to Halcon Resources' in 2012. On February 3, 2012, we wrote an article about Halcon, whose shares had risen to $11.46 ($3.82 before 1 for 3 reverse split), compared to its capital raisings at $3.75 and $4.50 ($1.25 and $1.50 pre-split). At the time, we questioned why the shares were trading so high when the company's main assets were the cash raised as part of the transaction.
+
+In the weeks, months and years following the publication of that article, the company's shares declined, and finally the company announced a comprehensive restructuring on May 18, 2016, which saw its shareholders diluted by 96%. The shares closed at $0.30 on May 19, 2016, less than 10% of the capital raising prices ($3.75 and above) in 2012.
+
+Of more relevance is that on March 1, 2012, Halcon announced that it had priced the sale of $400 million of preferred stock at $9.00, a price over 21% lower than the $11.46 level from the time we wrote the aforementioned article.
+
+In addition to Halcon's $400 million share sale, on September 12, 2012, a large shareholder priced a sale of 35 million shares at $7.00 per share, noticeably lower than both the $11.46 level it was at in early February that year, and the $9.00 at which Halcon sold additional shares.
+
+To be clear, we do not expect Tellurian to require a restructuring like Halcon, however, it would be reasonable to expect that Tellurian will want to sell additional shares to fund its multi-billion-dollar capital expenditure requirements. Likewise, Tellurian shareholders will likely be eager to sell their shares now that the merger has been completed, just as Halcon's shareholders did following the completion of that company's capital raisings.
+Investors in Tellurian may feel confident in the company, given the investments made by GE Oil and Gas and Total SA.
+
+A similar line of thinking was used as criticism for our bearish thesis on Halcon in February 2012. One comment in response to our Halcon article pointed out that Floyd Wilson (Halcon's CEO) had considerable success with Petrohawk Energy, and expected the same for Halcon. As history shows, Halcon's share price declined materially in the years under his leadership, and as discussed earlier, the company announced a highly dilutive restructuring last year.
+We mention this because the existence of a well-known investor is not a sufficient condition for making an investment in a company. Just as investors who bought Halcon at $11.46 were disappointed in the ensuing weeks and months, we also believe that investors who are buying Tellurian at Friday's level of $14.03 will be disappointed in the weeks and months to come.
+
+Valuation of the combined company after merger completion
+
+As discussed above, it is difficult to calculate a valuation based on the net present value of the merged entity's future cash flows and/or profits. Instead, we propose two different calculations based on the information discussed earlier in this article.
+
+Calculation based on combination of valuations in July plus $232 million cash raised:
+
+The valuation range discussed by the two companies in early July 2016 was a range of $210 million ($200 million for Tellurian + $10 million for Magellan) to $315 million ($300 million + $15 million).
+
+We can add to this the $25 million raised from the GE Oil and Gas transaction, and also the $207 million raised from the Total transaction.
+
+Therefore the value of the combined entity could be $315 million (from July 2016) + $25 million + $207 million = $547 million.
+
+$547 million divided by 199,382,948 shares = $2.74 per share.
+
+Calculation based on most recent capital raising in December
+
+The Total transaction (sale of 23% of Tellurian for $207 million) gives an implied valuation for Tellurian of $900 million. ($207 million / 0.23 = $900 million).
+
+We can then add the $15 million valuation for Magellan from the July 2016 valuation.
+
+Therefore the total value of the merged company is 900 million + 15 million = 915 million.
+
+$915 million / 199,382,948 shares = $4.59 per share.
+
+This valuation is substantially similar to the $4.57 paid by GE Oil and Gas, and the $4.50 paid by Total.
+
+
+Tellurian shares are trading for more than five times the highest valuation considered for the company during its merger discussions in July 2016.
+
+They are more than triple the prices paid by GE Oil and Gas and Total on November 28 and December 20, the latter being less than 2 months ago.
+

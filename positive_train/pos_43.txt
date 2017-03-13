@@ -1,0 +1,39 @@
+How Technology Is Making Expense Reporting Easier
+New tools are removing one of the biggest headaches business travelers endure: the paperwork
+Good news for road warriors: Keeping track of travel expenses is getting a whole lot easier.
+
+From mobile apps with voice recognition to online travel-booking sites, new technology is allowing employees to record and create expense reports on the fly as they travel, so they don’t have to spend as much time after the fact tallying up their costs.
+
+The innovations are reducing one of the biggest headaches business travelers face: keeping track of receipts, submitting expense reports on time and facing questions about the legitimacy of certain charges.
+
+“I am so glad the days of having to carry around and protect receipts are over,” says Michael Jacobs, chief procurement officer for office-supply company Staples Inc., which uses expense-processing technology from Coupa Software
+A win-win
+In addition to streamlining expense reporting, the tools are helping organizations save money by making it easier for employees to comply with company travel policies.
+
+Reviewing expenses as a manager is “significantly easier,” says Lisa Brauch, manager of accounting operations at Garmin International, a GPS navigation and wearable-technology company. She says she would have had to hire an additional employee in her accounts-payable department to help process travel-reimbursement claims had Garmin not started using an expense-management system from Certify.
+
+U.S. firms have a vested interest in keeping a close eye on their travel costs: They are projected to spend a collective $296.1 billion on travel and entertainment in 2017, a 4.4% increase from last year, according to the Global Business Travel Association. Many companies budget 10% or more of their annual revenue for travel-and-entertainment spending, according to the Aberdeen Group, a research firm.
+Expense processing started to get easier about five years ago when many companies began allowing employees to snap photos of receipts instead of collecting paper copies. Since then, voice recognition and GPS data have simplified the process even further. “Now I can just speak into my cellphone and say ‘breakfast at Starbucks for $5.25,’ and forget about that expense,” says Mr. Jacobs.
+
+He simply opens the Coupa app on his smartphone, clicks on the microphone icon and announces the item. The app then automatically creates an expense line in an existing expense report under the correct category—in this case “meals.”
+
+Coupa also offers an automatic mileage calculator, called “Smarter Trip,” which keeps track of a traveler’s miles and allows him or her to create an expense line in the report for that. If the user decides to stop for a burger, the app will automatically detect the food vendor and asks if the user wants to create another line item for the meal.
+
+Travel-booking sites, meanwhile, are helping organizations rein in expenses before their employees even hit the road. These tools can be customized to reflect a company’s travel policy and prompt employees to select the lowest fare for a given work trip.
+It “looks and feels like a leisure booking site, so our employees like using it,” Cathy Sharpe, the director of global travel-and-expense management at Illinois Tool Works, says of Concur Technologies’ travel-booking and expense tool. “But it can be configured for every country we operate in.” The tool also translates currency automatically and gives managers who need to approve expense reports the option of reading them in the language of their choice.
+
+The technology offered by Concur, a unit of SAP SE, has helped Illinois Tool Works, an industrial-equipment manufacturer operating in 58 countries, gain a better view of its employees’ travel and the company’s spending. Now, Ms. Sharpe says, 89% of the company’s 45,000 employees use the online booking tool, and the company has saved $1 million annually in back-office processing of expenses as a result.
+
+Ms. Sharpe says employees like that Concur allows them to book rooms through Airbnb and rides through Uber and automatically submit those expenses. While on a recent business trip to China, she discovered a new app in the Concur suite called TripLingo. “It provides unlimited phone dialing wherever you can get Wi-Fi, or I can take an image of something on a menu and it translates it into English,” she says.
+
+Concur recently rolled out another application, a virtual travel-planning assistant called Hello Hipmunk. A manager preparing for a business trip can email his or her group, and copy the Hello Hipmunk bot with a question such as, “We’re looking to fly nonstop to San Francisco on March 30 through April 6. What are our options?” The bot then scours several travel sites and emails the group with flight and hotel options.
+
+Setting parameters
+Because the tools have made it easier to book and record travel expenses, companies such as Kent, Wash.-based Exotic Metals Forming Co. have seen an uptick in employees willing to travel.
+Before the company began using Certify’s expense-processing system, it would take two weeks to a month for employees to be reimbursed for travel costs, says Veray Fugere, a payroll specialist at the firm. Now they get a check or direct payment three days after submitting an expense.
+
+“It has really encouraged people to travel, because they know they don’t have to wait too long for the funds afterward,” she says. “It also gives us a full view of the total expenses so we can track top spenders and see who is excessive.”
+
+Mastercard, meanwhile, has developed a payment tool to stop improper travel spending even earlier—either as it’s happening or before it even starts. With MasterCard’s In Control service, a manager can set parameters and choose to receive an email or text alert if an employee uses the corporate card after a certain hour or tries to use the card at an unapproved merchant.
+
+“It’s easier to set spending parameters beforehand rather than disciplining employees afterward for trying to charge a large hotel bar bill or an extravagant dinner,” says Clive Cornelius, a senior director at travel-management company Carlson Wagonlit.

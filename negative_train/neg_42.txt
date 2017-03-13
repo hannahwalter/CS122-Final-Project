@@ -1,0 +1,41 @@
+Texas Pacific Land Trust: Way Overvalued
+Share certificates up 100%+ in one year without any meaningful change in operations.
+
+Management's actions point to clear overvaluation.
+
+Insane valuation metrics: P/E 65x, P/S 40x, P/B 56x, EV/EBITDA 42x, and dividend yield (forward) 0.12%.
+
+Texas Pacific Land Trust (NYSE:TPL) was organized in 1888 pursuant to the bankruptcy proceedings of the Texas and Pacific Railway Company to hold, manage and liquidate the ownership of extensive pieces of land in the State of Texas. The trustees (certain creditors of the bankrupt railroad company) were given the task of monetizing these assets and using the proceeds to return capital back to them either through the payment of dividends or the buyback of outstanding share certificates.
+
+In effect, TPL is today the same company it was 130 years ago: A slowly liquidating trust whose sole purpose is to return capital to its trustees. The two major changes in its operations occurred more than half a century ago: First, in the 1920s, when a massive oil formation - the Permian Basin - was discovered on the lands owned by TPL, which meant that its lands could be put to a much more lucrative use than that of grazing cattle and commercial development.
+
+The second occurred back in 1954, when TPL sold its oil assets to Texaco, receiving in return permanent royalties for a fraction of any revenues derived from the mineral rights on approximately 459,191 acres. These royalties were (and still are) perpetual in nature and - as a general rule - are retained by TPL when and if the land is sold. They amount to 1/128 on 85,414 acres and 1/16 under 373,777 acres. From the initial 3.5 M acres of land around 887.6 k acres remain today under TPL's ownership.
+
+Currently, TPL's income is derived primarily from oil and gas royalties, easements and sundry income, land sales, grazing leases, and interest. This method of operation has remained constant throughout the years and for a considerable amount of time, there has not been any reorganization, disposition of any material amount of assets or any material change in the mode of conducting business.
+
+TPL's business has remained fairly constant throughout the last 3 years (even Oil & Gas royalties income didn't fluctuate much with oil & gas's historical price drops last year). The only exception is land sales, which fluctuate heavily from year to year depending on land demand as TPL is a passive seller of land and does not actively solicit sales.
+Despite this steady state of operations and without any major change in the underlying business, TPL's equity market valuation has been recently subject to a substantial increase: TPL's price per share certificate has skyrocketed by 100%+ in the last year alone, now boasting unseen valuation metrics:
+
+P/E: 65x
+P/S: 40x
+P/B: 56x
+EV/EBITDA: 42x
+Dividend yield (forward): 0.12%
+Considering TPL's main goal of liquidating its estate, we would argue that these multiples make absolutely no sense at all.
+
+But is the business really the same today as 10 years ago? Let's check their margins growth over this time period.
+Over the last 10 years, margins have improved by 15% to 25%, although at a 90%+ level, room for further improvement is limited at best. So, price appreciation and multiple expansion cannot be explained by an improvement in business.
+
+What about TPL's business of returning their earnings back to the trustees, chiefly through share certificate buybacks? Are those multiples deserved in the light of value creation to shareholders? To put a gauge on how much value was created in the last 10 years, we believe no other metric is better than book value per share growth over this time period. So, let's compare value created over the last 10 years with its share certificate appreciation:
+
+TPL has increased its book value per share by close to 2.5x while its certificate price has risen by 6.5x, which can account for price appreciation in part.
+
+It is interesting to note that up until 2013, both BV per share growth and certificate price growth were highly correlated, which makes sense since changes in book value serve as a rough proxy for changes in intrinsic values, sspecially in companies with relatively stable future prospects. Warren Buffett himself has made this point on Berkshire's (NYSE:BRK.A) (NYSE:BRK.B) Owner's Manual, where he states that "the percentage change in book value in any given year is likely to be reasonably close to that year's change in intrinsic value."
+
+Normally, book value per share growth and stock price appreciation tend to be highly correlated in stable companies. That was also the case with TPL up until 2013, after which share certificate price increased substantially above BV per share certificate growth in 2014, a situation that was corrected in 2015 and started happening again in 4Q 2016.
+In these periods, the average buyback per quarter was 0.52% vs. 0.75% for the periods where P/E were below 40x. This can be viewed in the graphic above by the smaller slope of the shares outstanding line (in green). This means that when TPL's share certificates were priced by the market at more than 40x earnings, TPL decreased substantially their buyback activity.
+
+Now, TPL has been doing one thing for the last 130 years: buying back its own shares certificates. Who better than TPL to know if their own share certificates are under or overvalued? If TPL thinks their share certificates are overvalued by the market, buying them back would be a very bad way of returning capital to trustees. In fact, by buying back overvalued share certificates, TPL would be destroying value for long-term trustees.
+
+TPL's share certificate price went from ~20x earnings in Jan 2016 to ~60x earnings in Dec 2016, remaining below the 40x earnings mark in the first 3 quarters of the year. During the first 9 months of 2016, TPL bought back on average ~56,000 certificates per quarter. In the last quarter of 2016, when P/E went from ~40x to ~60x, TPL bought back only 24,000 certificates. That's less than half the normal average quarterly buyback for the first 3 quarters of the year. In December, TPL bought only 2,466 certificates vs. a monthly average share certificates buyback of 18,667 during the first 3 quarters.
+

@@ -1,0 +1,112 @@
+It Is Time To Sell Or Short BP Prudhoe Bay Royalty Trust
+his stock is a pure oil price play.
+
+With oil prices stabilized and the quarterly dividend announced on Jan. 6 of $0.99, this stock looks like a good buy.
+
+However, expenses to BP Prudhoe Bay Royalty Trust are set to increase substantially each year starting 2018.
+
+The annual report coming out next week will likely estimate that dividends will end in two years!
+
+The annual report will likely estimate future cash flows that would result in around $4 in total future dividends per share!
+
+Background
+
+In the late 1980s, BP Plc (NYSE:BP) traded some of their future profits on the Prudhoe Bay oil wells in exchange for some cash. To do this they set up BP Prudhoe Bay Royalty Trust (NYSE:BPT) and committed to paying profits to this trust on 16% of the oil pumped. Except for a small fee for the trustee to manage the trust, these profits are paid to shareholders in dividends. This trust has paid steady dividends for over 30 years.
+
+The next annual report for BPT is likely to estimate total future dividends at around $4 per share with no dividends beyond the next few years. If you want to skip the gory details, just read the three quotes in the article below which are from 1) the 2014 annual report based on $94.99 oil, 2) the 2015 annual report based on $50.28 oil, and 3) my estimate for what the 2016 annual report will contain.
+
+The profit to the trust is a function of the total production of the oil wells, the market price of oil, and associated expenses. One expense is excise taxes to the state of Alaska for the oil pumped on behalf of the trust. The other main expense comes from lease operating expenses (LOE) and capital expenditures (Cap-Ex that are major overhauls of the wells). LOE and Cap-Ex cover BP Plc for their costs of operating, maintaining and improving these wells.
+
+Unlike other royalty trusts, BPT is not charged the actual LOE and Cap-Ex that BP Oil spends, which might be highly variable. Instead, LOE plus Cap-Ex charged to the trust is a predetermined amount that was set in place when the trust was created several decades ago. This predetermined amount was set to increase gradually through the years and also adjusted for inflation. To summarize, the dividends paid to BPT shareholders are based on:
+
+The WTI price of oil,
+the production of the wells,
+a known, predetermined Chargeable Cost per barrel to cover LOE and Cap-Ex,
+an adjustment to chargeable cost for inflation based on consumer price index,
+taxes per barrel charged by the State of Alaska, and
+trust administration costs.
+With the exception of the price of oil, these variables are very stable and can be estimated with a good degree of accuracy, at least for the next few years. Thus, we can fairly accurately estimate future dividends if we know the future price of oil.
+
+At the crux of this overpriced stock is the Chargeable Costs (remember these were set in place 30 years ago). Chargeable Costs are set to significantly increase starting 2018. My estimate of the break-even price of oil, at which this trust would not pay a dividend, is shown in the table below (note that different assumptions could be made about the other variables mentioned above that would change these numbers slightly).
+Over the last few years, the break-even price had annual increases similar to the increase between 2016 and 2017. But you can see that the yearly increases are significant starting 2018.
+
+Remember When Oil Was $95 (2014 Annual Report)
+
+You might think that I am taking some wild guesses to estimate these future numbers. But as I said before, other than the price of oil, the variables that impact future dividends are very predictable. So much so that every BPT annual report includes its own estimate of how long dividends will last and the total future amount of money paid to the trust (and passed along as dividends).
+
+First, we will look at what the annual report said when oil prices were much higher. This may help understand why past BPT share prices have been so high and why there is so much overconfidence in this stock. The annual report (for 2014) published in February of 2015 said this (note that I added bracketed [ ] text):
+
+"Based on the 2014 twelve-month average WTI Price of $94.99 per barrel, current Production Taxes, and the Chargeable Costs adjusted as prescribed by the Overriding Royalty Conveyance, it is estimated that royalty payments to the Trust will continue through the year 2028."
+
+"Based on the 2014 twelve-month average WTI Price of $94.99 per barrel, â¦ will result in undiscounted estimated future cash flow to the Trust of $2,106.7 million [$98.44/share], with a net present value of estimated future cash flows at 10% discount of $1,402.5 million [$65.54/share]." [The "â¦" is a run-on sentence stating other assumptions, see bottom of article for the full statement.] 2014 10-K
+The total future cash flow can be divided by the total number of shares to determine the cash flow per share (I did this and added inside the brackets above). This becomes an estimate of total dividend distributions paid per share before the trust terminates. To put this another way, if oil stays at $94.99 per barrel, and everything else stays the same (taxes, inflation adjustments and well production), this trust would pay out dividends totaling $98.44 per share between now and 2028 ("now" being Feb. 2015) and then terminate; if you wanted a 10% return, the present value on these future dividends would be $65.54.
+
+Last Annual Report (2015)
+
+It is unlikely we will see $95 per barrel oil. In fact, the average oil price in 2015 was around $50 a barrel. Here is what was in the annual report (for 2015) published February 2016 (bracketed text and emphasis added):
+
+"Based on the 2015 twelve-month average WTI Price of $50.28 per barrel, current Production Taxes, and the Chargeable Costs adjusted as prescribed by the Overriding Royalty Conveyance, it is estimated that royalty payments to the Trust will continue through the year 2020, and would be zero in the following year."
+
+"â¦ will result in undiscounted estimated future cash flow to the Trust of $248.1 million [$11.59/share], with a net present value of estimated future cash flows at 10% discount of $214.5 million [$10.02/share]." 2015 10-k
+After this information came out, the stock dropped from the low $30s to about $13 per share. After the dividend was announced to be $0.07 on April 6, 2016, the stock dropped further and bottomed at $11.29 the following day. This bottom lasted only momentarily. Then the stock rebounded back up to $15 over a few days and continued to creep up through the rest of the year to over $30. Bottom Line: The annual report says that the total future dividends over the next few years is $11.59 and only if oil stays around $50.28, yet the stock continues to trade over $20 per share.
+
+Quick sidebar, you may be asking why they used $50.28 when oil was trading around $30 in Feb. 2016? As the quote states, the $50.28 is the prior year's average. The typical approach in the annual report is to use the prior year's average oil price for these forward-looking estimates.
+
+My point in reviewing last year's reaction to the annual report is this: There is massive overconfidence in BPT, way beyond the real fundamental value of the stock. If you own this, sell it now to take advantage of this overconfidence. If you are planning to short it, the massive overconfidence could keep the price over-inflated even as dividends drop in the coming years; so a put option is not a guaranteed win (although seems to me to be a good bet).
+
+Prediction of Next Annual Report (2016)
+
+It is difficult to predict how the market will react to the annual report. All I can say with confidence, is what the next annual report is very likely to say. Think about what the values above are likely to be in the next annual report.
+
+First, consider the termination year (previously estimated as 2020). If the trustee uses the same method, they will base their future estimate on the 2016 annual average WTI oil price; $42.63 per barrel. Looking at the table I presented earlier in this article, the termination year they calculate should be 2018 (i.e., dividends will be paid through 2018 and zero after).
+
+Second, consider the estimated future cash flow to the trust (i.e., dividends). First, the oil price used for the calculation in this upcoming annual report could be less than last year ($42.63 if the same method is used); also keep in mind the $248.1 million (last year's cash flow estimate) includes the cash flow/dividends paid in 2016, which are now gone. I expect the reported value of estimated future cash flows to be around $4 per share. Imagine how the market might react if the annual report, due next week, says something like:
+
+Based on the 2016 twelve-month average WTI Price of $42.63 per barrel, current Production Taxes, and the Chargeable Costs adjusted as prescribed by the Overriding Royalty Conveyance, it is estimated that royalty payments to the Trust will continue through the year 2018, and would be zero in the following year.
+
+â¦ will result in undiscounted estimated future cash flow to the Trust of $86 million [$4/share]â¦.
+
+(no source, author's estimate)
+The most recent quarterly dividend was $0.994 (around 14% yield at a $28 stock price), which makes BPT look attractive. Note that my $4 estimate is based on $42.63 oil prices (last year's average). Currently, oil is in the low $50s. At $55 oil, total future dividends could be as high as $13 and the trust would last a couple of years beyond 2018. Still this stock is wildly overpriced. SELL!!
+
+Supplementary Notes
+
+The remainder of this report provides additional notes regarding the above estimates.
+
+Testing on prior annual reports, my calculation of the prior year's oil price is typically 10-20 cents off the number used in the annual report. Maybe it is the difference between using the open price compared to the average for the day. Also, there is a possibility that the trustee will attempt to paint a rosier picture and could use a different number for the price of oil when they do this calculation. Especially since $42.63 per barrel is lower than current oil prices. I can't imagine they would use a price higher than $55 per barrel (which as I state above should result in a future cash flow estimate around $13 per share).
+
+When the trustee estimates total future cash flows, I do not know the details of their methodology in estimating future production rates, taxes, or inflation adjustment. So my numbers in Table 1 (and my estimate of $4 in future dividends) may not match the trustee's analysis exactly. Testing my prediction ability on prior years, my estimate of total future cash flow is typically higher than the estimate in the annual report.
+
+I think this is because I use the maximum production of 90,000 barrels a day (above which BPT gets no additional dividends), where the trustee might use the prior year average. Regardless, my estimate of $4 might be a little off, but should be very close so long as the trustee uses an oil price around last year's average.
+
+Notes for Short Sellers
+
+In addition to the massive overconfidence in this stock, it may take some time for the market to react. In March of 2016, it took a little over a week from when the annual report was published and someone reported on this quote, so be patient on the shorts (maybe even consider April or June shorts). I will also restate that shorting BPT is still a gamble because the market may not accept the actual value of this stock even with these statements in the annual report.
+
+These statements on future cash flows are buried in the text. Aside from these statements, the rest of the annual report is almost entirely based on last year's dividends ($2.44 per share), so most of the numbers in the annual report (summarizing last year) will look pretty good, and may drive the stock up if investors focus on the past instead of the future.
+
+Lastly, this stock has a propensity to rebound because of the high dividend yield reported (and other reasons I do not fully understand), so do not be afraid to take a profit on put options after a drop; even if you think it could drop further.
+
+Full Quote
+
+For clarity in the article above, I did not include the full sentence about future estimated cash flows. The full sentence is below. You can find these statements in the annual report section titled "Reserve Estimates."
+
+"Based on the 2015 twelve-month average WTI Price [footnote 6] of $50.28 per barrel, other economic parameters prescribed by the Conveyance, and utilizing procedures specified in Financial Accounting Standards Board Accounting Standards Codification ("FASB ASC") 932, Extractive Activities - Oil and Gas, BP Alaska calculated that as of December 31, 2015 production of oil and condensate from the proved reserves allocated to the 1989 Working Interests will result in undiscounted estimated future cash flow to the Trust of $248.1 million, with a net present value of estimated future cash flows at 10% discount of $214.5 million.
+
+[Footnote 6] The unweighted arithmetic average of the WTI Price on the first day of each month during the year."
+More Evidence
+
+I hesitate to show sources for chargeable costs, because readers might get lost in the details. Prior articles have detailed these facts (look up Alpha Exposure's article "BPT Should Get Cut in Half" published last year), yet investors still do not see the problem. Do not trade on the FACT that this stock is a stinker (it is, but the market does not seem to accept it). Trade on the news that will come out quoting the annual report as I have detailed above. For those having a hard time believing the future dividends were this clear cut and yet the stock so overpriced, below are additional details.
+
+The image below comes from the last annual report. The numbers below have been the same in every annual report back to the earliest I could obtain (in 1991, the chargeable cost was 4.50).
+These chargeable costs are adjusted with inflation according to the consumer price index. For my break-even calculation, I used in the inflation adjustment ("Cost Adjustment Factor" in table below) averaging the numbers published in last year's annual report (I used 1.82). But guess what, the CPI increases, so this is very conservative looking forward. Again, I am not trying to project out well into the future; I am giving you annual report data before it is published.
+You will notice in the image above that taxes increase as the price of oil goes up. I attempted to peel apart Alaska's excise tax code, but found it easier to just interpolate using historic values such as those in the table above. As an example, consider the 2021 dividends.
+
+Chargeable Cost * Inflation + Taxes
+
+29.25 * 1.82 +1.84 = 55.08
+
+If oil prices are below 55.08 in 2021, there will be no dividends (assuming taxes and inflation does not change).
+
+The future dividends calculation takes just a little more effort. The trust is paid 16.4246% on the first 90,000 barrels per day pumped (0% for anything above 90,000). Now you have the tools to calculate any potential future dividend stream based on your assumptions.
+
