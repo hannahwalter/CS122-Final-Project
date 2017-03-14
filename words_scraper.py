@@ -279,7 +279,7 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
 
 def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
 
-    plt.plot(stock_vals_df['stock_val'])
+    plt.plot(stock_vals_df['stock_val'], 'r')
 
     monte_carlo_sim = []
     current = 0
@@ -300,11 +300,13 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
         current += (positive**best_c)*best_a - (negative**best_d)*best_b
         monte_carlo_sim.append(current)
 
-    plt.plot(monte_carlo_sim)
+    plt.plot(monte_carlo_sim, 'g')
 
-    plt.ylabel('stock value\nactual values vs. simulated values')
+    plt.ylabel('stock value\nactual values (red)\nvs.\nsimulated values (green)')
 
     plt.xlabel('dates')
+
+    plt.title('How closely our algorithm \'predicts\' actual data in the past')
     
     plt.savefig('static/twitter.png')
 
