@@ -179,7 +179,7 @@ def get_tweets(ticker, begin_date, end_date):
     initial_run = True
 
     while True:
-        time.sleep(random.uniform(.5,1))
+        time.sleep(1)
 
         if initial_run:
             r = requests.get(base_url.format(search_term, 
