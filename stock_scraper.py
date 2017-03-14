@@ -1,12 +1,8 @@
-# Team FiSci
-# Hannah Ni, Hannah Walter, Lin Su
-
 '''
-This code collects historical and real-time data on stocks
-from Yahoo finance API.
+TEAM: FiSci
+PEOPLE: Hannah Ni, Hannah Walter, Lin Su
 
-Packages to install:
-    yahoo-finance
+This file scrapes necessary stock data.
 '''
 
 from yahoo_finance import Share
@@ -30,6 +26,17 @@ import re
 quandl.ApiConfig.api_key = 'DZFGSrUkQDFyReYx1gvx'
 
 def find_ticker_and_name(company_input):
+    '''
+    Given a string input of either company name or ticker, this function finds the associated
+    ticker and name or returns possible matches or returns a "try again" statement.
+
+    INPUTS:
+        company_input: what the user input for their desired company or ticker
+    OUTPUTS:
+        string, if no matches were found
+        string and matches containing the input, if several were found
+        ticker, name if found
+    '''
     df = pd.DataFrame(pd.read_csv('files_for_code/companylist.csv'))
     df_by_ticker_match = df[df['Symbol'] == company_input.upper()]
     if len(df_by_ticker_match) == 1:
@@ -53,17 +60,16 @@ def find_ticker_and_name(company_input):
             matches_string += "Please try again with the correct spelling."
             return matches_string
 
-def historical_basic(ticker, start_date, end_date, only_start_and_end):
+def historical_basic(ticker, start_date, end_date):
     '''
-    Inputs:
+    INPUTS:
         ticker: company ticker, string
         start_date: 'yyyy-mm-dd'
         end_date: 'yyyy-mm-dd'
-        only_start_and_end: a Boolean.
-            False will return information for all days in between start_date and end_date
-            True will return information only for the start_date and end_date if both dates are business days
-                If start_date or end_date is not business day,
-                    will return information for the closest date after or before the specified date
+
+    OUTPUTS:
+        processed_df: a pandas dataframe containing dates, stock values, and the 
+            delta from each previous day.
     '''
 
     raw = Share(ticker).get_historical(start_date, end_date)

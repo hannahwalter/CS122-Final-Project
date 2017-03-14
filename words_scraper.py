@@ -33,6 +33,19 @@ MONTH_DICT = {'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04', 'May': '05',
 ### SCRAPING SEEKING ALPHA ###
 
 def get_sa_urls(ticker, begin_date, end_date):
+    '''
+    Given a ticker and an appropriate date range, this function returns the urls
+    received when searching Seeking Alpha.
+
+    INPUTS:
+        ticker: string
+        begin_date, end_date: isoformat dates
+
+    OUTPUTS:
+        string: if no urls could be found
+        url_list: list of appropriate urls
+        inacessible: count of pages that were inaccessible by the scraper
+    '''
 
     reload_url = "https://seekingalpha.com/symbol/" + ticker + "/focus?page={}"
     base = "https://seekingalpha.com"
@@ -48,11 +61,15 @@ def get_sa_urls(ticker, begin_date, end_date):
         r = requests.get(reload_url.format(str(page_count)), headers = HEADER)
         if r.status_code != 200:
             inaccessible += 1
+            page_count += 1
+            continue
         html = r.text
         soup = bs4.BeautifulSoup(html, 'lxml')
         search_items = soup.find_all('div', class_='symbol_article')
 
         for item in search_items:
+
+            # Discarding advertised articles
             if 'symbol_pro_research' in str(item):
                 continue
 
@@ -84,6 +101,7 @@ def get_sa_urls(ticker, begin_date, end_date):
                         current_d = (dt.datetime.strptime(date, '%b. %d, %Y').date()
                                     .isoformat())
 
+            # Comparing article date with desired dates
             if current_d > end_date:
                 continue
             elif current_d < begin_date:
@@ -100,6 +118,16 @@ def get_sa_urls(ticker, begin_date, end_date):
         return url_list, inaccessible
 
 def scrape_sa_urls(url_list):
+    '''
+    Given a list of urls for Seeking Alpha articles, this function returns a list of
+    the articles.
+
+    INPUTS:
+        url_list: list of urls for Seeking Alpha
+    OUTPUTS:
+        article_list: list of articles
+        inaccessible: count of inaccessible articles
+    '''
 
     article_list = []
     inaccessible = 0
@@ -129,6 +157,16 @@ def scrape_sa_urls(url_list):
 ### SCRAPING TWITTER ###
 
 def get_tweets(ticker, begin_date, end_date):
+    '''
+    This function scrapes the desired tweets for a certain company.
+
+    INPUTS:
+        ticker: string, the company ticker
+        begin_date, end_date: isoformat dates
+    OUTPUTS:
+        tweets_dict: dictionary of tweets, with keys as dates and values as
+        the tweets from that date
+    '''
 
     search_term = urllib.parse.quote_plus('#' + ticker)
 
@@ -178,6 +216,21 @@ def get_tweets(ticker, begin_date, end_date):
     return tweets_dict
 
 def get_twitter_words(tweets_dict, ticker):
+    '''
+    Given a dictionary of tweets and the ticker that was searched for, this
+    function scrapes the associated words.
+
+    INPUTS:
+        tweets_dict: dictionary of tweets
+        ticker: ticker of company that was searched for
+
+    OUTPUTS:
+        sorted_daily_list: a chronologically ordered list of tuples, where 
+            each tuple contains the date and then the number of positive
+            and negative words from tweets from that date
+        sorted_words: list of words and counts found in the tweets, in descending
+            order of frequency
+    '''
     ticker = ticker.lower()
 
     daily_dict = {}
@@ -213,6 +266,23 @@ def get_twitter_words(tweets_dict, ticker):
 ### ANALYZING TWITTER SENTIMENT ###
 
 def monte_carlo(sorted_daily_list, ticker, run_count):
+    '''
+    Given a list of positive and negative values per date, a company
+    ticker, and a number of times to run the simulation, this function
+    runs a random monte_carlo simulation to try to match positive/negative
+    values per day to the stock values.
+
+    INPUTS:
+        sorted_daily_list: list of tuples containing frequencies of positive
+            and negative words per date
+        ticker: company ticker associated with the tweets
+        run_count: number of times to run the simulation
+    OUTPUTS:
+        plots the values
+        dates_list: list of dates
+        monte_carlo_sim: values received from the monte carlo simulation
+        stock_vals: stock values of the company
+    '''
     begin_date = sorted_daily_list[0][0]
     end_date = sorted_daily_list[-1][0]
 
@@ -228,6 +298,8 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
     initial_found = False
 
     while current_run_count <= run_count:
+
+        # Establishing random variables
 
         A = random.uniform(0, 10*max_delta)
         B = random.uniform(0, 10*max_delta)
@@ -273,6 +345,20 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
 
 
 def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
+    '''
+    Given stock vals for a company, a list of positive/negative words per day,
+    and the optimal monte carlo values, this function plots the monte carlo simulated
+    values vs. stock values on a matlab plot.
+
+    INPUTS:
+        stock_vals_df: dataframe containing info on the stock values for a company
+        sorted_daily_list: list of positive/negative words per date
+        best_a, best_b, best_c, best_d: monte carlo values received from the simulation
+
+    OUTPUTS:
+        plot saved to static/twitter.png
+        monte_carlo_sim: values retrieved from using the optimal monte carlo values
+    '''
 
     stock_vals, = plt.plot(stock_vals_df['stock_val'], 'r', label = 'Actual Stock Values')
 
@@ -302,11 +388,8 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
     plt.xlim([0, len(stock_vals_df['date']) - 1])
 
     plt.legend([stock_vals, monte_carlo], ['stock', 'monte carlo'])
-
     plt.ylabel('Values')
-
     plt.xlabel('Dates')
-
     plt.title('Monte Carlo vs. Stock Values')
     
     plt.savefig('static/twitter.png')
@@ -366,11 +449,10 @@ def scrape_nyt_urls(url_list, search_item):
     INPUTS:
         url_list: list of urls to scrape
         search_item: string to search
-        naive_bayes: Boolean
 
     OUTPUTS:
-        l: sorted list (in descending order) of all the words obtained from
-        scraping the news sites and the associated count of words
+        articles: list of the articles (each article is a string in a list)
+        inaccessible: count of inaccessible articles
     '''
 
     words_dict = {}
@@ -398,6 +480,16 @@ def scrape_nyt_urls(url_list, search_item):
 ### GENERAL FUNCTIONS ###
 
 def bag_of_words_score(words_list):
+    '''
+    Given a list of words, this function computes a percentage of positive
+    vs. negative words. 
+
+    INPUTS:
+        words_list: list of words
+    OUTPUTS:   
+        p_percentage: percentage of positive words
+        n_percentage: percentage of negative words
+    '''
 
     p_score = 0
     n_score = 0
@@ -417,6 +509,16 @@ def bag_of_words_score(words_list):
     return p_percentage, n_percentage
 
 def split_strings_into_list(strings_list, search_item):
+    '''
+    Given a list of strings, this function returns a sorted list
+    with tuples of words and their frequencies.
+
+    INPUTS:
+        strings_list: list of strings
+        search_item: item that was searched for (to remove from string)
+    OUTPUTS:
+        sorted_words: list of the words, sorted with frequency counts
+    '''
 
     words_dict = {}
 

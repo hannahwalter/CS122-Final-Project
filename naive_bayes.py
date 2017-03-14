@@ -1,8 +1,16 @@
+'''
+TEAM: FiSci
+PEOPLE: Hannah Ni, Hannah Walter, Lin Su
+
+This file provides a naive bayes model. We ended using the sklearn package
+instead, but still used some functions from here. Some structure is from
+the markov models PA.
+'''
+
 import sys
 import math
 import re
 
-#took some structure of code from markov modes PA
 
 PRIOR_PROB_POS = .5
 PRIOR_PROB_NEG = .5
@@ -52,7 +60,7 @@ class Bayes:
 
     def get_probs(self, test_stg):
         '''
-        get's the un-normalized probability that a test_stg is in 
+        gets the un-normalized probability that a test_stg is in 
         the class of the model
         '''
         test_list = re.sub("[^\w]", " ",  test_stg).split()
@@ -153,8 +161,8 @@ if __name__=="__main__":
     num_args = len(sys.argv)
 
     if num_args != 5:
-        print("usage: python3 " + sys.argv[0] + " <file name for speaker A> " +
-              "<file name for speaker B>\n  <file name of text to identify> " +
+        print("usage: python3 " + sys.argv[0] + " <file name for article 1> " +
+              "<file name for article 2>\n  <file name of text to identify> " +
               "<order>")
         sys.exit(0)
     

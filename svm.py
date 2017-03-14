@@ -1,3 +1,11 @@
+'''
+TEAM: FiSci
+PEOPLE: Hannah Ni, Hannah Walter, Lin Su
+
+This file provides advanced sentiment measures. We learned to use the sklearn package
+and took some structure of code from sklearn API and examples.
+'''
+
 import pandas
 import numpy
 import scipy
@@ -12,17 +20,15 @@ from sklearn.metrics import confusion_matrix, f1_score
 from sklearn.linear_model import SGDClassifier, LogisticRegression
 
 
-#learned to use package and took some structure of code 
-#from sklearn API and examples 
-
 def build_df(train_list, classification):
     '''
-    this function builds a pandas DataFrame from a training list
-    inputs:
+    This function builds a pandas DataFrame from a training list
+
+    INPUTS:
         train_list: list of file names of the training data
         classification: the classification associated with files
             in train list, 1 for positive, or 0 for negative
-    outputs:
+    OUTPUTS:
         dataframe: a pandas DataFrame of the info with the file name as index
             a column with the text, and a column with classification
     '''
@@ -37,9 +43,11 @@ def build_df(train_list, classification):
 
 def build_train(num_pos, num_neg):
     '''
-    builds the complete training dataframe given a number of positive
+    Builds the complete training dataframe given a number of positive
     or negative training articles
-    outputs: the training DataFrame
+
+    INPUTS: number of positive and negative training articles
+    OUTPUTS: the training DataFrame
     '''
     # generates the list of training files given num_pos and num_neg
     pos_train, neg_train = naive_bayes.gen_train_list(num_pos, num_neg)
@@ -53,6 +61,7 @@ def build_train(num_pos, num_neg):
     train_df = train_df.reindex(numpy.random.permutation(train_df.index))
 
     return train_df
+
 #initializes the Multinomial Naive Bayes Classifier
 mnb_pipeline = Pipeline([
     ('count_vectorizer',   CountVectorizer(ngram_range=(1,  2))),
@@ -74,13 +83,13 @@ maxent_pipeline = Pipeline([
 
 def classify_with(train_df, test_list, pipeline):
     '''
-    this function classifies a test_list of strings based on a 
+    This function classifies a test_list of strings based on a 
     given training DataFrame and a given classifier
-    inputs:
+    INPUTS:
         train_df: the training DataFrame
         test_list: the list of strings to classify
         pipeline: the classifier to use
-    outputs:
+    OUTPUTS:
         predicts: an array of classifications, the index of the array corresponds
             to the index of the test_list 
     '''
@@ -91,12 +100,12 @@ def classify_with(train_df, test_list, pipeline):
 
 def final_output(num_pos, num_neg, test_list):
     '''
-    generates the final output to be passed through to our django file
-    inputs:
+    Generates the final output to be passed through to our django file
+    INPUTS:
         num_pos: number of positive training files
         num_neg: number of negative training files
         test_list: list of strings to be classified
-    outputs:
+    OUTPUTS:
         results: a list of lists for each classifier 
             each individual list is in the form:
             ['name of classifier', percent positive, 
@@ -131,11 +140,11 @@ def final_output(num_pos, num_neg, test_list):
 
 def test_clf(train_df, pipeline):
     ''' 
-    this function does in sample testing to assess accuracy of the Model
-    inputs: 
+    This function does in sample testing to assess accuracy of the Model
+    INPUTS: 
         train_df: training DataFrame
         pipeline: the classifier to test
-    outputs:
+    OUTPUTS:
         score: a measure of accuracy
     '''
     #divides the training data into 6 samples

@@ -1,3 +1,10 @@
+'''
+TEAM: FiSci
+PEOPLE: Hannah Ni, Hannah Walter, Lin Su
+
+This file provides aggregates our functions into a Django-compatible format.
+'''
+
 import datetime as dt
 import words_scraper
 import stock_scraper
@@ -22,7 +29,7 @@ def create_output(args):
             bag_of_words, monte_carlo, advanced_sentiment: Boolean, if this analysis 
                 is desired
     OUTPUTS:
-        dictionary with the desired data to be formatted for Django
+        dictionary of lists with the desired data to be formatted for Django
     '''
 
     output_dict = {}
@@ -145,6 +152,17 @@ def create_output(args):
     return output_dict
 
 def bow_format(articles_list, company_name, output_dict, source):
+    '''
+    Function to handle repeated formatting procedure for Seeking Alpha and NYTimes.
+
+    INPUTS:
+        articles_list: list of articles
+        company_name: name of the company
+        output_dict: current output dictionary
+        source: Seeking Alpha or New York Times
+    OUTPUTS:
+        updated output dict
+    '''
 
     words_list = words_scraper.split_strings_into_list(articles_list, company_name)
     percentage_tuple = words_scraper.bag_of_words_score(words_list)
