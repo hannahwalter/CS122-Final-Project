@@ -2,6 +2,7 @@ import datetime as dt
 import words_scraper
 import stock_scraper
 import naive_bayes
+import svm
 import util
 
 from imp import reload
@@ -24,9 +25,20 @@ def create_output(args):
         dictionary with the desired data
     '''
 
+    output_dict = {}
+
     name = args['company_name']
     date = args['date']
     days = args['days']
+
+    if date > dt.date.today().isoformat():
+        output_dict['date_error'] = (['Please enter a date before today' 
+            ' and try again.'])
+        return output_dict
+    elif date < (dt.date.today() - dt.timedelta(365)).isoformat():
+        output_dict['date_error'] = (['Please enter a date less than a year' 
+            ' ago and try again.'])
+        return output_dict
 
     # Generating appropriate isoformat dates
     end_date_obj = dt.datetime.strptime(date, '%Y-%m-%d').date()
@@ -35,8 +47,6 @@ def create_output(args):
 
     end_date = date
     begin_date = begin_date_obj.isoformat()
-
-    output_dict = {}
 
     # Finding company ticker
     find_ticker_company = stock_scraper.find_ticker_and_name(name)
@@ -73,7 +83,7 @@ def create_output(args):
         output_dict['bag_of_words'][1].append(t_n_percentage)
         output_dict['bag_of_words'][2].append(t_recommendation)
         
-    if args['bag_of_words'] or args['naive_bayes']:
+    if args['bag_of_words'] or args['advanced_sentiment']:
         nyt_urls = words_scraper.get_nyt_urls(company_name, begin_date, end_date)
         if type(nyt_urls) == str:
             output_dict['bag_of_words_error'] = nyt_urls
@@ -123,20 +133,21 @@ def create_output(args):
         dates, monte_carlo, stock = words_scraper.monte_carlo(daily_words_list, ticker, 5000)
         output_dict['monte_carlo'] = [['dates'] + dates, ['monte carlo'] + monte_carlo, ['stock'] + stock]
 
-    if args['naive_bayes'] and nyt_continue:
-        output_dict['naive_bayes'] = [['positive articles'], ['negative articles'], ['recommendation']]
+    if args['advanced_sentiment'] and nyt_continue or sa_continue:
 
-        pos_train, neg_train = naive_bayes.gen_train_list(40, 40)
-        pos_model = naive_bayes.Bayes(pos_train, 1, "positive")
-        neg_model = naive_bayes.Bayes(neg_train,1,"negative")
+        adv_list = []
+        if nyt_continue:
+            adv_list.extend([['Articles from the New York Times', '', '', ''], 
+                [' ', ' ', ' ', ' ']])
+            adv_nyt_list = svm.final_output(50, 50, nyt_articles_list)
+            adv_list.extend(adv_nyt_list)
+            
+        if sa_continue:
+            adv_list.extend([['Articles from Seeking Alpha', '', '', ''],
+                [' ', ' ', ' ', ' ']])
+            adv_sa_list = svm.final_output(50, 50, sa_articles_list)
+            adv_list.extend(adv_sa_list)
 
-        result_tup = naive_bayes.mass_class(pos_model, neg_model, nyt_articles_list, 1)
-        nb_p_percentage = result_tup[0]
-        nb_n_percentage = result_tup[1]
-        nb_recommendation = util.recommendation(nb_p_percentage, nb_n_percentage)
-
-        output_dict['naive_bayes'][0].append(nb_p_percentage)
-        output_dict['naive_bayes'][1].append(nb_n_percentage)
-        output_dict['naive_bayes'][2].append(nb_recommendation)
+        output_dict['advanced_sentiment'] = adv_list
  
     return output_dict

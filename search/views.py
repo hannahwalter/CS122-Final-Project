@@ -27,18 +27,18 @@ class SearchForm(forms.Form):
             required=True)
     date = forms.DateField(
             label='Date to look for recommendation',
-            widget=SelectDateWidget,
+            widget=SelectDateWidget(years = [2016, 2017]),
             initial=datetime.date.today(),
             required=True)
     days = forms.IntegerField(label = 'Number of days to scrape before date',
             required = True, max_value = 30, min_value = 1)
     show_args = forms.BooleanField(label='Show args_to_ui',
                                    required=False)
-    bag_of_words = forms.BooleanField(label='Show bag of words',
+    bag_of_words = forms.BooleanField(label='Show Bag of Words',
                                     required=False)
     monte_carlo = forms.BooleanField(label='Show Monte Carlo',
                                     required=False)
-    naive_bayes = forms.BooleanField(label='Show naive bayes',
+    advanced_sentiment = forms.BooleanField(label='Show Advanced Sentiment Analysis',
                                     required=False)
 
 def home(request):
@@ -61,10 +61,10 @@ def home(request):
                 args['monte_carlo'] = True
             else:
                 args['monte_carlo'] = False
-            if form.cleaned_data['naive_bayes']:
-                args['naive_bayes'] = True
+            if form.cleaned_data['advanced_sentiment']:
+                args['advanced_sentiment'] = True
             else:
-                args['naive_bayes'] = False
+                args['advanced_sentiment'] = False
             if form.cleaned_data['show_args']:
                 context['args'] = 'args_to_ui:\n' + json.dumps(args, indent=4)
 
@@ -88,18 +88,7 @@ def home(request):
         context['result'] = None
     else:
         context['recommendation'] = 'header'
-        if 'bag_of_words' in res:
-            context['bag_of_words'] = res['bag_of_words']
-        if 'monte_carlo' in res:
-            context['monte_carlo'] = res['monte_carlo']
-        if 'naive_bayes' in res:
-            context['naive_bayes'] = res['naive_bayes']
-        if 'bag_of_words_error' in res:
-            context['bag_of_words_error'] = res['bag_of_words_error']
-        if 'input_error' in res:
-            context['input_error'] = res['input_error']
-        if 'top_words' in res:
-            context['top_words'] = res['top_words']
+        context.update(res)
     context['form'] = form
     
     return render(request, 'index.html', context)

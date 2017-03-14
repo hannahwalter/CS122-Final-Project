@@ -111,6 +111,7 @@ def scrape_sa_urls(url_list):
         r = requests.get(url, headers = HEADER)
         if r.status_code != 200:
             inaccessible += 1
+            continue
         html = r.text
         soup = bs4.BeautifulSoup(html, 'lxml')
 

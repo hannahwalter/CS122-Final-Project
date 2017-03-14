@@ -68,7 +68,7 @@ def final_output(num_pos, num_neg, test_list):
         neg_art = len(predicts) - pos_art
         perc_pos = pos_art*100/len(predicts)
         perc_neg = neg_art*100/len(predicts)
-        accuracy = test_clf(df, classifier)*100
+        accuracy = round(test_clf(df, classifier)*100, 2)
         if classifier == mnb_pipeline:
             name = "Multinomial Naive Bayes Classifier Model"
         if classifier == maxent_pipeline:

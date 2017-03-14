@@ -31,8 +31,6 @@
         </div>
         {% endif %}
 
-
-
         <div class="frame">
             {% if recommendation %}
             <div id='header'>
@@ -42,6 +40,12 @@
             {% endif %}
             {% if input_error %}
                 {% for values in input_error %}
+                    {{values}}
+                {% endfor %}
+            {% endif %}
+
+            {% if date_error %}
+                {% for values in date_error %}
                     {{values}}
                 {% endfor %}
             {% endif %}
@@ -112,18 +116,19 @@
                 </table>
             </div>
             {% endif %}
-            {% if naive_bayes %}
+            {% if advanced_sentiment %}
             <div id='header'>
-                <h2>Naive Bayes Analysis</h2>
+                <h2>Advanced Sentiment Analysis</h2>
             </div>
-            <div class = 'naive bayes'>
+            <div class = 'advanced sentiment'>
                 <table>
                     <tr>
-                        <td></td>
-                        <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
-                        <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
+                        <td><strong>Classifier</strong></td>
+                        <td><strong>Positive</strong></td>
+                        <td><strong>Negative</strong></td>
+                        <td><strong>Accurancy</strong></td>
                     </tr>
-                    {% for values in naive_bayes %}
+                    {% for values in advanced_sentiment %}
                     <tr>
                         {% for v in values %}
                         <td style = 'padding-right: 40px'>{{v}}</td>
