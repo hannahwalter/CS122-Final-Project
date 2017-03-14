@@ -5,6 +5,13 @@
 This code collects historical and real-time data on stocks
 from Yahoo finance API.
 
+Part of this code is used in stock_scraper.py.
+
+This code has the potential to find optimized return strategy
+given a range of date to buy or sell. It could help us run
+simulation to evaluate the recommendation from different analysis
+if we had more time.
+
 Packages to install:
     yahoo-finance
 '''

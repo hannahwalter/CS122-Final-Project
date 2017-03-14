@@ -2,6 +2,7 @@ import sys
 import math
 import re
 
+#took some structure of code from markov modes PA
 
 PRIOR_PROB_POS = .5
 PRIOR_PROB_NEG = .5
@@ -16,6 +17,10 @@ class Bayes:
         self.train_all()
 
     def get_k_words(self, word_list):
+        '''
+        generates k word grams from the word_list
+        returns the list of k word grams
+        '''
         ret_list = []
         for i in range(len(word_list)-self.k+1):
             gram = word_list[i:i+self.k+1]
@@ -24,6 +29,9 @@ class Bayes:
         return ret_list
 
     def train(self, word_list):
+        '''
+        adds the k grams of a given word list to the model 
+        '''
         self.num_words+= len(word_list)
         gram_list = self.get_k_words(word_list)
         for gram in gram_list:
@@ -31,9 +39,11 @@ class Bayes:
                 self.grams[gram] = 1
             if gram in self.grams:
                 self.grams[gram]+=1
-        pass
         
     def train_all(self):
+        '''
+        trains the model on all of the files in the train_list 
+        ''' 
         for fil in self.train_list:
             txt = open(fil, "rU").read()
             txt_list = re.sub("[^\w]", " ",  txt).split()
@@ -41,6 +51,10 @@ class Bayes:
         pass
 
     def get_probs(self, test_stg):
+        '''
+        get's the un-normalized probability that a test_stg is in 
+        the class of the model
+        '''
         test_list = re.sub("[^\w]", " ",  test_stg).split()
         test_grams = self.get_k_words(test_list)
         prob_list = []
@@ -62,6 +76,11 @@ class Bayes:
         return ret_prob
 
 def gen_train_list(num_pos, num_neg):
+    '''
+    generates the list of training files given the number
+    of positive and negative files 
+    relies on our naming convention for training files
+    '''
     pos_train = []
     neg_train = []
     for i in range(num_pos):
@@ -73,6 +92,11 @@ def gen_train_list(num_pos, num_neg):
     return pos_train, neg_train
 
 def mass_class(pos_model, neg_model, test_list, order):
+    '''
+    given a positive and negative model classifies each
+    text in a list of texts as positive or negative
+    returns a tuple of the percentage positive, percentage negative
+    '''
     pos_count = 0
     neg_count = 0
 
@@ -89,6 +113,12 @@ def mass_class(pos_model, neg_model, test_list, order):
     return (pos_perc,neg_perc)
 
 def classify(pos_list, neg_list, test_text, order):
+    '''
+    classifies an individual text given a list of positive and negative
+    training files.  
+    outputs a tuple of the probability the text is negative, 
+    the probability the text is positive, and a conclusion
+    '''
     len_test = len(re.sub("[^\w]", " ",  test_text).split())
 
     pos_model = Bayes(pos_list, order, "positive")
