@@ -35,3 +35,4 @@ Yahoo_finance installation guide:
 4. Navigate to the download folder in command line
 5. Run the command: $ sudo python setup.py install
 6. Replace the file yql.py in the folder yahoo-finance-1.4.0 with the attached updated file (there are some bugs in the downloaded package and we fixed them)
+7. On one of our machines, the Yahoo_finance API is not constantly reliable. If you see the error 'No module named "yahoo_finance"', please uninstall the yahoo_finance package, and install it again following the instructions above. The API works fine on the other two machines our group have.
