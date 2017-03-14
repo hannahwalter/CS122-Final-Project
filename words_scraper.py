@@ -6,7 +6,6 @@ This file scrapes words from Twitter, NYTimes, and Selenium.
 '''
 
 import bs4
-import urllib3
 import requests
 import re
 import datetime as dt
@@ -17,13 +16,9 @@ import urllib
 import random
 import collections
 import matplotlib.pyplot as plt
-from fake_useragent import UserAgent
 
 import util as u
 import stock_scraper
-
-ua = UserAgent()
-pm = urllib3.PoolManager()
 
 STOP_WORDS = u.get_stop_words()
 POSITIVE, NEGATIVE = u.get_word_lexicons()
