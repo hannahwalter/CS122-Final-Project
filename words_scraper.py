@@ -279,7 +279,7 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
 
 def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
 
-    plt.plot(stock_vals_df['stock_val'], 'r')
+    plt.plot(stock_vals_df['stock_val'], 'r-')
 
     monte_carlo_sim = []
     current = 0
@@ -300,9 +300,9 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
         current += (positive**best_c)*best_a - (negative**best_d)*best_b
         monte_carlo_sim.append(current)
 
-    plt.plot(monte_carlo_sim, 'g')
+    plt.plot(monte_carlo_sim, 'g--')
 
-    plt.ylabel('stock value\nactual values (red)\nvs.\nsimulated values (green)')
+    plt.ylabel('stock value\nactual values (red solid)\nvs.\nsimulated values (green dashed)')
 
     plt.xlabel('dates')
 

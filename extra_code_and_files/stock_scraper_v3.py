@@ -54,6 +54,9 @@ import pandas as pd
 
 
 def find_ticker_and_name(company_input):
+    '''
+    Via a csv stored, search for company name and ticker with dataframe.
+    '''
     df = pd.read_csv('companylist.csv')
     df_by_ticker_match = df[df['Symbol'] == company_input.upper()]
     if df_by_ticker_match.shape[0] == 1:
