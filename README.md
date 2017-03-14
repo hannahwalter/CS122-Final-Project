@@ -18,7 +18,8 @@ How to try our work:
 5. Having trouble finding the ticker or name of a company? Don't worry, we will let you know if your input is contained in any tickers. We have also designed a program to help you out. In the command line, run the file 'interactive_stock_ticker_search_command_line', and follow the intuitive instructions on the command line to easily find the ticker of the company you are interested in.
 
 What challenges we have tried to conquer:
-1. Scraping our sources: While NYTimes provided an API for us to use, Twitter's API did not provide the desired flexibility, and Seeking Alpha had no API at all. As a result, we had to find a way to scrape these sources the traditional way. In order to prevent being blocked for scraping, our code implements some pauses which can slow the data gathering process. Furthermore, the use of "infinite scrolling" proved more difficult to deal with.
+1. Scraping our sources: While NYTimes provided an API for us to use, Twitter's API did not provide the desired flexibility, and Seeking Alpha had no API at all. As a result, we had to find a way to scrape these sources the traditional way. In order to prevent being blocked for scraping, our code implements some pauses which can slow the data gathering process. Furthermore, the use of "infinite scrolling" proved more difficult to deal with. Even now, some of our web scrapers will not retrieve
+results, so there are many, many corner cases we had to deal with (invalid requests, no articles, etc.)
 2. Data analysis: Because of the sentiment deeply embedded in the contextual nuances of an article, our intial Naive Bayes sentiment classifier was not as successful as we hoped. More sophisticated methods like the sklearn module were better at classifying as a positive article may list several negative things a company has gone through before presenting future outlooks.
 3. Time: Due to scraping on the spot, our code takes a while to run and process. While this is not ideal, it is an unfortunate consequence of our scraping. 
 
@@ -28,7 +29,7 @@ given the time it takes to run our code and space constraints.
 2. Improve the scope of sources we are scraping. We look forward to scraping Wall Street Journal, the Economist, and other high-profile commentary sources. Currently these sites restricts us from beautifulsoup or selenium scraping. With more authoritative sources, we could make better recommendation.
 3. Improving the sentiment library. Currently we collected 100 articles and classified them into positive and negative articles. Our Naive Bayes prediction would be significantly more accurate as we increase the number and quality of our training materials.
 
-Appandix:
+Appendix:
 Yahoo_finance installation guide:
 1. Open https://pypi.python.org/pypi/yahoo-finance in your browser
 2. Search for yahoo-finance-1.4.0.tar.gz on this page

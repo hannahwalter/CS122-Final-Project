@@ -286,7 +286,7 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
     begin_date = sorted_daily_list[0][0]
     end_date = sorted_daily_list[-1][0]
 
-    stock_vals_df = stock_scraper.historical_basic(ticker, begin_date, end_date, False)
+    stock_vals_df = stock_scraper.historical_basic(ticker, begin_date, end_date)
     max_delta = max(abs(stock_vals_df['delta']))
 
     current_run_count = 0

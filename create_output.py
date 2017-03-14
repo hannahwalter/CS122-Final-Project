@@ -127,8 +127,8 @@ def create_output(args):
         if sa_continue:
             output_dict = bow_format(sa_articles_list, company_name, output_dict, 'Seeking Alpha')
 
-        output_dict['inaccessible_count'] = (sa_scrape_inaccessible + sa_articles_inaccessible 
-            + nyt_inaccessible)
+        output_dict['inaccessible_count'] = [(sa_scrape_inaccessible + sa_articles_inaccessible 
+            + nyt_inaccessible)]
 
     if args['monte_carlo']:
         dates, monte_carlo, stock = words_scraper.monte_carlo(daily_words_list, ticker, 5000)
