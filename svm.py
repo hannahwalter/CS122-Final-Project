@@ -75,7 +75,7 @@ def final_output(num_pos, num_neg, test_list):
             name = "Maximum Entropy Classifier Model"
         if classifier == svm_pipeline:
             name = "Support Vector Machine Classifier Model"
-        return_list = [name, perc_pos, perc_neg, accuracy]
+        return_list = [name, round(perc_pos, 2), round(perc_neg, 2), accuracy]
         results.append(return_list)
     return results
 

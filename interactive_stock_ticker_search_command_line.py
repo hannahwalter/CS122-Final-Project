@@ -1,13 +1,13 @@
+'''
+Interactive interface via COMMAND LINE to guide user find company ticker.
+Would NOT be shown via Django.
+'''
+
 try:
     from urllib.request import urlopen
 except ImportError:
     from urllib2 import urlopen
 from json import loads
-
-'''
-Interactive interface via COMMAND LINE to guide user find company ticker.
-Would NOT be shown via Django.
-'''
 
 ticker = ''
 while ticker == '':

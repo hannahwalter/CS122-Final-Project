@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FiSci Technoslogy</title>
+        <title>FiSci Technology</title>
         <link rel="stylesheet" type="text/css" href="{% static "/static/main.css" %}" />
     </head>
     <body>
@@ -50,6 +50,12 @@
                 {% endfor %}
             {% endif %}
 
+            {% if inaccessible_count %}
+                {% for values in inaccessible_count %}
+                    There were {{values}} inaccessible articles.
+                {% endfor %}
+            {% endif %}
+
             {% if bag_of_words %}
             <div id='header'>
                 <h2>Bag of Words Analysis</h2>
@@ -62,12 +68,6 @@
             <div class="bag of words">
                 <br>
                 <table>
-                    <tr>
-                        <td></td>
-                        <td style = 'padding-right: 20px'><strong>Twitter</strong></td>
-                        <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
-                        <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
-                    </tr>
                     {% for values in bag_of_words %}
                     <tr>
                         {% for v in values %}
@@ -83,11 +83,6 @@
                 </div>
                 <table>
                     <tr>
-                        <td></td> 
-                        <td style = 'padding-right: 20px'><strong>Twitter</strong></td>
-                        <td style = 'padding-right: 20px'><strong>NYTimes</strong></td>
-                        <td style = 'padding-right: 20px'><strong>Seeking Alpha</strong></td>
-                    </tr>
                     {% for values in top_words %}
                     <tr>
                         {% for v in values %}

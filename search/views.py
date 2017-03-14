@@ -8,18 +8,6 @@ import datetime
 import pandas as pd
 from django.forms.extras.widgets import SelectDateWidget
 
-'''
-def create_output(d):
-    return {'bag_of_words': [['Positive words', '57%', '43%', '23%'], 
-    ['Negative words', '43%', '57%', '77%'], ['Recommendation', 'Buy', 'Buy', 'Hold']],
-    'top_words': [['1', 'a', 'b', 'c'], ['2', 'a', 'b', 'c'], ['3', 'a', 'b', 'c'],
-    ['4', 'a', 'b', 'c'], ['1', 'a', 'b', 'c'], ['1', 'a', 'b', 'c'], ['1', 'a', 'b', 'c']
-    , ['1', 'a', 'b', 'c'], ['1', 'a', 'b', 'c']],
-    'bag_of_words_error': ['Could not find articles for NYTimes'],
-    'monte_carlo': [['Dates', 'date1', 'date2'], ['Monte Carlo Values', 'value1', 'value2'], ['Stock Values', 'value1', 'value2']],
-    'naive_bayes': [['Positive articles', 'x%', 'x%', 'x%'], ['Negative articles', 'y%', 'y%', 'y%']]}
-'''
-
 class SearchForm(forms.Form):
     company_name = forms.CharField(
             label='Key word(s) in company name or ticker',
@@ -27,7 +15,7 @@ class SearchForm(forms.Form):
             required=True)
     date = forms.DateField(
             label='Date to look for recommendation',
-            widget=SelectDateWidget(years = [2016, 2017]),
+            widget=SelectDateWidget(years = [2017, 2016]),
             initial=datetime.date.today(),
             required=True)
     days = forms.IntegerField(label = 'Number of days to scrape before date',

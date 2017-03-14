@@ -11,7 +11,7 @@ What we have done:
 5. We presented our results in an intuitive web interface with tables and graphs customizable to how much detail the user desires to see.
 
 How to try our work:
-1. Install APIs (for yahoo_finance, see Appandix of this text)
+1. Install APIs
 2. Navigate to the folder this text file is in, run command $ python3 manage.py runserver
 3. Open a browser and go to 'http://127.0.0.1:8000/'
 4. Get a feel of our intuitive user interface and try it out
@@ -26,12 +26,3 @@ What our potential could be if we had more time:
 1. Train an algorithm that weights each data source and method. If we had more time, we would run our analysis on thousands of stocks with data for the past decade, draw recommendation from each of the analysis, and simulate the payoff we would get by following each recommendation sources. From this we would derive better recommendation based on high-dimensional datasets. For example, we are suspecting that the most accurate source of prediction may differ by the industry, and that in the past decade, Twitter may be a more and more accurate predictor.
 2. Improve the scope of sources we are scraping. We look forward to scraping Wall Street Journal, the Economist, and other high-profile commentary sources. Currently these sites restricts us from beautifulsoup or selenium scraping. With more authoritative sources, we could make better recommendation.
 3. Improving the sentiment library. Currently we collected 100 articles and classified them into positive and negative articles. Our Naive Bayes prediction would be significantly more accurate as we increase the number and quality of our training materials.
-
-Appandix:
-Yahoo_finance installation guide:
-1. Open https://pypi.python.org/pypi/yahoo-finance in your browser
-2. Search for yahoo-finance-1.4.0.tar.gz on this page
-3. Download the installation package
-4. Navigate to the download folder in command line
-5. Run the command: $ sudo python setup.py install
-6. Replace the file yql.py in the folder yahoo-finance-1.4.0 with the attached updated file (there are some bugs in the downloaded package and we fixed them)

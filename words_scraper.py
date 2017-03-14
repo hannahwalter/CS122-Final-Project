@@ -95,7 +95,7 @@ def get_sa_urls(ticker, begin_date, end_date):
         page_count += 1
 
     if len(url_list) == 0:
-        return "No articles could be found or accessed for this company."
+        return "No articles could be found or accessed for this company from Seeking Alpha."
     else:
         return url_list, inaccessible
 
@@ -234,11 +234,6 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
         C = random.uniform(0,1)
         D = random.uniform(0,1)
 
-        #A = random.uniform(0, 10*max_delta)
-        #B = random.uniform(0, 10*max_delta)
-        #C = random.uniform(0,1)
-        #D = random.uniform(0,1)
-
         sum_sq = 0
         model = 0
 
@@ -256,7 +251,6 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
             val = A*(positive**C) - B*(negative**D)
             model += val
 
-            #sq_error = (abs(stock_vals_df.loc[day[0], 'delta']) - abs(val))**2
             sq_error = (stock_vals_df.loc[day[0], 'stock_val'] - model)**2
 
             sum_sq += sq_error
@@ -280,7 +274,7 @@ def monte_carlo(sorted_daily_list, ticker, run_count):
 
 def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
 
-    plt.plot(stock_vals_df['stock_val'])
+    stock_vals, = plt.plot(stock_vals_df['stock_val'], 'r', label = 'Actual Stock Values')
 
     monte_carlo_sim = []
     current = 0
@@ -301,7 +295,19 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
         current += (positive**best_c)*best_a - (negative**best_d)*best_b
         monte_carlo_sim.append(current)
 
-    plt.plot(monte_carlo_sim)
+    monte_carlo, = plt.plot(monte_carlo_sim, 'g', label = 'Monte Carlo Simulated Values')
+
+    plt.ylim([min(stock_vals_df['stock_val'].tolist()) - 20, 
+        max(stock_vals_df['stock_val'].tolist()) + 20])
+    plt.xlim([0, len(stock_vals_df['date']) - 1])
+
+    plt.legend([stock_vals, monte_carlo], ['stock', 'monte carlo'])
+
+    plt.ylabel('Values')
+
+    plt.xlabel('Dates')
+
+    plt.title('Monte Carlo vs. Stock Values')
     
     plt.savefig('static/twitter.png')
 
@@ -336,7 +342,7 @@ def get_nyt_urls(search_item, beginning_date, ending_date):
     json = r.json()
     num_results = json['response']['meta']['hits']
     if num_results == 0:
-        return "No results available"
+        return "There were no articles found in the New York Times."
     pages = math.ceil(num_results/10)
 
     url_list = []
@@ -372,6 +378,7 @@ def scrape_nyt_urls(url_list, search_item):
     inaccessible = 0
 
     for url in url_list:
+        time.sleep(.5)
 
         r = requests.get(url, headers = HEADER)
         if r.status_code != 200:
@@ -401,8 +408,11 @@ def bag_of_words_score(words_list):
         elif word in NEGATIVE:
             n_score += count
 
-    p_percentage = round((p_score / (p_score + n_score)) * 100, 2)
-    n_percentage = round((n_score / (p_score + n_score)) * 100, 2)
+    if p_score == 0 and n_score == 0:
+        return 'error'
+    else:
+        p_percentage = round((p_score / (p_score + n_score)) * 100, 2)
+        n_percentage = round((n_score / (p_score + n_score)) * 100, 2)
     
     return p_percentage, n_percentage
 
