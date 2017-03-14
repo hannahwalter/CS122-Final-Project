@@ -301,6 +301,10 @@ def plot(stock_vals_df, sorted_daily_list, best_a, best_b, best_c, best_d):
         monte_carlo_sim.append(current)
 
     plt.plot(monte_carlo_sim)
+
+    plt.ylabel('stock value\nactual values vs. simulated values')
+
+    plt.xlabel('dates')
     
     plt.savefig('static/twitter.png')
 
